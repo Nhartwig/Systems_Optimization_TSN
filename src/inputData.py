@@ -24,6 +24,7 @@ class TSN:
         self.createDeviceObjects(tree.getroot())
         self.createLinkObjects(tree.getroot())
         self.createStreamObjects(tree.getroot())
+        self.savedCost = 100000000          #very big initial cost
 
     ## Creates the Device Objects
     #
@@ -48,7 +49,7 @@ class TSN:
             dest = lin.get('dest')
             speed = float(lin.get('speed'))
 
-            #For each link in the xml file, find the source and destination device objects.
+            # For each link in the xml file, find the source and destination device objects.
             for dev in self.devices:
                 if src == dev.name:
                     source_device = dev
@@ -107,6 +108,17 @@ class TSN:
         for link in self.links:
             link.used_bandwidth = 0
 
+    def save_Solution(self, cost):
+        if cost < self.savedCost:
+            self.savedCost = cost
+            for stream in self.streams:
+                stream.saved_solution_routes = stream.solution_routes
+
+    def load_Best_Solution(self):
+        for stream in self.streams:
+            stream.solution_routes = stream.saved_solution_routes
+        return self.savedCost
+
 
 class Device:
 
@@ -139,16 +151,19 @@ class Stream:
         self.stream_bandwidth = self.size / self.period
         self.routes = []
         self.solution_routes = []
+        self.saved_solution_routes = []
         self.solution_links = []
 
     def findRoutes(self, graph):
-        route = nx.all_simple_paths(graph, self.src, self.dest, cutoff=7)
+        route = nx.all_simple_paths(graph, self.src, self.dest, cutoff=8)
         for r in route:
             self.routes.append(r)
 
     def initial_solution(self):
         for i in range(self.rl):
-            self.solution_routes.append(self.routes[i])
+            r1 = self.routes[i]
+            self.solution_routes.append(r1)
+            self.routes.remove(r1)
 
     def solution_Links(self, tsn):
         self.solution_links.clear()
@@ -163,7 +178,7 @@ class Stream:
 
     def stream_cost(self, tsn):
         self.solution_Links(tsn)
-        cost = 0;
+        cost = 0
         for link in self.solution_links:
             link.used_bandwidth += self.stream_bandwidth
             cost += link.used_bandwidth
@@ -171,10 +186,16 @@ class Stream:
                 cost = cost * 10
         return cost
 
-    def random_exchange(self):
+    def random_exchange(self, random_stream):
         r1 = random.choice(self.routes)
         r2 = random.choice(self.solution_routes)
         # print("r1 r2 =====", r1[2].name, ", ", r2[2].name)
+
+        random_stream.routes.remove(r1)
+        random_stream.routes.append(r2)
+
+        random_stream.solution_routes.remove(r2)
+        random_stream.solution_routes.append(r1)
         return r1, r2
 
     def printRouteLinks(self, tsn):

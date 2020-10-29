@@ -28,9 +28,9 @@ def createGraph(tsn_object):
 
 
 def findStreamsRoutes(tsn):
-    for s in tsn.streams:
-        s.findRoutes(G)
-        s.initial_solution()
+    for stream in tsn.streams:
+        stream.findRoutes(G)
+        stream.initial_solution()
 
 
 def printStreamRoutes(tsn):
