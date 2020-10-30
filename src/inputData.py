@@ -13,9 +13,10 @@ class TSN:
     #
     #    @return   An instance of the TSN class initializer with devices, streams and links lists of objects.
 
-    def __init__(self):
+    def __init__(self, filename = "../test_cases/TC3_medium.xml"):
 
-        tree = ET.parse('../test_cases/TC3_medium.xml')
+        tree = ET.parse(filename)
+        # tree = ET.parse('../test_cases/TC3_medium.xml')
         # tree = ET.parse('../test_cases/TC0_example.xml')
 
         self.devices = []
@@ -163,7 +164,7 @@ class Stream:
 
     def stream_cost(self, tsn):
         self.solution_Links(tsn)
-        cost = 0;
+        cost = 0
         for link in self.solution_links:
             link.used_bandwidth += self.stream_bandwidth
             cost += link.used_bandwidth

@@ -7,9 +7,11 @@
 #    @authors                 Matej Poljuha
 
 import networkx as nx
-import matplotlib.pyplot as plt
+
+from matplotlib import pyplot as plt
 from inputData import *
 from simulated_Annealing import *
+from output_xml import *
 
 
 def createGraph(tsn_object):
@@ -55,8 +57,8 @@ def printSolution(tsn):
     for s in tsn.streams:
         s.printRouteLinks(tsn)
 
-
-tsn = TSN()                 #create tsn object
+filename = "../test_cases/TC3_medium.xml"
+tsn = TSN(filename)                 #create tsn object
 
 G, N = createGraph(tsn)     #createGraph(tsn) returns two graphs, one with device objects as nodes
                             # and one with device objects names as nodes
@@ -70,3 +72,5 @@ generateGraphImage(N)       #generate graph image with input only the devices na
 simulated_annealing(tsn)    #run simulated annealing algorithm
 
 printSolution(tsn)          #print solution
+
+outputSolutionXML(tsn, filename)      #output results to xml file
