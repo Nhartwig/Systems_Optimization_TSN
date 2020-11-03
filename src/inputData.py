@@ -100,7 +100,7 @@ class TSN:
     #
     # @return A number that is proportional to how many similar links each stream has (the smaller the better)
     def similarLinks(self):
-        similarity_links = 0
+        similarity_links = 1
         for s in self.streams:
             if s.rl > 1:
                 for i in range(0, len(s.solution_links) - 1):

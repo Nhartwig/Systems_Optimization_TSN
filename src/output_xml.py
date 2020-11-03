@@ -1,10 +1,9 @@
 import xml.etree.ElementTree as ET
-
+import inputData
 
 def getTestCaseName(filename):
     test_case_name = filename.split('/')[-1].split('.')[0]
     return test_case_name
-
 
 def indent(elem, level=0):
     i = "\n" + level*"    "
@@ -20,7 +19,6 @@ def indent(elem, level=0):
     else:
         if level and (not elem.tail or not elem.tail.strip()):
             elem.tail = i
-
 
 def outputSolutionXML(tsn, filename="default.xml"):
     """

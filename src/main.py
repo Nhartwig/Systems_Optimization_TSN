@@ -47,7 +47,8 @@ def printStreamRoutes(tsn):
 
 def generateGraphImage(graph):
     plt.tight_layout()
-    nx.draw_networkx(graph, arrows=True)
+    pos = nx.spectral_layout(graph)
+    nx.draw_networkx(graph, arrows=True, font_size=6, pos = pos, font_color = 'w', arrowsize=6)
     plt.savefig("../images/Graph_Image.png", format="PNG")
     plt.clf()
 
@@ -76,20 +77,3 @@ simulated_annealing(tsn)  # run simulated annealing algorithm
 printSolution(tsn)  # print solution
 
 outputSolutionXML(tsn, filename)  # output results to xml file
-
-print("==========================")
-
-similarity_links = 0
-for s in tsn.streams:
-    if s.rl > 1:
-        print("\n \33[31m", s.id, "\033[0m")
-        for l in range(0, len(s.solution_links) - 1):
-            l1 = s.solution_links[l]
-            for k in range(l + 1, len(s.solution_links)):
-                l2 = s.solution_links[k]
-                # if (l1.src.name == l2.src.name) and (l1.dest.name == l2.dest.name):
-                if l1 == l2:
-                    print("source = ", l1.src.name, "dest = ", l1.dest.name, "l = ", l)
-                    similarity_links += 1
-
-print("similarity links = ", similarity_links)
