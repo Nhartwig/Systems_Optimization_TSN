@@ -7,7 +7,6 @@
 #    @authors                 Matej Poljuha
 
 import networkx as nx
-
 from matplotlib import pyplot as plt
 from inputData import *
 from simulated_Annealing import *
@@ -30,9 +29,9 @@ def createGraph(tsn_object):
 
 
 def findStreamsRoutes(tsn):
-    for s in tsn.streams:
-        s.findRoutes(G)
-        s.initial_solution()
+    for stream in tsn.streams:
+        stream.findRoutes(G)
+        stream.initial_solution()
 
 
 def printStreamRoutes(tsn):
@@ -48,7 +47,8 @@ def printStreamRoutes(tsn):
 
 def generateGraphImage(graph):
     plt.tight_layout()
-    nx.draw_networkx(graph, arrows=True)
+    pos = nx.spectral_layout(graph)
+    nx.draw_networkx(graph, arrows=True, font_size=6, pos = pos, font_color = 'w', arrowsize=6)
     plt.savefig("../images/Graph_Image.png", format="PNG")
     plt.clf()
 
@@ -57,20 +57,23 @@ def printSolution(tsn):
     for s in tsn.streams:
         s.printRouteLinks(tsn)
 
-filename = "../test_cases/TC3_medium.xml"
-tsn = TSN(filename)                 #create tsn object
 
-G, N = createGraph(tsn)     #createGraph(tsn) returns two graphs, one with device objects as nodes
-                            # and one with device objects names as nodes
+filename = '../test_cases/TC3_medium.xml'
+# filename = '../test_cases/TC1_check_red.xml'
 
-findStreamsRoutes(tsn)      #we find for each stream the possible routes and create our initial solution
+tsn = TSN(filename)  # create tsn object
+
+G, N = createGraph(tsn)  # createGraph(tsn) returns two graphs, one with device objects as nodes
+# and one with device objects names as nodes
+
+findStreamsRoutes(tsn)  # we find for each stream the possible routes and create our initial solution
 
 printStreamRoutes(tsn)
 
-generateGraphImage(N)       #generate graph image with input only the devices names
+generateGraphImage(N)  # generate graph image with input only the devices names
 
-simulated_annealing(tsn)    #run simulated annealing algorithm
+simulated_annealing(tsn)  # run simulated annealing algorithm
 
-printSolution(tsn)          #print solution
+printSolution(tsn)  # print solution
 
-outputSolutionXML(tsn, filename)      #output results to xml file
+outputSolutionXML(tsn, filename)  # output results to xml file
