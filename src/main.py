@@ -7,9 +7,10 @@
 #    @authors                 Matej Poljuha
 
 import networkx as nx
-import matplotlib.pyplot as plt
+from matplotlib import pyplot as plt
 from inputData import *
 from simulated_Annealing import *
+from output_xml import *
 
 
 def createGraph(tsn_object):
@@ -56,17 +57,39 @@ def printSolution(tsn):
         s.printRouteLinks(tsn)
 
 
-tsn = TSN()                 #create tsn object
+filename = '../test_cases/TC3_medium.xml'
+# filename = '../test_cases/TC1_check_red.xml'
 
-G, N = createGraph(tsn)     #createGraph(tsn) returns two graphs, one with device objects as nodes
-                            # and one with device objects names as nodes
+tsn = TSN(filename)  # create tsn object
 
-findStreamsRoutes(tsn)      #we find for each stream the possible routes and create our initial solution
+G, N = createGraph(tsn)  # createGraph(tsn) returns two graphs, one with device objects as nodes
+# and one with device objects names as nodes
+
+findStreamsRoutes(tsn)  # we find for each stream the possible routes and create our initial solution
 
 printStreamRoutes(tsn)
 
-generateGraphImage(N)       #generate graph image with input only the devices names
+generateGraphImage(N)  # generate graph image with input only the devices names
 
-simulated_annealing(tsn)    #run simulated annealing algorithm
+simulated_annealing(tsn)  # run simulated annealing algorithm
 
-printSolution(tsn)          #print solution
+printSolution(tsn)  # print solution
+
+outputSolutionXML(tsn, filename)  # output results to xml file
+
+print("==========================")
+
+similarity_links = 0
+for s in tsn.streams:
+    if s.rl > 1:
+        print("\n \33[31m", s.id, "\033[0m")
+        for l in range(0, len(s.solution_links) - 1):
+            l1 = s.solution_links[l]
+            for k in range(l + 1, len(s.solution_links)):
+                l2 = s.solution_links[k]
+                # if (l1.src.name == l2.src.name) and (l1.dest.name == l2.dest.name):
+                if l1 == l2:
+                    print("source = ", l1.src.name, "dest = ", l1.dest.name, "l = ", l)
+                    similarity_links += 1
+
+print("similarity links = ", similarity_links)
