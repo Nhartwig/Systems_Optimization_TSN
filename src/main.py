@@ -60,6 +60,7 @@ def printSolution(tsn):
 
 filename = '../test_cases/TC3_medium.xml'
 # filename = '../test_cases/TC1_check_red.xml'
+# filename = '../test_cases/TC0_example.xml'
 
 tsn = TSN(filename)  # create tsn object
 
