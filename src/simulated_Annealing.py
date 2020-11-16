@@ -1,5 +1,6 @@
 import numpy as np
 import random
+from worst_case_delay import worst_case_delay
 
 
 def simulated_annealing(tsn):
@@ -7,11 +8,15 @@ def simulated_annealing(tsn):
     r = 0.03  # Set t declining factor
     i = 0
     print("\n")
+
+    worst_case_delay(tsn)
     cost0 = tsn.linksCost()
     tsn.save_Solution(cost0)
 
     while T > 1:  # Set loops
         T = T * (1 - r)
+
+        worst_case_delay(tsn)
         cost0 = tsn.linksCost()
 
         i += 1

@@ -13,6 +13,7 @@ from matplotlib import pyplot as plt
 from inputData import *
 from simulated_Annealing import *
 from output_xml import *
+from worst_case_delay import *
 
 
 
@@ -103,3 +104,5 @@ simulated_annealing(tsn)  # run simulated annealing algorithm
 printSolution(tsn)  # print solution
 
 outputSolutionXML(tsn, filename)  # output results to xml file
+
+
