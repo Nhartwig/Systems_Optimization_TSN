@@ -180,9 +180,14 @@ class Stream:
     #@return has no return
     def initial_solution(self):
         for i in range(self.rl):
-            r1 = random.choice(self.routes)
-            self.solution_routes.append(r1)
-            self.routes.remove(r1)
+            if self.routes:
+                r1 = random.choice(self.routes)
+                self.solution_routes.append(r1)
+                self.routes.remove(r1)
+            else:
+                r1 = random.choice(self.solution_routes)
+                self.solution_routes.append(r1)
+
 
     ## Transforms the solution routes into solution links of devices.
     #

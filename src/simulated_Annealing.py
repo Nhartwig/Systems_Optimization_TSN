@@ -4,9 +4,11 @@ import random
 
 def simulated_annealing(tsn):
     T = 1000  # Set
-    r = 0.003  # Set t declining factor
+    r = 0.03  # Set t declining factor
     i = 0
     print("\n")
+    cost0 = tsn.linksCost()
+    tsn.save_Solution(cost0)
 
     while T > 1:  # Set loops
         T = T * (1 - r)
@@ -19,7 +21,8 @@ def simulated_annealing(tsn):
         for j in range(100):
             # exchange two random tasks from two random cores and get a new neighbour solution
             s1 = random.choice(tsn.streams)  # pick a random stream
-            r1, r2 = s1.random_exchange(s1)  # From random stream s1 exchange 2 routes from solution and possible routes
+            if s1.routes:
+                r1, r2 = s1.random_exchange(s1)  # From random stream s1 exchange 2 routes from solution and possible routes
 
             # Get the new cost
             cost1 = tsn.linksCost()
@@ -31,7 +34,7 @@ def simulated_annealing(tsn):
                 x = np.random.uniform()
                 if x < np.exp((cost0 - cost1) / T):
                     cost0 = cost1
-                else:  # change solution to previous state
+                elif s1.routes:  # change solution to previous state
                     s1.routes.remove(r2)
                     s1.routes.append(r1)
 
