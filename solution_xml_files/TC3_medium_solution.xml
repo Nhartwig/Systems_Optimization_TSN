@@ -37,15 +37,15 @@
     <stream id="Stream2">
         <route>
             <link src="ES3" dest="SW3" />
-            <link src="SW3" dest="SW7" />
-            <link src="SW7" dest="SW6" />
-            <link src="SW6" dest="SW5" />
+            <link src="SW3" dest="SW2" />
+            <link src="SW2" dest="SW5" />
             <link src="SW5" dest="ES4" />
         </route>
         <route>
             <link src="ES3" dest="SW3" />
-            <link src="SW3" dest="SW2" />
-            <link src="SW2" dest="SW5" />
+            <link src="SW3" dest="SW7" />
+            <link src="SW7" dest="SW6" />
+            <link src="SW6" dest="SW5" />
             <link src="SW5" dest="ES4" />
         </route>
         <route>

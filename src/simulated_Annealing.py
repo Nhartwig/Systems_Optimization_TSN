@@ -16,7 +16,7 @@ def simulated_annealing(tsn):
 
         i += 1
         if not i % 10:
-            print("iteration i ", 100 * i, "cost = ", round(cost0, 4))
+            print("iteration i ", 100 * i, "cost = ", round(cost0, 1))
 
         for j in range(100):
             # exchange two random tasks from two random cores and get a new neighbour solution

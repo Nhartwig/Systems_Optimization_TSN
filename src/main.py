@@ -7,10 +7,13 @@
 #    @authors                 Matej Poljuha
 
 import networkx as nx
+import sys
+import os
 from matplotlib import pyplot as plt
 from inputData import *
 from simulated_Annealing import *
 from output_xml import *
+
 
 
 def createGraph(tsn_object):
@@ -57,11 +60,32 @@ def printSolution(tsn):
     for s in tsn.streams:
         s.printRouteLinks(tsn)
 
+def parsing_input(args):
+    folderPath = "../test_cases/"
 
-filename = '../test_cases/TC3_medium.xml'
+    if not args:
+        args.append("../test_cases/TC5_large1.xml")
+        filename = folderPath + args[0]
+    else:
+        filename = folderPath + args[0]
+    
+    if os.path.exists(filename):
+        print("exists")
+        return filename
+    else:
+        sys.exit("\33[91mWrong file argument enter one of these: \33[93m \nTC0_example.xml \nTC3_medium.xml \nTC1_check_red.xml  \nTC5_large1.xml \nTC6_large2.xml\33[0m")
+    return filename
+
+
+filename = parsing_input(sys.argv[1:])
+
+# filename = '../test_cases/TC3_medium.xml'
 # filename = '../test_cases/TC3_extended.xml'
 # filename = '../test_cases/TC1_check_red.xml'
 # filename = '../test_cases/TC0_example.xml'
+# filename = '../test_cases/TC5_large1.xml'
+# filename = '../test_cases/TC7_huge.xml'
+# filename = '../test_cases/TCX0_multicast.xml'
 
 tsn = TSN(filename)  # create tsn object
 

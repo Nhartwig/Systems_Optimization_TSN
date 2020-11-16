@@ -94,7 +94,7 @@ class TSN:
             cost += s.stream_cost(self)
 
         self.resetLinkBandwidth()
-        return cost * self.similarLinks()
+        return 10*cost + 5*self.similarLinks()
 
     ## Calculates the similar links between the different routes for the critical streams
     #
@@ -140,6 +140,7 @@ class Device:
         self.name = name
         self.type = type
         self.vertices = []
+        
 
 
 class Link:
@@ -149,6 +150,7 @@ class Link:
         self.dest = dest_device
         self.bandwidth = speed * 8
         self.used_bandwidth = 0
+        self.egressPort = []
 
 
 class Stream:

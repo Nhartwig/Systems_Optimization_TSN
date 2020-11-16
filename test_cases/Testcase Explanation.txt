@@ -1,0 +1,51 @@
+[*]
+Name: TC0_example
+Purpose: Use this as a simple example testcase
+
+[*]
+Name: TC1_check_red
+Purpose: Use this to test that your methods favors splitting the stream along disjunct paths instead of having all of them overlap on the shorter path (See solution)
+
+[*]
+Name: TC2_check_bw
+Purpose: Use this to test that your method avoids overloading the bandwidth of a link, even at the cost of a longer path (See solution)
+
+[*]
+Name: TC3_medium
+Purpose: A simple medium sized testcase
+
+[*]
+Name: TC4_split_and_merge
+Purpose: Use this to test that your method computes the bandwidth correctly, considering that redundant copies of a stream can split and merge along the route. (Stream0 merges on link SW2,ES2 and thus only consumes 0,8 Mbit/s)
+
+Link        Used/Available (Mbit/s)     Streams on Link
+SW0,SW2:    2,4/10                      ['Stream0_0', 'Stream1_0']
+SW1,SW2:    0,8/10                      ['Stream0_1']
+SW2,ES2:    2,4/10                      ['Stream0_0', 'Stream0_1', 'Stream1_0']
+ES1,SW1:    0,8/10                      ['Stream0_1']
+ES1,SW0:    2,4/10                      ['Stream0_0', 'Stream1_0']
+
+[*]
+Name: TC5_large1
+Purpose: A large testcase
+
+[*]
+Name: TC6_large2
+Purpose: A large testcase
+
+[*]
+Name: TC7_huge
+Purpose: A huge testcase to test the scalability of your solution
+
+-----------------------------
+Testcases for testing possible extensions:
+- All of the above should be schedulable given both worst-case delay analysis methods
+
+[*]
+Name: TCX0_multicast
+Purpose: The example testcase with a multicast stream
+
+[*]
+Name: TCX1_multicast_medium
+Purpose: A medium-sized testcase with multicast streams
+
