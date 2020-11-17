@@ -1,6 +1,7 @@
 import xml.etree.ElementTree as ET
 import networkx as nx
 import random
+import math
 
 
 class TSN:
@@ -93,7 +94,7 @@ class TSN:
         wct = 0
         for s in self.streams:
             cost += s.stream_cost(self)
-            wct += self.worst_cycle_time(s)
+            wct += self.stream_wct(s)
 
         self.resetLinkBandwidth()
         return 10*cost + 5*self.similarLinks() + wct
@@ -114,14 +115,13 @@ class TSN:
         return similarity_links
 
 
-    def worst_cycle_time(self, s):
+    def stream_wct(self, s):
+        max = 0
         for l in s.solution_links:
-            max = 0
             if l.src.type == "Switch":
-                switch = l.src
-                if switch.cycleTime > max:
-                    max = switch.cycleTime 
-        return max
+                if l.src.cycleTime > max:
+                    max = l.src.cycleTime 
+        return max * (math.floor(len(s.solution_links)/s.rl) + 1)
 
 
     ## Resets links used bandwidth
@@ -167,7 +167,7 @@ class Link:
         self.dest = dest_device
         self.bandwidth = speed * 8
         self.used_bandwidth = 0
-        self.src.speed = speed
+        self.src.speed = speed * 8     #Mbit/s which is the bandwidth size of the link
         
 
 
@@ -192,7 +192,7 @@ class Stream:
     #
     # @return has no return
     def findRoutes(self, graph):
-        route = nx.all_simple_paths(graph, self.src, self.dest, cutoff=8)
+        route = nx.all_simple_paths(graph, self.src, self.dest, cutoff=10)
         for r in route:
             self.routes.append(r)
 

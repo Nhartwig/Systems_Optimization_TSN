@@ -7,12 +7,12 @@
     </stream>
     <stream id="Stream1">
         <route>
-            <link src="ES2" dest="SW0" />
-            <link src="SW0" dest="ES4" />
-        </route>
-        <route>
             <link src="ES2" dest="SW1" />
             <link src="SW1" dest="ES4" />
+        </route>
+        <route>
+            <link src="ES2" dest="SW0" />
+            <link src="SW0" dest="ES4" />
         </route>
     </stream>
 </solution>

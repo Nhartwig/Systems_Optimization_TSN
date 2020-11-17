@@ -9,6 +9,7 @@
 import networkx as nx
 import sys
 import os
+import math
 from matplotlib import pyplot as plt
 from inputData import *
 from simulated_Annealing import *
@@ -74,7 +75,7 @@ def parsing_input(args):
         print("exists")
         return filename
     else:
-        sys.exit("\33[91mWrong file argument enter one of these: \33[93m \nTC0_example.xml \nTC3_medium.xml \nTC1_check_red.xml  \nTC5_large1.xml \nTC6_large2.xml\33[0m")
+        sys.exit("\33[91mWrong file argument enter one of these: \33[93m \nTC0_example.xml \nTC1_check_red.xml \nTC2_check_bw.xml  \nTC3_medium.xml \nTC3_extended.xml  \nTC5_large1.xml \nTC6_large2.xml \nTC7_huge.xml \33[0m")
     return filename
 
 
@@ -105,4 +106,11 @@ printSolution(tsn)  # print solution
 
 outputSolutionXML(tsn, filename)  # output results to xml file
 
+worst_case_delay(tsn)
 
+for device in tsn.devices:
+    if device.type == "Switch":
+        print(" \033[0m", device.name," cycle time = ", round(device.cycleTime, 3))
+
+for s in tsn.streams:
+    print(s.id, " route lenght = ", math.ceil(len(s.solution_links)/s.rl), "worst cycle delay = ", round(tsn.stream_wct(s), 3))

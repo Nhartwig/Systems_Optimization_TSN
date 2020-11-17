@@ -2,12 +2,12 @@ def worst_case_delay(tsn):
     # print("worst_case_delay")
     add_priority_to_streams(tsn)            # Assign priorities to streams depending on deadline
     add_stream_to_switch_device(tsn)        # Add streams to every switch
-    cycle = 0
-    for d in tsn.devices:
-        for s in d.egressPort:
-            cycle += s.size/d.speed 
-        d.cycleTime = cycle
-        # print(" \033[0m", d.name," cycle time = ", d.cycleTime)
+    for device in tsn.devices:
+        cycle = 0
+        for s in device.egressPort:
+            cycle += s.stream_bandwidth/device.speed
+        device.cycleTime = cycle
+        # print(" \033[0m", device.name," cycle time = ", device.cycleTime)
 
 
 def add_priority_to_streams(tsn):
