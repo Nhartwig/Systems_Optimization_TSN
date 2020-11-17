@@ -1,0 +1,21 @@
+<solution tc_name="TC4_split_and_merge">
+	<stream id="Stream0">
+		<route>
+			<link src="ES1" dest="SW0" />
+			<link src="SW0" dest="SW2" />
+			<link src="SW2" dest="ES2" />
+		</route>
+		<route>
+			<link src="ES1" dest="SW1" />
+			<link src="SW1" dest="SW2" />
+			<link src="SW2" dest="ES2" />
+		</route>
+	</stream>
+	<stream id="Stream1">
+		<route>
+			<link src="ES1" dest="SW0" />
+			<link src="SW0" dest="SW2" />
+			<link src="SW2" dest="ES2" />
+		</route>
+	</stream>
+</solution>

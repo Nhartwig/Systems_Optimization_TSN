@@ -1,0 +1,30 @@
+<!--
+Use this testcase to check that your bandwidth calculations are correct.
+Beware that the redundant copies of Stream0 merge on link [SW2,ES2] and thus only one copy of them consumes bandwidth there
+-->
+<NetworkDescription>
+    <!-- Expected order: devices, links, streams-->
+
+    <device name="SW0" type="Switch"/>
+    <device name="SW1" type="Switch"/>
+    <device name="SW2" type="Switch"/>
+
+    <device name="ES1" type="EndSystem"/>
+    <device name="ES2" type="EndSystem"/>
+
+    <!-- Links are directional-->
+    <!-- speed = byte/us-->
+    <!-- 1.25B/us = 10 Mbit/s -->
+    <link src="ES1" dest="SW0" speed="1.25"/>
+    <link src="ES1" dest="SW1" speed="1.25"/>
+
+    <link src="SW0" dest="SW2" speed="1.25"/>
+    <link src="SW1" dest="SW2" speed="1.25"/>
+
+    <link src="SW2" dest="ES2" speed="1.25"/>
+
+    <!-- times in us -->
+    <stream id="Stream0" src="ES1" dest="ES2" size="100" period="1000" deadline="10000" rl="2"/>
+    <stream id="Stream1" src="ES1" dest="ES2" size="200" period="1000" deadline="10000" rl="1"/>
+
+</NetworkDescription>
