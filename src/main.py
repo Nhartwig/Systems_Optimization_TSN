@@ -102,7 +102,7 @@ generateGraphImage(N)  # generate graph image with input only the devices names
 
 simulated_annealing(tsn)  # run simulated annealing algorithm
 
-printSolution(tsn)  # print solution
+# printSolution(tsn)  # print solution
 
 outputSolutionXML(tsn, filename)  # output results to xml file
 

@@ -20,7 +20,7 @@ def simulated_annealing(tsn):
         cost0 = tsn.linksCost()
 
         i += 1
-        if not i % 10:
+        if not i % 1:
             print("iteration i ", 100 * i, "cost = ", round(cost0, 1))
 
         for j in range(100):

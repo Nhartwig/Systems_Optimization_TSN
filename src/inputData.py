@@ -97,7 +97,8 @@ class TSN:
             wct += self.stream_wct(s)
 
         self.resetLinkBandwidth()
-        return 10*cost + 5*self.similarLinks() + wct
+        similarity = self.similarLinks()
+        return cost + similarity + wct
 
     ## Calculates the similar links between the different routes for the critical streams
     #
@@ -121,7 +122,7 @@ class TSN:
             if l.src.type == "Switch":
                 if l.src.cycleTime > max:
                     max = l.src.cycleTime 
-        return max * (math.floor(len(s.solution_links)/s.rl) + 1)
+        return max
 
 
     ## Resets links used bandwidth
@@ -192,7 +193,7 @@ class Stream:
     #
     # @return has no return
     def findRoutes(self, graph):
-        route = nx.all_simple_paths(graph, self.src, self.dest, cutoff=10)
+        route = nx.all_simple_paths(graph, self.src, self.dest, cutoff=15)
         for r in route:
             self.routes.append(r)
 
