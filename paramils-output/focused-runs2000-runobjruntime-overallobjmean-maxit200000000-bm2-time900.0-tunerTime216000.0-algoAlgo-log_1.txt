@@ -28,8 +28,43 @@ New Incumbent: 0, 100000000 [0, 0]. With state coolFactor=0.003, startTemp=1000
  Same incumbent, new precision:
 New Incumbent: 900.0000000000001, 900.0010000000001 [1, 900.0]. With state coolFactor=0.003, startTemp=1000
 2/100000000, 1800.0000000000002/216000.0
-          -> Take improving step to random coolFactor=0.006..0.1 startTemp=100 (900.0010000000001 [based on 1 runs with cutoff 900.0])
+          -> Take improving step to random coolFactor=0.072 startTemp=300 (900.0010000000001 [based on 1 runs with cutoff 900.0])
 
 3/100000000, 2700.0000000000005/216000.0
-          -> Take improving step to random coolFactor=0.001 startTemp=10000..1000000 (900.0010000000001 [based on 1 runs with cutoff 900.0])
+          -> Take improving step to random coolFactor=0.0905 startTemp=500 (900.0010000000001 [based on 1 runs with cutoff 900.0])
 
+4/100000000, 3600.0000000000005/216000.0
+          -> Take improving step to random coolFactor=0.012 startTemp=2000 (900.0010000000001 [based on 1 runs with cutoff 900.0])
+
+5/100000000, 4500.000000000001/216000.0
+          -> Take improving step to random coolFactor=0.072 startTemp=400 (900.0010000000001 [based on 1 runs with cutoff 900.0])
+
+6/100000000, 5400.000000000001/216000.0
+          -> Take improving step to random coolFactor=0.0515 startTemp=500 (900.0010000000001 [based on 1 runs with cutoff 900.0])
+
+7/100000000, 6300.000000000001/216000.0
+          -> Take improving step to random coolFactor=0.0785 startTemp=300 (900.0010000000001 [based on 1 runs with cutoff 900.0])
+
+8/100000000, 7200.000000000001/216000.0
+          -> Take improving step to random coolFactor=0.061 startTemp=100 (900.0010000000001 [based on 1 runs with cutoff 900.0])
+
+9/100000000, 8100.000000000001/216000.0
+          -> Take improving step to random coolFactor=0.0505 startTemp=100 (900.0010000000001 [based on 1 runs with cutoff 900.0])
+
+10/100000000, 9000.000000000002/216000.0
+          -> Take improving step to random coolFactor=0.0875 startTemp=300 (900.0010000000001 [based on 1 runs with cutoff 900.0])
+
+11/100000000, 9900.000000000002/216000.0
+          -> Take improving step to random coolFactor=0.0735 startTemp=400 (900.0010000000001 [based on 1 runs with cutoff 900.0])
+
+   BLS in iteration 1, start with coolFactor=0.0735 startTemp=400 (900.0010000000001 [based on 1 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.0735->0.0795"], evaluating ...
+12/100000000, 10800.000000000002/216000.0
+          -> Take improving step to neighbour coolFactor=0.0795 startTemp=400 (900.0010000000001 [based on 1 runs with cutoff 900.0]) with flip 1
+
+          
+============= Performing 1 bonus runs of state: coolFactor=0.0795 startTemp=400 (900.0010000000001 [based on 1 runs with cutoff 900.0]) ============ 
+
+State wants more detail (1+1) than incumbent (1), doing incumbent first:
+coolFactor=0.0795 startTemp=400 (900.0010000000001 [based on 1 runs with cutoff 900.0])
+coolFactor=0.003 startTemp=1000 (900.0010000000001 [based on 1 runs with cutoff 900.0])
