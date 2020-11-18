@@ -1,0 +1,21 @@
+execdir = src/
+
+outdir = paramils-output
+
+algo = python3 algo_wrapper.py
+
+paramfile = my_params.txt
+
+instance_file = my_train_instances.txt
+test_instance_file = my_test_instances.txt
+
+run_obj = runtime
+
+overall_obj = mean
+
+cutoff_time = 900
+
+cutoff_length = max
+
+tunerTimeout = 216000
+

@@ -35,7 +35,7 @@ def createGraph(tsn_object):
     return graph, names
 
 
-def findStreamsRoutes(tsn):
+def findStreamsRoutes(tsn, G):
     for stream in tsn.streams:
         stream.findRoutes(G)
         stream.initial_solution()
@@ -94,56 +94,66 @@ def check_input_cooling(x):
         raise ValueError('cooling factor must be in range 0 to 1 (exclusive)')
     return num
 
+def run_evaluation(filename, cutoff_time, seed, coolFactor, startTemp):
+    # not sure if we need to use seed
+    tsn = TSN(filename)
+    G, N = createGraph(tsn)
+    findStreamsRoutes(tsn, G)
+    printStreamRoutes(tsn)
+    generateGraphImage(N)
+    return simulated_annealing(tsn, startTemp, coolFactor, cutoff_time)
 
-parser = argparse.ArgumentParser()
-parser.add_argument('-filename', action='store', default='../test_cases/TC5_large1.xml', choices= ['../test_cases/TC3_medium.xml'
-                                                                                                ,'../test_cases/TC3_extended.xml'
-                                                                                                ,'../test_cases/TC1_check_red.xml'
-                                                                                                ,'../test_cases/TC0_example.xml'
-                                                                                                ,'../test_cases/TC5_large1.xml'
-                                                                                                ,'../test_cases/TC7_huge.xml'
-                                                                                                ,'../test_cases/TCX0_multicast.xml'],
-                    help = 'a filename for the problem instance')
 
-parser.add_argument('-startTemp', action='store', default=1000, type=check_input_temp, help = 'initial temperature for SA algo')
-parser.add_argument('-coolFactor', action='store', default=0.03, type=check_input_cooling,help = 'the temperature decline factor of the algo')
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    # choices= ['../test_cases/TC3_medium.xml'
+    # ,'../test_cases/TC3_extended.xml'
+    # ,'../test_cases/TC1_check_red.xml'
+    # ,'../test_cases/TC0_example.xml'
+    # ,'../test_cases/TC5_large1.xml'
+    # ,'../test_cases/TC7_huge.xml'
+    # ,'../test_cases/TCX0_multicast.xml'],
+    parser.add_argument('filename', action='store', default='../test_cases/TC5_large1.xml', help = 'a filename for the problem instance')
+    parser.add_argument('-startTemp', action='store', default=1000, type=check_input_temp, help = 'initial temperature for SA algo')
+    parser.add_argument('-coolFactor', action='store', default=0.03, type=check_input_cooling,help = 'the temperature decline factor of the algo')
 
-args = parser.parse_args()
-filename = args.filename
-startTemp = float(args.startTemp)
-coolFactor = float(args.coolFactor)
+    args = parser.parse_args()
+    filename = args.filename
+    startTemp = float(args.startTemp)
+    coolFactor = float(args.coolFactor)
 
-# filename = '../test_cases/TC3_medium.xml'
-# filename = '../test_cases/TC3_extended.xml'
-# filename = '../test_cases/TC1_check_red.xml'
-# filename = '../test_cases/TC0_example.xml'
-# filename = '../test_cases/TC5_large1.xml'
-# filename = '../test_cases/TC7_huge.xml'
-# filename = '../test_cases/TCX0_multicast.xml'
+    # filename = '../test_cases/TC3_medium.xml'
+    # filename = '../test_cases/TC3_extended.xml'
+    # filename = '../test_cases/TC1_check_red.xml'
+    # filename = '../test_cases/TC0_example.xml'
+    # filename = '../test_cases/TC5_large1.xml'
+    # filename = '../test_cases/TC7_huge.xml'
+    # filename = '../test_cases/TCX0_multicast.xml'
 
-tsn = TSN(filename)  # create tsn object
+    tsn = TSN(filename)  # create tsn object
 
-G, N = createGraph(tsn)  # createGraph(tsn) returns two graphs, one with device objects as nodes
-# and one with device objects names as nodes
+    G, N = createGraph(tsn)  # createGraph(tsn) returns two graphs, one with device objects as nodes
+    # and one with device objects names as nodes
 
-findStreamsRoutes(tsn)  # we find for each stream the possible routes and create our initial solution
+    findStreamsRoutes(tsn, G)  # we find for each stream the possible routes and create our initial solution
 
-printStreamRoutes(tsn)
+    printStreamRoutes(tsn)
 
-generateGraphImage(N)  # generate graph image with input only the devices names
+    generateGraphImage(N)  # generate graph image with input only the devices names
 
-start_time = datetime.datetime.now().strftime("%d %B %Y %X")
-simulated_annealing(tsn, startTemp, coolFactor)  # run simulated annealing algorithm
+    start_time = datetime.datetime.now().strftime("%d %B %Y %X")
+    (status, runtime, cost, seed) = simulated_annealing(tsn, startTemp, coolFactor)  # run simulated annealing algorithm
+    print("Cost:", cost, "Runtime (seconds): ", runtime)
 
-# printSolution(tsn)  # print solution
+    # printSolution(tsn)  # print solution
 
-outputSolutionXML(tsn, filename, start_time)  # output results to xml file
+    outputSolutionXML(tsn, filename, start_time)  # output results to xml file
 
-worst_case_delay(tsn)
+    worst_case_delay(tsn)
 
-for device in tsn.devices:
-    if device.type == "Switch":
-        print(" \033[0m", device.name," cycle time = ", round(device.cycleTime, 3))
+    for device in tsn.devices:
+        if device.type == "Switch":
+            print(" \033[0m", device.name," cycle time = ", round(device.cycleTime, 3))
 
-for s in tsn.streams:
-    print(s.id, " route lenght = ", math.ceil(len(s.solution_links)/s.rl), "worst cycle delay = ", round(tsn.stream_wct(s), 3))
+    for s in tsn.streams:
+        print(s.id, " route lenght = ", math.ceil(len(s.solution_links)/s.rl), "worst cycle delay = ", round(tsn.stream_wct(s), 3))

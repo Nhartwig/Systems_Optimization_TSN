@@ -1,0 +1,7 @@
+/home/nate/sys_opt/Systems_Optimization_TSN/test_cases/TC0_example.xml
+/home/nate/sys_opt/Systems_Optimization_TSN/test_cases/TC1_check_red.xml
+/home/nate/sys_opt/Systems_Optimization_TSN/test_cases/TC2_check_bw.xml
+/home/nate/sys_opt/Systems_Optimization_TSN/test_cases/TC3_extended.xml
+/home/nate/sys_opt/Systems_Optimization_TSN/test_cases/TC3_medium.xml
+/home/nate/sys_opt/Systems_Optimization_TSN/test_cases/TC5_large1.xml
+/home/nate/sys_opt/Systems_Optimization_TSN/test_cases/TC6_large2.xml

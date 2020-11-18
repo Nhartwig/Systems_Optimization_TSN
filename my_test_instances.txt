@@ -1,0 +1,3 @@
+/home/nate/sys_opt/Systems_Optimization_TSN/test_cases/TCX0_multicast.xml
+/home/nate/sys_opt/Systems_Optimization_TSN/test_cases/TCX1_multicast_medium.xml
+/home/nate/sys_opt/Systems_Optimization_TSN/test_cases/TC7_huge.xml

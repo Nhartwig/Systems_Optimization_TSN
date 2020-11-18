@@ -1,0 +1,54 @@
+Call: /usr/bin/ruby ../scripts/param_ils_2_3_run.rb "-numRun" "1" "-scenariofile" "my_scenario.txt" "-validN" "100"
+
+
+seed: 2468
+algo: python3 algo_wrapper.py
+tunerTimeout (CPU time): 216000.0
+maxWallTime: 8640000.0
+maxEvals: 100000000
+run_obj: qual
+overall_obj: mean
+instance_file: my_train_instances.txt
+test_instance_file: my_test_instances.txt
+N: 2000
+cutoff_time: 900.0
+cutoff_length: 2147483647
+R: 10
+pertubation_strength_basic: 
+pertubation_strength_scaling: false
+p_restart: 0.01
+Run 2
+Level 
+========================================================
+Starting ILS for level 1, i.e. a limit of N=2000, and cutoff time=900.0.
+Current CPU time = 0, this run goes until 216000.0 
+========================================================
+New Incumbent: 0, 100000000 [0, 0]. With state coolFactor=0.003, startTemp=1000
+1/100000000, 900.0000000000001/216000.0
+ Same incumbent, new precision:
+New Incumbent: 900.0000000000001, 1.0e+100 [1, 900.0]. With state coolFactor=0.003, startTemp=1000
+2/100000000, 1800.0000000000002/216000.0
+          -> Take improving step to random coolFactor=0.006..0.1 startTemp=100 (1.0e+100 [based on 1 runs with cutoff 900.0])
+
+3/100000000, 2700.0000000000005/216000.0
+          -> Take improving step to random coolFactor=0.001 startTemp=10000..1000000 (1.0e+100 [based on 1 runs with cutoff 900.0])
+
+4/100000000, 3600.0000000000005/216000.0
+          -> Take improving step to random coolFactor=0.001 startTemp=100 (1.0e+100 [based on 1 runs with cutoff 900.0])
+
+5/100000000, 4500.000000000001/216000.0
+          -> Take improving step to random coolFactor=0.006..0.1 startTemp=1000 (1.0e+100 [based on 1 runs with cutoff 900.0])
+
+State wants more detail (1+1) than incumbent (1), doing incumbent first:
+coolFactor=0.006..0.1 startTemp=1000 (1.0e+100 [based on 1 runs with cutoff 900.0])
+coolFactor=0.003 startTemp=1000 (1.0e+100 [based on 1 runs with cutoff 900.0])
+6/100000000, 5400.000000000001/216000.0
+ Same incumbent, new precision:
+New Incumbent: 5400.000000000001, 1.0e+100 [2, 900.0]. With state coolFactor=0.003, startTemp=1000
+7/100000000, 6300.000000000001/216000.0
+8/100000000, 7200.000000000001/216000.0
+          -> Take improving step to random coolFactor=0.001 startTemp=100 (1.0e+100 [based on 2 runs with cutoff 900.0])
+
+State wants more detail (2+1) than incumbent (2), doing incumbent first:
+coolFactor=0.001 startTemp=100 (1.0e+100 [based on 2 runs with cutoff 900.0])
+coolFactor=0.003 startTemp=1000 (1.0e+100 [based on 2 runs with cutoff 900.0])

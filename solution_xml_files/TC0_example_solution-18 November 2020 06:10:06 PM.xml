@@ -1,0 +1,18 @@
+<solution tc_name="TC0_example">
+    <stream id="Stream0">
+        <route>
+            <link dest="SW1" src="ES1" />
+            <link dest="ES3" src="SW1" />
+        </route>
+    </stream>
+    <stream id="Stream1">
+        <route>
+            <link dest="SW1" src="ES2" />
+            <link dest="ES4" src="SW1" />
+        </route>
+        <route>
+            <link dest="SW0" src="ES2" />
+            <link dest="ES4" src="SW0" />
+        </route>
+    </stream>
+</solution>
