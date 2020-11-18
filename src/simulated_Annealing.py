@@ -1,5 +1,6 @@
 import numpy as np
 import random
+from worst_case_delay import worst_case_delay
 
 
 def simulated_annealing(tsn):
@@ -7,16 +8,20 @@ def simulated_annealing(tsn):
     r = 0.03  # Set t declining factor
     i = 0
     print("\n")
+
+    worst_case_delay(tsn)
     cost0 = tsn.linksCost()
     tsn.save_Solution(cost0)
 
     while T > 1:  # Set loops
         T = T * (1 - r)
+
+        worst_case_delay(tsn)
         cost0 = tsn.linksCost()
 
         i += 1
-        if not i % 10:
-            print("iteration i ", 100 * i, "cost = ", round(cost0, 4))
+        if not i % 1:
+            print("iteration i ", 100 * i, "cost = ", round(cost0, 1))
 
         for j in range(100):
             # exchange two random tasks from two random cores and get a new neighbour solution

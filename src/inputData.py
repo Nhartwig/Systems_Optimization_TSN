@@ -1,6 +1,7 @@
 import xml.etree.ElementTree as ET
 import networkx as nx
 import random
+import math
 
 
 class TSN:
@@ -90,11 +91,14 @@ class TSN:
     # @return The cost (depending on the bandwidth used) multiplied by the Link similarity of critical streams, more bandwidth used the higher the cost value.
     def linksCost(self):
         cost = 0
+        wct = 0
         for s in self.streams:
             cost += s.stream_cost(self)
+            wct += self.stream_wct(s)
 
         self.resetLinkBandwidth()
-        return cost * self.similarLinks()
+        similarity = self.similarLinks()
+        return cost + similarity + wct
 
     ## Calculates the similar links between the different routes for the critical streams
     #
@@ -110,6 +114,16 @@ class TSN:
                         if link_1 == link_2:
                             similarity_links += 1
         return similarity_links
+
+
+    def stream_wct(self, s):
+        max = 0
+        for l in s.solution_links:
+            if l.src.type == "Switch":
+                if l.src.cycleTime > max:
+                    max = l.src.cycleTime 
+        return max
+
 
     ## Resets links used bandwidth
     #
@@ -140,6 +154,11 @@ class Device:
         self.name = name
         self.type = type
         self.vertices = []
+        self.speed = 0
+        self.egressPort = []        #contains the streams that are using the switch devices
+        self.cycleTime  = 0
+        
+        
 
 
 class Link:
@@ -149,6 +168,8 @@ class Link:
         self.dest = dest_device
         self.bandwidth = speed * 8
         self.used_bandwidth = 0
+        self.src.speed = speed * 8     #Mbit/s which is the bandwidth size of the link
+        
 
 
 class Stream:
@@ -166,12 +187,13 @@ class Stream:
         self.solution_routes = []
         self.saved_solution_routes = []
         self.solution_links = []
+        self.priority = 0
 
     ## Find all the possible routes for the stream from its source to destination with maximum length of 'cutoff = 8' links
     #
     # @return has no return
     def findRoutes(self, graph):
-        route = nx.all_simple_paths(graph, self.src, self.dest, cutoff=8)
+        route = nx.all_simple_paths(graph, self.src, self.dest, cutoff=15)
         for r in route:
             self.routes.append(r)
 
@@ -201,7 +223,6 @@ class Stream:
                 for link in tsn.links:
                     if (link.src == src_device) and (link.dest == dest_device):
                         self.solution_links.append(link)
-                        # print("link src, dest = (", link.src.name, " ,", link.dest.name, " )")
 
     ##  Calculates the cost of a stream depending of the bandwidth used.
     #
