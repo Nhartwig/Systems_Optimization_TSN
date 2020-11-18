@@ -20,7 +20,7 @@ def indent(elem, level=0):
         if level and (not elem.tail or not elem.tail.strip()):
             elem.tail = i
 
-def outputSolutionXML(tsn, filename="default.xml"):
+def outputSolutionXML(tsn, filename="default.xml", start_time=''):
     """
     Outputs TSN solution to XML file called "solution.xml", located in same directory.
     :param TSN:
@@ -50,5 +50,5 @@ def outputSolutionXML(tsn, filename="default.xml"):
     indent(root)
     tree = ET.ElementTree(root)
 
-    with open('../solution_xml_files/'+test_case+'_solution.xml', "wb") as files:
+    with open('../solution_xml_files/'+test_case+'_solution-'+start_time+'.xml', "wb") as files:
         tree.write(files, encoding="utf-8")

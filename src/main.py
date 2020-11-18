@@ -10,6 +10,8 @@ import networkx as nx
 import sys
 import os
 import math
+import datetime
+import argparse
 from matplotlib import pyplot as plt
 from inputData import *
 from simulated_Annealing import *
@@ -62,24 +64,54 @@ def printSolution(tsn):
     for s in tsn.streams:
         s.printRouteLinks(tsn)
 
-def parsing_input(args):
-    folderPath = "../test_cases/"
+# def parsing_input(args):
+#     folderPath = "../test_cases/"
+#
+#     if not args:
+#         args.append("../test_cases/TC5_large1.xml")
+#         filename = folderPath + args[0]
+#     else:
+#         filename = folderPath + args[0]
+#
+#     if os.path.exists(filename):
+#         print("exists")
+#         return filename
+#     else:
+#         sys.exit("\33[91mWrong file argument enter one of these: \33[93m \nTC0_example.xml \nTC1_check_red.xml \nTC2_check_bw.xml  \nTC3_medium.xml \nTC3_extended.xml  \nTC5_large1.xml \nTC6_large2.xml \nTC7_huge.xml \33[0m")
+#     return filename
+#
+# filename = parsing_input(sys.argv[1:])
 
-    if not args:
-        args.append("../test_cases/TC5_large1.xml")
-        filename = folderPath + args[0]
-    else:
-        filename = folderPath + args[0]
-    
-    if os.path.exists(filename):
-        print("exists")
-        return filename
-    else:
-        sys.exit("\33[91mWrong file argument enter one of these: \33[93m \nTC0_example.xml \nTC1_check_red.xml \nTC2_check_bw.xml  \nTC3_medium.xml \nTC3_extended.xml  \nTC5_large1.xml \nTC6_large2.xml \nTC7_huge.xml \33[0m")
-    return filename
+def check_input_temp(x):
+    num = float(x)
+    if num<0:
+        raise ValueError('negative start temperatures not allowed')
+    return num
+
+def check_input_cooling(x):
+    num = float(x)
+    if (num<=0) or (num>=1):
+        raise ValueError('cooling factor must be in range 0 to 1 (exclusive)')
+    return num
 
 
-filename = parsing_input(sys.argv[1:])
+parser = argparse.ArgumentParser()
+parser.add_argument('-filename', action='store', default='../test_cases/TC5_large1.xml', choices= ['../test_cases/TC3_medium.xml'
+                                                                                                ,'../test_cases/TC3_extended.xml'
+                                                                                                ,'../test_cases/TC1_check_red.xml'
+                                                                                                ,'../test_cases/TC0_example.xml'
+                                                                                                ,'../test_cases/TC5_large1.xml'
+                                                                                                ,'../test_cases/TC7_huge.xml'
+                                                                                                ,'../test_cases/TCX0_multicast.xml'],
+                    help = 'a filename for the problem instance')
+
+parser.add_argument('-startTemp', action='store', default=1000, type=check_input_temp, help = 'initial temperature for SA algo')
+parser.add_argument('-coolFactor', action='store', default=0.03, type=check_input_cooling,help = 'the temperature decline factor of the algo')
+
+args = parser.parse_args()
+filename = args.filename
+startTemp = float(args.startTemp)
+coolFactor = float(args.coolFactor)
 
 # filename = '../test_cases/TC3_medium.xml'
 # filename = '../test_cases/TC3_extended.xml'
@@ -100,11 +132,12 @@ printStreamRoutes(tsn)
 
 generateGraphImage(N)  # generate graph image with input only the devices names
 
-simulated_annealing(tsn)  # run simulated annealing algorithm
+start_time = datetime.datetime.now().strftime("%d %B %Y %X")
+simulated_annealing(tsn, startTemp, coolFactor)  # run simulated annealing algorithm
 
 # printSolution(tsn)  # print solution
 
-outputSolutionXML(tsn, filename)  # output results to xml file
+outputSolutionXML(tsn, filename, start_time)  # output results to xml file
 
 worst_case_delay(tsn)
 

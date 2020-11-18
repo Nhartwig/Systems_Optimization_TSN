@@ -3,9 +3,11 @@ import random
 from worst_case_delay import worst_case_delay
 
 
-def simulated_annealing(tsn):
-    T = 1000  # Set
-    r = 0.03  # Set t declining factor
+def simulated_annealing(tsn, startTemp=1000, coolFactor=1):
+    # T = 1000  # Set
+    # r = 0.03  # Set t declining factor
+    T = startTemp
+    r = coolFactor
     i = 0
     print("\n")
 
