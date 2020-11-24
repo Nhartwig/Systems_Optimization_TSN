@@ -66,13 +66,12 @@ def parsing_input(args):
     folderPath = "../test_cases/"
 
     if not args:
-        args.append("../test_cases/TC5_large1.xml")
+        args.append("../test_cases/TC3_medium.xml")
         filename = folderPath + args[0]
     else:
         filename = folderPath + args[0]
     
     if os.path.exists(filename):
-        print("exists")
         return filename
     else:
         sys.exit("\33[91mWrong file argument enter one of these: \33[93m \nTC0_example.xml \nTC1_check_red.xml \nTC2_check_bw.xml  \nTC3_medium.xml \nTC3_extended.xml  \nTC5_large1.xml \nTC6_large2.xml \nTC7_huge.xml \33[0m")
@@ -81,36 +80,26 @@ def parsing_input(args):
 
 filename = parsing_input(sys.argv[1:])
 
-# filename = '../test_cases/TC3_medium.xml'
-# filename = '../test_cases/TC3_extended.xml'
-# filename = '../test_cases/TC1_check_red.xml'
-# filename = '../test_cases/TC0_example.xml'
-# filename = '../test_cases/TC5_large1.xml'
-# filename = '../test_cases/TC7_huge.xml'
-# filename = '../test_cases/TCX0_multicast.xml'
+tsn = TSN(filename)         # create tsn object
 
-tsn = TSN(filename)  # create tsn object
+G, N = createGraph(tsn)     # createGraph(tsn) returns two graphs, one with device objects as nodes
+                            # and one with device objects names as nodes
 
-G, N = createGraph(tsn)  # createGraph(tsn) returns two graphs, one with device objects as nodes
-# and one with device objects names as nodes
+findStreamsRoutes(tsn)      # we find for each stream the possible routes and create our initial solution
 
-findStreamsRoutes(tsn)  # we find for each stream the possible routes and create our initial solution
+# printStreamRoutes(tsn)
 
-printStreamRoutes(tsn)
+generateGraphImage(N)       # generate graph image with input only the devices names
 
-generateGraphImage(N)  # generate graph image with input only the devices names
+simulated_annealing(tsn)    # run simulated annealing algorithm
 
-simulated_annealing(tsn)  # run simulated annealing algorithm
-
-# printSolution(tsn)  # print solution
+printSolution(tsn)          # print solution
 
 outputSolutionXML(tsn, filename)  # output results to xml file
 
-worst_case_delay(tsn)
+# for device in tsn.devices:
+#     if device.type == "Switch":
+#         print(" \033[0m", device.name," cycle time = ", round(device.cycleTime, 3))
 
-for device in tsn.devices:
-    if device.type == "Switch":
-        print(" \033[0m", device.name," cycle time = ", round(device.cycleTime, 3))
-
-for s in tsn.streams:
-    print(s.id, " route lenght = ", math.ceil(len(s.solution_links)/s.rl), "worst cycle delay = ", round(tsn.stream_wct(s), 3))
+# for s in tsn.streams:
+#     print(s.id, " route lenght = ", math.ceil(len(s.solution_links)/s.rl), "worst cycle delay = ", round(tsn.stream_wct(s), 3))

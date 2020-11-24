@@ -5,7 +5,7 @@ from worst_case_delay import worst_case_delay
 
 def simulated_annealing(tsn):
     T = 1000  # Set
-    r = 0.03  # Set t declining factor
+    r = 0.05  # Set t declining factor
     i = 0
     print("\n")
 
@@ -30,6 +30,7 @@ def simulated_annealing(tsn):
                 r1, r2 = s1.random_exchange(s1)  # From random stream s1 exchange 2 routes from solution and possible routes
 
             # Get the new cost
+            worst_case_delay(tsn)
             cost1 = tsn.linksCost()
 
             if cost1 < cost0:

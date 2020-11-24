@@ -98,8 +98,12 @@ class TSN:
 
         self.resetLinkBandwidth()
         similarity = self.similarLinks()
-        return cost + similarity + wct
-
+        a = cost
+        b = similarity
+        c = wct
+        return 10*a + 5*b + 3*c
+        # return (-a*a + a + a*b + b + b*c + c)/1000
+            
     ## Calculates the similar links between the different routes for the critical streams
     #
     # @return A number that is proportional to how many similar links each stream has (the smaller the better)
