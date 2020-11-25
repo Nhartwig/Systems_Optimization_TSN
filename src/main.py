@@ -66,7 +66,7 @@ def parsing_input(args):
     folderPath = "../test_cases/"
 
     if not args:
-        args.append("../test_cases/TC3_medium.xml")
+        args.append("../test_cases/TC5_large1.xml")
         filename = folderPath + args[0]
     else:
         filename = folderPath + args[0]
@@ -102,4 +102,4 @@ outputSolutionXML(tsn, filename)  # output results to xml file
 #         print(" \033[0m", device.name," cycle time = ", round(device.cycleTime, 3))
 
 # for s in tsn.streams:
-#     print(s.id, " route lenght = ", math.ceil(len(s.solution_links)/s.rl), "worst cycle delay = ", round(tsn.stream_wct(s), 3))
+#     print(s.id, " route lenght = ", math.ceil(len(s.solution_links)/s.rl), "worst cycle delay = ", math.ceil(len(s.solution_links)/s.rl)*round(tsn.stream_wct(s), 3))

@@ -23,7 +23,7 @@ class TSN:
         self.createDeviceObjects(tree.getroot())
         self.createLinkObjects(tree.getroot())
         self.createStreamObjects(tree.getroot())
-        self.savedCost = 100000000  # initial cost
+        self.savedCost = 10000000000  # initial cost
 
     ## Creates the Device Objects
     #
@@ -121,12 +121,25 @@ class TSN:
 
 
     def stream_wct(self, s):
-        max = 0
+        maxWCT = 0                  # maximum worst case time for all switches
         for l in s.solution_links:
             if l.src.type == "Switch":
-                if l.src.cycleTime > max:
-                    max = l.src.cycleTime 
-        return max
+                if l.src.cycleTime > maxWCT:
+                    maxWCT = l.src.cycleTime
+
+        maxRouteLength = 0
+        # finding the route with the maximum number of hops
+        for i in range(0,s.rl):
+            if maxRouteLength < len(s.solution_routes[i]):
+                maxRouteLength = len(s.solution_routes[i])
+
+        worstCaseDelay = maxWCT * maxRouteLength
+        
+        if worstCaseDelay > s.period:
+            print("OVERFLOW")
+            return 10000000
+
+        return 0
 
 
     ## Resets links used bandwidth

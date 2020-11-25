@@ -5,7 +5,7 @@ def worst_case_delay(tsn):
     for device in tsn.devices:
         cycle = 0
         for s in device.egressPort:
-            cycle += s.size/device.speed
+            cycle += s.stream_bandwidth/device.speed
         device.cycleTime = cycle
         # print(" \033[0m", device.name," cycle time = ", device.cycleTime)
 
