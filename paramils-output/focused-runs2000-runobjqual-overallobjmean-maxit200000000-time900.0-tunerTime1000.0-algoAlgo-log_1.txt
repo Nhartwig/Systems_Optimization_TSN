@@ -1,0 +1,140 @@
+Call: /usr/bin/ruby ../scripts/param_ils_2_3_run.rb "-numRun" "1" "-scenariofile" "my_scenario.txt" "-validN" "10"
+
+
+seed: 2468
+algo: python3 algo_wrapper.py
+tunerTimeout (CPU time): 1000.0
+maxWallTime: 8640000.0
+maxEvals: 100000000
+run_obj: qual
+overall_obj: mean
+instance_file: my_train_instances.txt
+test_instance_file: my_test_instances.txt
+N: 2000
+cutoff_time: 900.0
+cutoff_length: 2147483647
+R: 10
+pertubation_strength_basic: 
+pertubation_strength_scaling: false
+p_restart: 0.01
+Run 2
+Level 
+========================================================
+Starting ILS for level 1, i.e. a limit of N=2000, and cutoff time=900.0.
+Current CPU time = 0, this run goes until 1000.0 
+========================================================
+New Incumbent: 0, 100000000 [0, 0]. With state coolFactor=0.03, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 0.6621220111846924, 61.0 [1, 900.0]. With state coolFactor=0.03, startTemp=500
+          -> Take improving step to random coolFactor=0.006 startTemp=500 (61.0 [based on 1 runs with cutoff 900.0])
+
+          -> Take improving step to random coolFactor=0.021 startTemp=1000 (61.0 [based on 1 runs with cutoff 900.0])
+
+          -> Take improving step to random coolFactor=0.012 startTemp=500 (61.0 [based on 1 runs with cutoff 900.0])
+
+          -> Take improving step to random coolFactor=0.03 startTemp=750 (61.0 [based on 1 runs with cutoff 900.0])
+
+          -> Take improving step to random coolFactor=0.024 startTemp=500 (61.0 [based on 1 runs with cutoff 900.0])
+
+State wants more detail (1+1) than incumbent (1), doing incumbent first:
+coolFactor=0.024 startTemp=500 (61.0 [based on 1 runs with cutoff 900.0])
+coolFactor=0.03 startTemp=500 (61.0 [based on 1 runs with cutoff 900.0])
+7/100000000, 36.91809892654419/1000.0
+ Same incumbent, new precision:
+New Incumbent: 36.91809892654419, 4346.666666666666 [2, 900.0]. With state coolFactor=0.03, startTemp=500
+8/100000000, 71.85996341705322/1000.0
+9/100000000, 142.240247964859/1000.0
+          -> Take improving step to random coolFactor=0.012 startTemp=500 (4379.0 [based on 2 runs with cutoff 900.0])
+
+11/100000000, 304.4132013320923/1000.0
+          -> Take improving step to random coolFactor=0.006 startTemp=1000 (4379.0 [based on 2 runs with cutoff 900.0])
+
+13/100000000, 409.3819966316223/1000.0
+New inc: 4157.166666666666
+New Incumbent: 409.3819966316223, 4157.166666666666 [2, 900.0]. With state coolFactor=0.009, startTemp=750
+          -> Take improving step to random coolFactor=0.009 startTemp=750 (4157.166666666666 [based on 2 runs with cutoff 900.0])
+
+15/100000000, 567.5618603229523/1000.0
+        -> Worse random: coolFactor=0.006 startTemp=750 (4214.166666666666 [based on 2 runs with cutoff 900.0])
+17/100000000, 616.6431832313538/1000.0
+        -> Worse random: coolFactor=0.018 startTemp=500 (4270.583333333333 [based on 2 runs with cutoff 900.0])
+   BLS in iteration 1, start with coolFactor=0.009 startTemp=750 (4157.166666666666 [based on 2 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.009->0.021"], evaluating ...
+19/100000000, 660.4729270935059/1000.0
+        -> worse: (4379.0 [based on 2 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.009->0.015"], evaluating ...
+21/100000000, 722.239098072052/1000.0
+        -> worse: (4379.0 [based on 2 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.009->0.018"], evaluating ...
+23/100000000, 773.579104423523/1000.0
+        -> worse: (4348.083333333333 [based on 2 runs with cutoff 900.0])
+    Changing ["startTemp: 750->1000"], evaluating ...
+25/100000000, 877.6007771492004/1000.0
+        -> worse: (4379.0 [based on 2 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.009->0.003"], evaluating ...
+27/100000000, 1176.3745045661926/1000.0
+        -> worse: (4334.833333333333 [based on 2 runs with cutoff 900.0])
+ParamILS has reached the specified CPU time limit of 1000.0 seconds => stopping the search now.
+          
+============= Performing 5 bonus runs of state: coolFactor=0.009 startTemp=750 (4157.166666666666 [based on 2 runs with cutoff 900.0]) ============ 
+
+ParamILS has reached the specified CPU time limit of 1000.0 seconds => stopping the search now.
+          -> After 5 bonus runs for LM: coolFactor=0.009 startTemp=750 (4157.166666666666 [based on 2 runs with cutoff 900.0])
+
+   LM for iteration 1: coolFactor=0.009 startTemp=750 (4157.166666666666 [based on 2 runs with cutoff 900.0])
+
+========== DETAILED RESULTS (iteration 1): ==========
+================================================
+
+==================================================================
+Best parameter configuration found so far (end of iteration 1): coolFactor=0.009, startTemp=750
+==================================================================
+Training quality of this incumbent parameter configuration: 4157.166666666666, based on 2 runs with cutoff 900.0
+==================================================================
+
+Comparing LM against incumbent:
+coolFactor=0.009 startTemp=750 (4157.166666666666 [based on 2 runs with cutoff 900.0])
+coolFactor=0.009 startTemp=750 (4157.166666666666 [based on 2 runs with cutoff 900.0])
+LM better, change incumbent
+New Incumbent: 1176.3745045661926, 4157.166666666666 [2, 900.0]. With state coolFactor=0.009, startTemp=750
+ParamILS has reached the specified CPU time limit of 1000.0 seconds => stopping the search now.
+Final solution for depth 1 with limit N=2000, and cutoff time=900.0.
+New Incumbent: 1176.3745045661926, 4157.166666666666 [2, 900.0]. With state coolFactor=0.009, startTemp=750
+
+==================================================================
+ParamILS is finished.
+==================================================================
+
+Final best parameter configuration found: coolFactor=0.009, startTemp=750
+==================================================================
+Active parameters: coolFactor=0.009, startTemp=750
+
+==================================================================
+Training quality of this final best found parameter configuration: 4157.166666666666, based on 2 runs with cutoff 900.0
+==================================================================
+
+
+==================================================================
+Computing validation result on independent data -- 10 runs with cutoff time 900.0...
+==================================================================
+/home/nate/sys_opt/Systems_Optimization_TSN/test_cases/TCX1_multicast_medium.xml: 1.0e+100
+/home/nate/sys_opt/Systems_Optimization_TSN/test_cases/TCX0_multicast.xml: 36.6
+/home/nate/sys_opt/Systems_Optimization_TSN/test_cases/TC7_huge.xml: 58073.0
+/home/nate/sys_opt/Systems_Optimization_TSN/test_cases/TC7_huge.xml: 57996.833333333336
+/home/nate/sys_opt/Systems_Optimization_TSN/test_cases/TCX1_multicast_medium.xml: 1.0e+100
+/home/nate/sys_opt/Systems_Optimization_TSN/test_cases/TCX0_multicast.xml: 36.6
+/home/nate/sys_opt/Systems_Optimization_TSN/test_cases/TC7_huge.xml: 57964.833333333336
+/home/nate/sys_opt/Systems_Optimization_TSN/test_cases/TCX0_multicast.xml: 36.6
+/home/nate/sys_opt/Systems_Optimization_TSN/test_cases/TCX1_multicast_medium.xml: 1.0e+100
+/home/nate/sys_opt/Systems_Optimization_TSN/test_cases/TCX1_multicast_medium.xml: 1.0e+100
+Combined result: 4.0e+99
+
+================================================================
+Final best parameter configuration: coolFactor=0.009, startTemp=750
+==================================================================
+Active parameters: coolFactor=0.009, startTemp=750
+
+================================================================
+Training quality of this final best found parameter configuration: 4157.166666666666, based on 2 runs with cutoff 900.0
+Test quality of this final best found parameter configuration: 4.0e+99, based on 10 independent runs with cutoff 900.0
+==================================================================

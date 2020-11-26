@@ -15,6 +15,10 @@ def simulated_annealing(tsn, startTemp=1000, coolFactor=1, cutoff_time=900):
     """
     # T = 1000  # Set
     # r = 0.03  # Set t declining factor
+    results_dict = {}
+    iterations = 0
+    temperature_progress = []
+    cost_progress = []
     start_time = time.time()
 
     T = startTemp
@@ -32,17 +36,27 @@ def simulated_annealing(tsn, startTemp=1000, coolFactor=1, cutoff_time=900):
         worst_case_delay(tsn)
         cost0 = tsn.linksCost()
 
+        temperature_progress.append(T)
+        cost_progress.append(cost0)
+
         i += 1
         if not i % 1:
             print("iteration i ", 100 * i, "cost = ", round(cost0, 1))
 
         for j in range(100):
+            iterations = i
+            # temperature_progress.append(T)
+            # cost_progress.append(cost0)
+
             if time.time()-start_time >= cutoff_time:
                 if not cost0:
                     cost = cost1
                 else:
                     cost = cost0
-                return("TIMEOUT", cutoff_time, cost, -1)
+
+                results_dict['Results'] = ("TIMEOUT", cutoff_time, cost, -1)
+                results_dict['Values'] = (iterations, temperature_progress, cost_progress, startTemp, coolFactor)
+                return results_dict
             # exchange two random tasks from two random cores and get a new neighbour solution
             s1 = random.choice(tsn.streams)  # pick a random stream
             if s1.routes:
@@ -70,4 +84,6 @@ def simulated_annealing(tsn, startTemp=1000, coolFactor=1, cutoff_time=900):
     runtime = time.time() - start_time
     # check the memory for the best solution.
     #print("total iterations = ", i * 100, "cost = ", round(cost0, 4))
-    return("SUCCESS", runtime, cost0, -1)
+    results_dict['Results'] = ("SAT", runtime, cost0, 1)
+    results_dict['Values'] = (iterations, temperature_progress, cost_progress, startTemp, coolFactor)
+    return results_dict

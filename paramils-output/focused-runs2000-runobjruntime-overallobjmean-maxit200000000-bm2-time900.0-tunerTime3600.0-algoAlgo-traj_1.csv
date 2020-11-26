@@ -1,0 +1,4 @@
+"Total Time","Mean Performance","Wallclock Time","Incumbent ID","Automatic Configurator Time","Configuration..."
+0.1037, 100000000, 0.0005, 0, 0.1037, coolFactor='0.03', startTemp='500'
+0.7970, 0.692603349685669, 2.6821, 0, 0.1044, coolFactor='0.03', startTemp='500'
+32.2453, 14.310941576957703, 39.2631, 0, 0.1104, coolFactor='0.03', startTemp='500'

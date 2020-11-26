@@ -9,7 +9,7 @@ paramfile = my_params.txt
 instance_file = my_train_instances.txt
 test_instance_file = my_test_instances.txt
 
-run_obj = runtime
+run_obj = qual
 
 overall_obj = mean
 
@@ -17,5 +17,5 @@ cutoff_time = 900
 
 cutoff_length = max
 
-tunerTimeout = 216000
+tunerTimeout = 1000
 

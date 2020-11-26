@@ -101,8 +101,8 @@ def run_evaluation(filename, cutoff_time, seed, coolFactor, startTemp):
     findStreamsRoutes(tsn, G)
     printStreamRoutes(tsn)
     generateGraphImage(N)
-    return simulated_annealing(tsn, startTemp, coolFactor, cutoff_time)
-
+    results_dict = simulated_annealing(tsn, startTemp, coolFactor, cutoff_time)
+    return results_dict
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -142,7 +142,9 @@ if __name__ == "__main__":
     generateGraphImage(N)  # generate graph image with input only the devices names
 
     start_time = datetime.datetime.now().strftime("%d %B %Y %X")
-    (status, runtime, cost, seed) = simulated_annealing(tsn, startTemp, coolFactor)  # run simulated annealing algorithm
+    #(status, runtime, cost, seed) = simulated_annealing(tsn, startTemp, coolFactor)  # run simulated annealing algorithm
+    results_dict = simulated_annealing(tsn, startTemp, coolFactor)  # run simulated annealing algorithm
+    (status, runtime, cost, seed) = results_dict['Results']
     print("Cost:", cost, "Runtime (seconds): ", runtime)
 
     # printSolution(tsn)  # print solution
