@@ -17,5 +17,6 @@ cutoff_time = 900
 
 cutoff_length = max
 
-tunerTimeout = 1000
+tunerTimeout = 21600
+
 

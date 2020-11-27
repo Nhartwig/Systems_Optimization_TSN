@@ -1,6 +1,6 @@
-Final best parameter configuration: coolFactor=0.009, startTemp=750
+Final best parameter configuration: coolFactor=0.024, startTemp=500
 ==================================================================
-Active parameters: coolFactor=0.009, startTemp=750
+Active parameters: coolFactor=0.024, startTemp=500
 ==================================================================
-Training quality of this final best found parameter configuration: 4157.166666666666, based on 2 runs with cutoff 900.0
-Test quality of this final best found parameter configuration: 4.0e+99, based on 10 independent runs with cutoff 900.0
+Training quality of this final best found parameter configuration: 3169.4128888888886, based on 3 runs with cutoff 900.0
+Test quality of this final best found parameter configuration: 29337.400000000005, based on 10 independent runs with cutoff 900.0

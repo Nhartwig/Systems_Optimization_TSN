@@ -1,0 +1,2365 @@
+Call: /usr/bin/ruby ../scripts/param_ils_2_3_run.rb "-numRun" "1" "-scenariofile" "my_scenario.txt" "-validN" "20"
+
+
+seed: 2468
+algo: python3 algo_wrapper.py
+tunerTimeout (CPU time): 21600.0
+maxWallTime: 8640000.0
+maxEvals: 100000000
+run_obj: qual
+overall_obj: mean
+instance_file: my_train_instances.txt
+test_instance_file: my_test_instances.txt
+N: 2000
+cutoff_time: 900.0
+cutoff_length: 2147483647
+R: 10
+pertubation_strength_basic: 
+pertubation_strength_scaling: false
+p_restart: 0.01
+Run 2
+Level 
+========================================================
+Starting ILS for level 1, i.e. a limit of N=2000, and cutoff time=900.0.
+Current CPU time = 0, this run goes until 21600.0 
+========================================================
+New Incumbent: 0, 100000000 [0, 0]. With state coolFactor=0.03, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 0.44841551780700684, 61.0 [1, 900.0]. With state coolFactor=0.03, startTemp=500
+          -> Take improving step to random coolFactor=0.006 startTemp=500 (61.0 [based on 1 runs with cutoff 900.0])
+
+          -> Take improving step to random coolFactor=0.021 startTemp=1000 (61.0 [based on 1 runs with cutoff 900.0])
+
+          -> Take improving step to random coolFactor=0.012 startTemp=500 (61.0 [based on 1 runs with cutoff 900.0])
+
+          -> Take improving step to random coolFactor=0.03 startTemp=750 (61.0 [based on 1 runs with cutoff 900.0])
+
+          -> Take improving step to random coolFactor=0.024 startTemp=500 (61.0 [based on 1 runs with cutoff 900.0])
+
+State wants more detail (1+1) than incumbent (1), doing incumbent first:
+coolFactor=0.024 startTemp=500 (61.0 [based on 1 runs with cutoff 900.0])
+coolFactor=0.03 startTemp=500 (61.0 [based on 1 runs with cutoff 900.0])
+7/100000000, 19.143970251083374/21600.0
+ Same incumbent, new precision:
+New Incumbent: 19.143970251083374, 4379.0 [2, 900.0]. With state coolFactor=0.03, startTemp=500
+8/100000000, 36.83165669441223/21600.0
+9/100000000, 72.23400330543518/21600.0
+          -> Take improving step to random coolFactor=0.012 startTemp=500 (4379.0 [based on 2 runs with cutoff 900.0])
+
+11/100000000, 152.89159107208252/21600.0
+          -> Take improving step to random coolFactor=0.006 startTemp=1000 (4379.0 [based on 2 runs with cutoff 900.0])
+
+13/100000000, 204.3295521736145/21600.0
+          -> Take improving step to random coolFactor=0.009 startTemp=750 (4379.0 [based on 2 runs with cutoff 900.0])
+
+15/100000000, 281.79344487190247/21600.0
+          -> Take improving step to random coolFactor=0.006 startTemp=750 (4379.0 [based on 2 runs with cutoff 900.0])
+
+17/100000000, 306.3878688812256/21600.0
+New inc: 4348.5
+New Incumbent: 306.3878688812256, 4348.5 [2, 900.0]. With state coolFactor=0.018, startTemp=500
+          -> Take improving step to random coolFactor=0.018 startTemp=500 (4348.5 [based on 2 runs with cutoff 900.0])
+
+   BLS in iteration 1, start with coolFactor=0.018 startTemp=500 (4348.5 [based on 2 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.018->0.021"], evaluating ...
+19/100000000, 326.98307728767395/21600.0
+New inc: 4182.166666666666
+New Incumbent: 326.98307728767395, 4182.166666666666 [2, 900.0]. With state coolFactor=0.021, startTemp=500
+          -> Take improving step to neighbour coolFactor=0.021 startTemp=500 (4182.166666666666 [based on 2 runs with cutoff 900.0]) with flip 1
+
+          
+============= Performing 1 bonus runs of state: coolFactor=0.021 startTemp=500 (4182.166666666666 [based on 2 runs with cutoff 900.0]) ============ 
+
+ Same incumbent, new precision:
+New Incumbent: 333.1143732070923, 3086.6484444444436 [3, 900.0]. With state coolFactor=0.021, startTemp=500
+          -> After 1 bonus runs: coolFactor=0.021 startTemp=500 (3086.6484444444436 [based on 3 runs with cutoff 900.0])
+
+    Changing ["coolFactor: 0.021->0.012"], evaluating ...
+21/100000000, 343.3792760372162/21600.0
+        -> worse: (3220.8573333333334 [based on 3 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.015"], evaluating ...
+23/100000000, 372.06392216682434/21600.0
+        -> worse: (4316.583333333333 [based on 2 runs with cutoff 900.0])
+    Changing ["startTemp: 500->750"], evaluating ...
+25/100000000, 393.8861794471741/21600.0
+        -> worse: (4379.0 [based on 2 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.003"], evaluating ...
+27/100000000, 538.4723513126373/21600.0
+        -> worse: (4379.0 [based on 2 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.03"], evaluating ...
+        -> worse: (3220.8573333333334 [based on 3 runs with cutoff 900.0])
+    Changing ["startTemp: 500->1000"], evaluating ...
+29/100000000, 564.8724353313446/21600.0
+        -> worse: (4379.0 [based on 2 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.024"], evaluating ...
+        -> worse: (3217.904 [based on 3 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.009"], evaluating ...
+32/100000000, 618.3778586387634/21600.0
+        -> worse: (4379.0 [based on 2 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.027"], evaluating ...
+34/100000000, 634.3974981307983/21600.0
+        -> worse: (4299.166666666666 [based on 2 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.001"], evaluating ...
+35/100000000, 646.509871006012/21600.0
+36/100000000, 1068.3095564842224/21600.0
+        -> worse: (4309.833333333333 [based on 2 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.006"], evaluating ...
+37/100000000, 1138.6814782619476/21600.0
+        -> worse: (4379.0 [based on 2 runs with cutoff 900.0])
+          
+============= Performing 11 bonus runs of state: coolFactor=0.021 startTemp=500 (3086.6484444444436 [based on 3 runs with cutoff 900.0]) ============ 
+
+ Same incumbent, new precision:
+New Incumbent: 1139.4455602169037, 2323.9363333333326 [4, 900.0]. With state coolFactor=0.021, startTemp=500
+39/100000000, 1191.46777009964/21600.0
+ Same incumbent, new precision:
+New Incumbent: 1191.46777009964, 4957.782399999999 [5, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 1192.442233324051, 4136.151999999999 [6, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 1200.346228837967, 3682.179428571428 [7, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 1201.0350360870361, 3226.3819999999996 [8, 900.0]. With state coolFactor=0.021, startTemp=500
+43/100000000, 1208.7097568511963/21600.0
+ Same incumbent, new precision:
+New Incumbent: 1208.7097568511963, 2974.3777777777777 [9, 900.0]. With state coolFactor=0.021, startTemp=500
+44/100000000, 1228.6645548343658/21600.0
+ Same incumbent, new precision:
+New Incumbent: 1228.6645548343658, 3522.3399999999992 [10, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 1234.5770273208618, 3284.3610909090903 [11, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 1235.187114238739, 3015.747666666666 [12, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 1236.2228345870972, 2786.536307692307 [13, 900.0]. With state coolFactor=0.021, startTemp=500
+48/100000000, 1288.7725338935852/21600.0
+ Same incumbent, new precision:
+New Incumbent: 1288.7725338935852, 3696.2241904761904 [14, 900.0]. With state coolFactor=0.021, startTemp=500
+          -> After 11 bonus runs for LM: coolFactor=0.021 startTemp=500 (3696.2241904761904 [based on 14 runs with cutoff 900.0])
+
+   LM for iteration 1: coolFactor=0.021 startTemp=500 (3696.2241904761904 [based on 14 runs with cutoff 900.0])
+
+========== DETAILED RESULTS (iteration 1): ==========
+================================================
+
+==================================================================
+Best parameter configuration found so far (end of iteration 1): coolFactor=0.021, startTemp=500
+==================================================================
+Training quality of this incumbent parameter configuration: 3696.2241904761904, based on 14 runs with cutoff 900.0
+==================================================================
+
+Comparing LM against incumbent:
+coolFactor=0.021 startTemp=500 (3696.2241904761904 [based on 14 runs with cutoff 900.0])
+coolFactor=0.021 startTemp=500 (3696.2241904761904 [based on 14 runs with cutoff 900.0])
+LM better, change incumbent
+New Incumbent: 1288.7725338935852, 3696.2241904761904 [14, 900.0]. With state coolFactor=0.021, startTemp=500
+48/100000000, 1288.7725338935852/21600.0
+iteration 2, flip 3, evaluation count 48
+    perturb to ---> coolFactor=0.012 startTemp=500 (3220.8573333333334 [based on 3 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.003 startTemp=500 (4379.0 [based on 2 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.015 startTemp=500 (4316.583333333333 [based on 2 runs with cutoff 900.0])
+   BLS in iteration 2, start with coolFactor=0.015 startTemp=500 (3179.246222222222 [based on 3 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.015->0.006"], evaluating ...
+50/100000000, 1317.537083864212/21600.0
+        -> worse: (3220.8573333333334 [based on 3 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.015->0.003"], evaluating ...
+51/100000000, 1358.4631309509277/21600.0
+        -> worse: (3220.8573333333334 [based on 3 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.015->0.03"], evaluating ...
+        -> worse: (2424.593 [based on 4 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.015->0.027"], evaluating ...
+          -> Take improving step to neighbour coolFactor=0.027 startTemp=500 (2384.676333333333 [based on 4 runs with cutoff 900.0]) with flip 3
+
+          
+============= Performing 5 bonus runs of state: coolFactor=0.027 startTemp=500 (2384.676333333333 [based on 4 runs with cutoff 900.0]) ============ 
+
+56/100000000, 1405.2499566078186/21600.0
+60/100000000, 1418.7091588974/21600.0
+          -> After 5 bonus runs: coolFactor=0.027 startTemp=500 (2999.3362962962965 [based on 9 runs with cutoff 900.0])
+
+    Changing ["coolFactor: 0.027->0.018"], evaluating ...
+        -> worse: (3200.524 [based on 3 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.009"], evaluating ...
+62/100000000, 1439.2081162929535/21600.0
+        -> worse: (3220.8573333333334 [based on 3 runs with cutoff 900.0])
+    Changing ["startTemp: 500->1000"], evaluating ...
+64/100000000, 1456.9810388088226/21600.0
+        -> worse: (4379.0 [based on 2 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.001"], evaluating ...
+65/100000000, 1580.907610654831/21600.0
+        -> worse: (3174.746222222222 [based on 3 runs with cutoff 900.0])
+    Changing ["startTemp: 500->750"], evaluating ...
+67/100000000, 1597.9956290721893/21600.0
+70/100000000, 1647.386074066162/21600.0
+74/100000000, 1661.791630268097/21600.0
+          -> Take improving step to neighbour coolFactor=0.027 startTemp=750 (2995.558518518518 [based on 9 runs with cutoff 900.0]) with flip 4
+
+          
+============= Performing 5 bonus runs of state: coolFactor=0.027 startTemp=750 (2995.558518518518 [based on 9 runs with cutoff 900.0]) ============ 
+
+75/100000000, 1678.3459811210632/21600.0
+79/100000000, 1729.057212114334/21600.0
+          -> After 5 bonus runs: coolFactor=0.027 startTemp=750 (3725.292761904762 [based on 14 runs with cutoff 900.0])
+
+    Changing ["coolFactor: 0.027->0.03"], evaluating ...
+80/100000000, 1743.999939918518/21600.0
+        -> worse: (4379.0 [based on 2 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.006"], evaluating ...
+81/100000000, 1765.7793135643005/21600.0
+        -> worse: (3220.8573333333334 [based on 3 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.018"], evaluating ...
+83/100000000, 1791.6197271347046/21600.0
+        -> worse: (4371.25 [based on 2 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.015"], evaluating ...
+85/100000000, 1822.5651965141296/21600.0
+        -> worse: (4306.666666666666 [based on 2 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.009"], evaluating ...
+86/100000000, 1837.2958455085754/21600.0
+        -> worse: (3220.8573333333334 [based on 3 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.024"], evaluating ...
+88/100000000, 1856.5635704994202/21600.0
+91/100000000, 1911.8761270046234/21600.0
+95/100000000, 1928.3044204711914/21600.0
+96/100000000, 1947.0974321365356/21600.0
+100/100000000, 2003.4649193286896/21600.0
+          -> Take improving step to neighbour coolFactor=0.024 startTemp=750 (3707.3641904761903 [based on 14 runs with cutoff 900.0]) with flip 5
+
+          
+============= Performing 6 bonus runs of state: coolFactor=0.024 startTemp=750 (3707.3641904761903 [based on 14 runs with cutoff 900.0]) ============ 
+
+State wants more detail (14+1) than incumbent (14), doing incumbent first:
+coolFactor=0.024 startTemp=750 (3707.3641904761903 [based on 14 runs with cutoff 900.0])
+coolFactor=0.021 startTemp=500 (3696.2241904761904 [based on 14 runs with cutoff 900.0])
+ Same incumbent, new precision:
+New Incumbent: 2009.3105607032776, 3510.1140444444445 [15, 900.0]. With state coolFactor=0.021, startTemp=500
+102/100000000, 2014.7704820632935/21600.0
+State wants more detail (15+1) than incumbent (15), doing incumbent first:
+coolFactor=0.024 startTemp=750 (3520.511377777778 [based on 15 runs with cutoff 900.0])
+coolFactor=0.021 startTemp=500 (3510.1140444444445 [based on 15 runs with cutoff 900.0])
+103/100000000, 2034.7162234783173/21600.0
+ Same incumbent, new precision:
+New Incumbent: 2034.7162234783173, 3824.6902499999997 [16, 900.0]. With state coolFactor=0.021, startTemp=500
+104/100000000, 2053.147218942642/21600.0
+State wants more detail (16+1) than incumbent (16), doing incumbent first:
+coolFactor=0.024 startTemp=750 (3844.0419166666666 [based on 16 runs with cutoff 900.0])
+coolFactor=0.021 startTemp=500 (3824.6902499999997 [based on 16 runs with cutoff 900.0])
+ Same incumbent, new precision:
+New Incumbent: 2054.0715119838715, 3601.4143529411763 [17, 900.0]. With state coolFactor=0.021, startTemp=500
+State wants more detail (17+1) than incumbent (17), doing incumbent first:
+coolFactor=0.024 startTemp=750 (3619.62768627451 [based on 17 runs with cutoff 900.0])
+coolFactor=0.021 startTemp=500 (3601.4143529411763 [based on 17 runs with cutoff 900.0])
+ Same incumbent, new precision:
+New Incumbent: 2062.702390193939, 3454.5771111111108 [18, 900.0]. With state coolFactor=0.021, startTemp=500
+108/100000000, 2069.904765367508/21600.0
+State wants more detail (18+1) than incumbent (18), doing incumbent first:
+coolFactor=0.024 startTemp=750 (3471.7785925925923 [based on 18 runs with cutoff 900.0])
+coolFactor=0.021 startTemp=500 (3454.5771111111108 [based on 18 runs with cutoff 900.0])
+ Same incumbent, new precision:
+New Incumbent: 2070.5168895721436, 3275.9677894736838 [19, 900.0]. With state coolFactor=0.021, startTemp=500
+State wants more detail (19+1) than incumbent (19), doing incumbent first:
+coolFactor=0.024 startTemp=750 (3292.2639298245613 [based on 19 runs with cutoff 900.0])
+coolFactor=0.021 startTemp=500 (3275.9677894736838 [based on 19 runs with cutoff 900.0])
+111/100000000, 2123.288815498352/21600.0
+ Same incumbent, new precision:
+New Incumbent: 2123.288815498352, 3887.3443999999995 [20, 900.0]. With state coolFactor=0.021, startTemp=500
+112/100000000, 2173.5859940052032/21600.0
+          -> After 6 bonus runs: coolFactor=0.024 startTemp=750 (3903.4757333333328 [based on 20 runs with cutoff 900.0])
+
+    Changing ["coolFactor: 0.024->0.001"], evaluating ...
+113/100000000, 2187.919538974762/21600.0
+114/100000000, 2637.9846184253693/21600.0
+        -> worse: (4379.0 [based on 2 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.024->0.021"], evaluating ...
+        -> worse: (3220.8573333333334 [based on 3 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.024->0.003"], evaluating ...
+116/100000000, 2648.902288913727/21600.0
+117/100000000, 2798.5627851486206/21600.0
+        -> worse: (4379.0 [based on 2 runs with cutoff 900.0])
+    Changing ["startTemp: 750->1000"], evaluating ...
+119/100000000, 2818.754658937454/21600.0
+        -> worse: (4366.666666666666 [based on 2 runs with cutoff 900.0])
+    Changing ["startTemp: 750->500"], evaluating ...
+        -> worse: (2422.3779999999997 [based on 4 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.024->0.012"], evaluating ...
+122/100000000, 2859.080761194229/21600.0
+        -> worse: (4339.333333333333 [based on 2 runs with cutoff 900.0])
+          
+============= Performing 6 bonus runs of state: coolFactor=0.024 startTemp=750 (3903.4757333333328 [based on 20 runs with cutoff 900.0]) ============ 
+
+State wants more detail (20+1) than incumbent (20), doing incumbent first:
+coolFactor=0.024 startTemp=750 (3903.4757333333328 [based on 20 runs with cutoff 900.0])
+coolFactor=0.021 startTemp=500 (3887.3443999999995 [based on 20 runs with cutoff 900.0])
+ Same incumbent, new precision:
+New Incumbent: 2859.807377576828, 3703.9375238095236 [21, 900.0]. With state coolFactor=0.021, startTemp=500
+State wants more detail (21+1) than incumbent (21), doing incumbent first:
+coolFactor=0.024 startTemp=750 (3719.300698412698 [based on 21 runs with cutoff 900.0])
+coolFactor=0.021 startTemp=500 (3703.9375238095236 [based on 21 runs with cutoff 900.0])
+ Same incumbent, new precision:
+New Incumbent: 2861.4820070266724, 3537.2130909090906 [22, 900.0]. With state coolFactor=0.021, startTemp=500
+State wants more detail (22+1) than incumbent (22), doing incumbent first:
+coolFactor=0.024 startTemp=750 (3551.559757575757 [based on 22 runs with cutoff 900.0])
+coolFactor=0.021 startTemp=500 (3537.2130909090906 [based on 22 runs with cutoff 900.0])
+ Same incumbent, new precision:
+New Incumbent: 2862.976114988327, 3386.0733913043478 [23, 900.0]. With state coolFactor=0.021, startTemp=500
+State wants more detail (23+1) than incumbent (23), doing incumbent first:
+coolFactor=0.024 startTemp=750 (3399.7962898550722 [based on 23 runs with cutoff 900.0])
+coolFactor=0.021 startTemp=500 (3386.0733913043478 [based on 23 runs with cutoff 900.0])
+129/100000000, 2915.7286682128906/21600.0
+ Same incumbent, new precision:
+New Incumbent: 2915.7286682128906, 3890.521722222222 [24, 900.0]. With state coolFactor=0.021, startTemp=500
+130/100000000, 2964.599911928177/21600.0
+State wants more detail (24+1) than incumbent (24), doing incumbent first:
+coolFactor=0.024 startTemp=750 (3903.7144999999996 [based on 24 runs with cutoff 900.0])
+coolFactor=0.021 startTemp=500 (3890.521722222222 [based on 24 runs with cutoff 900.0])
+ Same incumbent, new precision:
+New Incumbent: 2972.3454082012177, 3773.2346133333326 [25, 900.0]. With state coolFactor=0.021, startTemp=500
+132/100000000, 2979.7143108844757/21600.0
+State wants more detail (25+1) than incumbent (25), doing incumbent first:
+coolFactor=0.024 startTemp=750 (3785.8996799999995 [based on 25 runs with cutoff 900.0])
+coolFactor=0.021 startTemp=500 (3773.2346133333326 [based on 25 runs with cutoff 900.0])
+ Same incumbent, new precision:
+New Incumbent: 2980.4288544654846, 3629.4871282051276 [26, 900.0]. With state coolFactor=0.021, startTemp=500
+          -> After 6 bonus runs for LM: coolFactor=0.024 startTemp=750 (3641.6650769230764 [based on 26 runs with cutoff 900.0])
+
+   LM for iteration 2: coolFactor=0.024 startTemp=750 (3641.6650769230764 [based on 26 runs with cutoff 900.0])
+
+========== DETAILED RESULTS (iteration 2): ==========
+================================================
+
+==================================================================
+Best parameter configuration found so far (end of iteration 2): coolFactor=0.021, startTemp=500
+==================================================================
+Training quality of this incumbent parameter configuration: 3629.4871282051276, based on 26 runs with cutoff 900.0
+==================================================================
+
+Comparing LM against incumbent:
+coolFactor=0.024 startTemp=750 (3641.6650769230764 [based on 26 runs with cutoff 900.0])
+coolFactor=0.021 startTemp=500 (3629.4871282051276 [based on 26 runs with cutoff 900.0])
+Incumbent better, keeping it
+rejecting worse coolFactor=0.024 startTemp=750 (3641.6650769230764 [based on 26 runs with cutoff 900.0]), going back to coolFactor=0.021 startTemp=500 (3629.4871282051276 [based on 26 runs with cutoff 900.0])
+134/100000000, 2981.111521959305/21600.0
+iteration 3, flip 7, evaluation count 134
+    perturb to ---> coolFactor=0.021 startTemp=750 (3220.8573333333334 [based on 3 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.021 startTemp=500 (3629.4871282051276 [based on 26 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.024 startTemp=500 (2422.3779999999997 [based on 4 runs with cutoff 900.0])
+135/100000000, 3026.5089542865753/21600.0
+   BLS in iteration 3, start with coolFactor=0.024 startTemp=500 (5039.735733333333 [based on 5 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.024->0.027"], evaluating ...
+          -> Take improving step to neighbour coolFactor=0.027 startTemp=500 (2999.3362962962965 [based on 9 runs with cutoff 900.0]) with flip 7
+
+          
+============= Performing 1 bonus runs of state: coolFactor=0.027 startTemp=500 (2999.3362962962965 [based on 9 runs with cutoff 900.0]) ============ 
+
+137/100000000, 3042.9919962882996/21600.0
+          -> After 1 bonus runs: coolFactor=0.027 startTemp=500 (3553.0526666666674 [based on 10 runs with cutoff 900.0])
+
+    Changing ["startTemp: 500->1000"], evaluating ...
+        -> worse: (3220.8573333333334 [based on 3 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.003"], evaluating ...
+        -> worse: (2424.593 [based on 4 runs with cutoff 900.0])
+    Changing ["startTemp: 500->750"], evaluating ...
+140/100000000, 3057.4745864868164/21600.0
+143/100000000, 3099.7076156139374/21600.0
+        -> worse: (3725.292761904762 [based on 14 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.012"], evaluating ...
+        -> worse: (2424.593 [based on 4 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.021"], evaluating ...
+          -> Take improving step to neighbour coolFactor=0.021 startTemp=500 (3629.4871282051276 [based on 26 runs with cutoff 900.0]) with flip 8
+
+          
+============= Performing 5 bonus runs of state: coolFactor=0.021 startTemp=500 (3629.4871282051276 [based on 26 runs with cutoff 900.0]) ============ 
+
+146/100000000, 3111.3340759277344/21600.0
+ Same incumbent, new precision:
+New Incumbent: 3111.3340759277344, 3528.564345679012 [27, 900.0]. With state coolFactor=0.021, startTemp=500
+147/100000000, 3131.3137414455414/21600.0
+ Same incumbent, new precision:
+New Incumbent: 3131.3137414455414, 3704.7703809523805 [28, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 3131.9296123981476, 3579.123126436781 [29, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 3137.977108001709, 3489.971422222222 [30, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 3138.860275030136, 3378.3271827956983 [31, 900.0]. With state coolFactor=0.021, startTemp=500
+          -> After 5 bonus runs: coolFactor=0.021 startTemp=500 (3378.3271827956983 [based on 31 runs with cutoff 900.0])
+
+    Changing ["coolFactor: 0.021->0.006"], evaluating ...
+151/100000000, 3141.3883152008057/21600.0
+        -> worse: (2424.593 [based on 4 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.009"], evaluating ...
+        -> worse: (2424.593 [based on 4 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.018"], evaluating ...
+        -> worse: (2409.343 [based on 4 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.001"], evaluating ...
+154/100000000, 3158.4994447231293/21600.0
+        -> worse: (2390.0096666666664 [based on 4 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.015"], evaluating ...
+155/100000000, 3231.830591201782/21600.0
+        -> worse: (5011.407733333333 [based on 5 runs with cutoff 900.0])
+    Changing ["startTemp: 500->750"], evaluating ...
+        -> worse: (2424.593 [based on 4 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.03"], evaluating ...
+157/100000000, 3269.414537191391/21600.0
+        -> worse: (5037.641066666667 [based on 5 runs with cutoff 900.0])
+    Changing ["startTemp: 500->1000"], evaluating ...
+        -> worse: (3220.8573333333334 [based on 3 runs with cutoff 900.0])
+          
+============= Performing 8 bonus runs of state: coolFactor=0.021 startTemp=500 (3378.3271827956983 [based on 31 runs with cutoff 900.0]) ============ 
+
+159/100000000, 3328.020495891571/21600.0
+ Same incumbent, new precision:
+New Incumbent: 3328.020495891571, 3757.4054999999994 [32, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 3328.760549545288, 3644.6295757575754 [33, 900.0]. With state coolFactor=0.021, startTemp=500
+161/100000000, 3348.684437274933/21600.0
+ Same incumbent, new precision:
+New Incumbent: 3348.684437274933, 3786.6306666666665 [34, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 3356.704046010971, 3705.8224761904758 [35, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 3357.324774980545, 3604.577407407407 [36, 900.0]. With state coolFactor=0.021, startTemp=500
+164/100000000, 3377.476801633835/21600.0
+ Same incumbent, new precision:
+New Incumbent: 3377.476801633835, 3742.21045045045 [37, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 3385.2709033489227, 3668.950807017544 [38, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 3385.9583933353424, 3575.7930940170936 [39, 900.0]. With state coolFactor=0.021, startTemp=500
+          -> After 8 bonus runs for LM: coolFactor=0.021 startTemp=500 (3575.7930940170936 [based on 39 runs with cutoff 900.0])
+
+   LM for iteration 3: coolFactor=0.021 startTemp=500 (3575.7930940170936 [based on 39 runs with cutoff 900.0])
+
+========== DETAILED RESULTS (iteration 3): ==========
+================================================
+
+==================================================================
+Best parameter configuration found so far (end of iteration 3): coolFactor=0.021, startTemp=500
+==================================================================
+Training quality of this incumbent parameter configuration: 3575.7930940170936, based on 39 runs with cutoff 900.0
+==================================================================
+
+Comparing LM against incumbent:
+coolFactor=0.021 startTemp=500 (3575.7930940170936 [based on 39 runs with cutoff 900.0])
+coolFactor=0.021 startTemp=500 (3575.7930940170936 [based on 39 runs with cutoff 900.0])
+LM better, change incumbent
+New Incumbent: 3385.9583933353424, 3575.7930940170936 [39, 900.0]. With state coolFactor=0.021, startTemp=500
+same state as last ILS: coolFactor=0.021 startTemp=500 (3575.7930940170936 [based on 39 runs with cutoff 900.0])
+166/100000000, 3385.9583933353424/21600.0
+iteration 4, flip 10, evaluation count 166
+    perturb to ---> coolFactor=0.003 startTemp=500 (2424.593 [based on 4 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.015 startTemp=500 (5011.407733333333 [based on 5 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.021 startTemp=500 (3575.7930940170936 [based on 39 runs with cutoff 900.0])
+ Same incumbent, new precision:
+New Incumbent: 3387.0953392982483, 3487.298266666666 [40, 900.0]. With state coolFactor=0.021, startTemp=500
+   BLS in iteration 4, start with coolFactor=0.021 startTemp=500 (3487.298266666666 [based on 40 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.012"], evaluating ...
+168/100000000, 3478.554303407669/21600.0
+        -> worse: (5035.5743999999995 [based on 5 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.024"], evaluating ...
+        -> worse: (3740.860380952381 [based on 7 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.018"], evaluating ...
+170/100000000, 3545.915223836899/21600.0
+        -> worse: (5022.2410666666665 [based on 5 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.03"], evaluating ...
+        -> worse: (4204.0342222222225 [based on 6 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.006"], evaluating ...
+172/100000000, 3729.7911064624786/21600.0
+        -> worse: (5035.3744 [based on 5 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.003"], evaluating ...
+173/100000000, 4099.320822954178/21600.0
+        -> worse: (5034.441066666666 [based on 5 runs with cutoff 900.0])
+    Changing ["startTemp: 500->1000"], evaluating ...
+        -> worse: (2424.593 [based on 4 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.027"], evaluating ...
+175/100000000, 4115.680132627487/21600.0
+        -> worse: (3848.936541666667 [based on 16 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.001"], evaluating ...
+176/100000000, 5015.680132627487/21600.0
+        -> worse: (5011.841066666666 [based on 5 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.015"], evaluating ...
+        -> worse: (4181.006444444444 [based on 6 runs with cutoff 900.0])
+    Changing ["startTemp: 500->750"], evaluating ...
+178/100000000, 5073.489226579666/21600.0
+        -> worse: (5038.041066666667 [based on 5 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.009"], evaluating ...
+179/100000000, 5195.542162895203/21600.0
+        -> worse: (5035.507733333334 [based on 5 runs with cutoff 900.0])
+          
+============= Performing 12 bonus runs of state: coolFactor=0.021 startTemp=500 (3487.298266666666 [based on 40 runs with cutoff 900.0]) ============ 
+
+180/100000000, 5247.472237586975/21600.0
+ Same incumbent, new precision:
+New Incumbent: 5247.472237586975, 3779.929203252032 [41, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 5253.404356241226, 3711.4683174603174 [42, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 5254.1255831718445, 3625.9876589147284 [43, 900.0]. With state coolFactor=0.021, startTemp=500
+183/100000000, 5273.906235694885/21600.0
+ Same incumbent, new precision:
+New Incumbent: 5273.906235694885, 3731.7493030303026 [44, 900.0]. With state coolFactor=0.021, startTemp=500
+184/100000000, 5325.989609003067/21600.0
+ Same incumbent, new precision:
+New Incumbent: 5325.989609003067, 3992.6845037037033 [45, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 5333.740446567535, 3926.720579710145 [46, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 5334.399114847183, 3844.471205673759 [47, 900.0]. With state coolFactor=0.021, startTemp=500
+187/100000000, 5340.225347280502/21600.0
+ Same incumbent, new precision:
+New Incumbent: 5340.225347280502, 3783.077472222222 [48, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 5341.17972445488, 3706.443238095238 [49, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 5349.128520488739, 3651.4812533333334 [50, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 5350.050712108612, 3580.4326013071895 [51, 900.0]. With state coolFactor=0.021, startTemp=500
+191/100000000, 5369.783556222916/21600.0
+ Same incumbent, new precision:
+New Incumbent: 5369.783556222916, 3678.828128205128 [52, 900.0]. With state coolFactor=0.021, startTemp=500
+          -> After 12 bonus runs for LM: coolFactor=0.021 startTemp=500 (3678.828128205128 [based on 52 runs with cutoff 900.0])
+
+   LM for iteration 4: coolFactor=0.021 startTemp=500 (3678.828128205128 [based on 52 runs with cutoff 900.0])
+
+========== DETAILED RESULTS (iteration 4): ==========
+================================================
+
+==================================================================
+Best parameter configuration found so far (end of iteration 4): coolFactor=0.021, startTemp=500
+==================================================================
+Training quality of this incumbent parameter configuration: 3678.828128205128, based on 52 runs with cutoff 900.0
+==================================================================
+
+Comparing LM against incumbent:
+coolFactor=0.021 startTemp=500 (3678.828128205128 [based on 52 runs with cutoff 900.0])
+coolFactor=0.021 startTemp=500 (3678.828128205128 [based on 52 runs with cutoff 900.0])
+LM better, change incumbent
+New Incumbent: 5369.783556222916, 3678.828128205128 [52, 900.0]. With state coolFactor=0.021, startTemp=500
+same state as last ILS: coolFactor=0.021 startTemp=500 (3678.828128205128 [based on 52 runs with cutoff 900.0])
+191/100000000, 5369.783556222916/21600.0
+iteration 5, flip 11, evaluation count 191
+    perturb to ---> coolFactor=0.03 startTemp=500 (4204.0342222222225 [based on 6 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.024 startTemp=500 (3740.860380952381 [based on 7 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.027 startTemp=500 (3848.936541666667 [based on 16 runs with cutoff 900.0])
+   BLS in iteration 5, start with coolFactor=0.027 startTemp=500 (3624.234392156863 [based on 17 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.015"], evaluating ...
+193/100000000, 5381.576389789581/21600.0
+        -> worse: (3720.6260952380953 [based on 7 runs with cutoff 900.0])
+    Changing ["startTemp: 500->1000"], evaluating ...
+        -> worse: (2424.593 [based on 4 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.018"], evaluating ...
+        -> worse: (4189.867555555556 [based on 6 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.006"], evaluating ...
+        -> worse: (4202.145333333333 [based on 6 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.03"], evaluating ...
+197/100000000, 5392.4968848228455/21600.0
+        -> worse: (3740.3641904761907 [based on 7 runs with cutoff 900.0])
+    Changing ["startTemp: 500->750"], evaluating ...
+        -> worse: (3537.244711111111 [based on 15 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.009"], evaluating ...
+        -> worse: (4202.256444444444 [based on 6 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.012"], evaluating ...
+        -> worse: (4202.312 [based on 6 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.003"], evaluating ...
+201/100000000, 5408.173873662949/21600.0
+        -> worse: (4200.200888888889 [based on 6 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.024"], evaluating ...
+        -> worse: (3277.7278333333334 [based on 8 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.021"], evaluating ...
+          -> Take improving step to neighbour coolFactor=0.021 startTemp=500 (3678.828128205128 [based on 52 runs with cutoff 900.0]) with flip 11
+
+          
+============= Performing 11 bonus runs of state: coolFactor=0.021 startTemp=500 (3678.828128205128 [based on 52 runs with cutoff 900.0]) ============ 
+
+204/100000000, 5466.949802875519/21600.0
+ Same incumbent, new precision:
+New Incumbent: 5466.949802875519, 3901.7842012578617 [53, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 5472.714438199997, 3846.2802716049387 [54, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 5473.433277845383, 3776.9988121212123 [55, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 5474.028316020966, 3710.6416904761904 [56, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 5475.028924942017, 3646.174292397661 [57, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 5475.745762825012, 3583.926459770115 [58, 900.0]. With state coolFactor=0.021, startTemp=500
+210/100000000, 5481.739301919937/21600.0
+ Same incumbent, new precision:
+New Incumbent: 5481.739301919937, 3538.5136723163837 [59, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 5489.413827180862, 3495.510844444444 [60, 900.0]. With state coolFactor=0.021, startTemp=500
+212/100000000, 5509.5292954444885/21600.0
+ Same incumbent, new precision:
+New Incumbent: 5509.5292954444885, 3580.7811584699452 [61, 900.0]. With state coolFactor=0.021, startTemp=500
+213/100000000, 5561.624835252762/21600.0
+ Same incumbent, new precision:
+New Incumbent: 5561.624835252762, 3773.1744731182794 [62, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 5562.241154432297, 3714.2510687830686 [63, 900.0]. With state coolFactor=0.021, startTemp=500
+          -> After 11 bonus runs: coolFactor=0.021 startTemp=500 (3714.2510687830686 [based on 63 runs with cutoff 900.0])
+
+    Changing ["coolFactor: 0.021->0.001"], evaluating ...
+215/100000000, 5580.916985988617/21600.0
+        -> worse: (4181.367555555556 [based on 6 runs with cutoff 900.0])
+    Changing ["startTemp: 500->1000"], evaluating ...
+216/100000000, 5640.608201265335/21600.0
+        -> worse: (5038.1744 [based on 5 runs with cutoff 900.0])
+    Changing ["startTemp: 500->750"], evaluating ...
+        -> worse: (4204.367555555556 [based on 6 runs with cutoff 900.0])
+          
+============= Performing 3 bonus runs of state: coolFactor=0.021 startTemp=500 (3714.2510687830686 [based on 63 runs with cutoff 900.0]) ============ 
+
+ Same incumbent, new precision:
+New Incumbent: 5647.574896097183, 3670.3498333333328 [64, 900.0]. With state coolFactor=0.021, startTemp=500
+219/100000000, 5699.573599815369/21600.0
+ Same incumbent, new precision:
+New Incumbent: 5699.573599815369, 3852.188041025641 [65, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 5700.2164142131805, 3794.7457979797978 [66, 900.0]. With state coolFactor=0.021, startTemp=500
+          -> After 3 bonus runs for LM: coolFactor=0.021 startTemp=500 (3794.7457979797978 [based on 66 runs with cutoff 900.0])
+
+   LM for iteration 5: coolFactor=0.021 startTemp=500 (3794.7457979797978 [based on 66 runs with cutoff 900.0])
+
+========== DETAILED RESULTS (iteration 5): ==========
+================================================
+
+==================================================================
+Best parameter configuration found so far (end of iteration 5): coolFactor=0.021, startTemp=500
+==================================================================
+Training quality of this incumbent parameter configuration: 3794.7457979797978, based on 66 runs with cutoff 900.0
+==================================================================
+
+Comparing LM against incumbent:
+coolFactor=0.021 startTemp=500 (3794.7457979797978 [based on 66 runs with cutoff 900.0])
+coolFactor=0.021 startTemp=500 (3794.7457979797978 [based on 66 runs with cutoff 900.0])
+LM better, change incumbent
+New Incumbent: 5700.2164142131805, 3794.7457979797978 [66, 900.0]. With state coolFactor=0.021, startTemp=500
+same state as last ILS: coolFactor=0.021 startTemp=500 (3794.7457979797978 [based on 66 runs with cutoff 900.0])
+220/100000000, 5700.2164142131805/21600.0
+iteration 6, flip 13, evaluation count 220
+    perturb to ---> coolFactor=0.03 startTemp=500 (3740.3641904761907 [based on 7 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.021 startTemp=500 (3794.7457979797978 [based on 66 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.009 startTemp=500 (4202.256444444444 [based on 6 runs with cutoff 900.0])
+221/100000000, 5718.540887355804/21600.0
+   BLS in iteration 6, start with coolFactor=0.009 startTemp=500 (3738.840380952381 [based on 7 runs with cutoff 900.0])
+    Changing ["startTemp: 500->1000"], evaluating ...
+223/100000000, 5771.877894163132/21600.0
+224/100000000, 5787.488604068756/21600.0
+226/100000000, 5929.349194765091/21600.0
+        -> worse: (5037.107733333333 [based on 5 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.009->0.003"], evaluating ...
+227/100000000, 5983.622902393341/21600.0
+          -> Take improving step to neighbour coolFactor=0.003 startTemp=500 (3737.078476190476 [based on 7 runs with cutoff 900.0]) with flip 13
+
+          
+============= Performing 2 bonus runs of state: coolFactor=0.003 startTemp=500 (3737.078476190476 [based on 7 runs with cutoff 900.0]) ============ 
+
+229/100000000, 6042.858927249908/21600.0
+          -> After 2 bonus runs: coolFactor=0.003 startTemp=500 (3017.077037037037 [based on 9 runs with cutoff 900.0])
+
+    Changing ["coolFactor: 0.003->0.012"], evaluating ...
+230/100000000, 6056.567416906357/21600.0
+        -> worse: (3738.888 [based on 7 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.003->0.021"], evaluating ...
+231/100000000, 6197.785085916519/21600.0
+          -> Take improving step to neighbour coolFactor=0.021 startTemp=500 (3794.7457979797978 [based on 66 runs with cutoff 900.0]) with flip 14
+
+          
+============= Performing 2 bonus runs of state: coolFactor=0.021 startTemp=500 (3794.7457979797978 [based on 66 runs with cutoff 900.0]) ============ 
+
+232/100000000, 6217.6624591350555/21600.0
+ Same incumbent, new precision:
+New Incumbent: 6217.6624591350555, 3864.6948656716413 [67, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 6218.375858783722, 3808.3875882352936 [68, 900.0]. With state coolFactor=0.021, startTemp=500
+          -> After 2 bonus runs: coolFactor=0.021 startTemp=500 (3808.3875882352936 [based on 68 runs with cutoff 900.0])
+
+    Changing ["startTemp: 500->750"], evaluating ...
+        -> worse: (3740.6499047619045 [based on 7 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.027"], evaluating ...
+        -> worse: (3296.3857192982455 [based on 19 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.006"], evaluating ...
+236/100000000, 6254.866855382919/21600.0
+        -> worse: (3738.745142857143 [based on 7 runs with cutoff 900.0])
+    Changing ["startTemp: 500->1000"], evaluating ...
+        -> worse: (4204.478666666667 [based on 6 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.03"], evaluating ...
+        -> worse: (3277.293666666667 [based on 8 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.001"], evaluating ...
+239/100000000, 6421.15714597702/21600.0
+        -> worse: (3720.9356190476187 [based on 7 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.024"], evaluating ...
+        -> worse: (3020.0185185185187 [based on 9 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.015"], evaluating ...
+        -> worse: (3260.0228333333334 [based on 8 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.018"], evaluating ...
+242/100000000, 6437.863640785217/21600.0
+        -> worse: (3728.2213333333334 [based on 7 runs with cutoff 900.0])
+          
+============= Performing 9 bonus runs of state: coolFactor=0.021 startTemp=500 (3808.3875882352936 [based on 68 runs with cutoff 900.0]) ============ 
+
+ Same incumbent, new precision:
+New Incumbent: 6445.593371391296, 3767.0826086956517 [69, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 6446.610494852066, 3713.6671428571426 [70, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 6447.548965215683, 3661.7563380281686 [71, 900.0]. With state coolFactor=0.021, startTemp=500
+246/100000000, 6448.3161652088165/21600.0
+ Same incumbent, new precision:
+New Incumbent: 6448.3161652088165, 3611.395833333333 [72, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 6454.306801557541, 3574.3160547945204 [73, 900.0]. With state coolFactor=0.021, startTemp=500
+248/100000000, 6461.986011266708/21600.0
+ Same incumbent, new precision:
+New Incumbent: 6461.986011266708, 3538.965081081081 [74, 900.0]. With state coolFactor=0.021, startTemp=500
+249/100000000, 6514.2621285915375/21600.0
+ Same incumbent, new precision:
+New Incumbent: 6514.2621285915375, 3698.4788799999997 [75, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 6514.8858070373535, 3650.617315789473 [76, 900.0]. With state coolFactor=0.021, startTemp=500
+251/100000000, 6535.051774263382/21600.0
+ Same incumbent, new precision:
+New Incumbent: 6535.051774263382, 3716.154753246753 [77, 900.0]. With state coolFactor=0.021, startTemp=500
+          -> After 9 bonus runs for LM: coolFactor=0.021 startTemp=500 (3716.154753246753 [based on 77 runs with cutoff 900.0])
+
+   LM for iteration 6: coolFactor=0.021 startTemp=500 (3716.154753246753 [based on 77 runs with cutoff 900.0])
+
+========== DETAILED RESULTS (iteration 6): ==========
+================================================
+
+==================================================================
+Best parameter configuration found so far (end of iteration 6): coolFactor=0.021, startTemp=500
+==================================================================
+Training quality of this incumbent parameter configuration: 3716.154753246753, based on 77 runs with cutoff 900.0
+==================================================================
+
+Comparing LM against incumbent:
+coolFactor=0.021 startTemp=500 (3716.154753246753 [based on 77 runs with cutoff 900.0])
+coolFactor=0.021 startTemp=500 (3716.154753246753 [based on 77 runs with cutoff 900.0])
+LM better, change incumbent
+New Incumbent: 6535.051774263382, 3716.154753246753 [77, 900.0]. With state coolFactor=0.021, startTemp=500
+same state as last ILS: coolFactor=0.021 startTemp=500 (3716.154753246753 [based on 77 runs with cutoff 900.0])
+251/100000000, 6535.051774263382/21600.0
+iteration 7, flip 16, evaluation count 251
+    perturb to ---> coolFactor=0.015 startTemp=500 (3260.0228333333334 [based on 8 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.012 startTemp=500 (3738.888 [based on 7 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.001 startTemp=500 (3720.9356190476187 [based on 7 runs with cutoff 900.0])
+252/100000000, 6551.011130332947/21600.0
+   BLS in iteration 7, start with coolFactor=0.001 startTemp=500 (3260.2936666666665 [based on 8 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.001->0.018"], evaluating ...
+        -> worse: (3266.6686666666665 [based on 8 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.001->0.012"], evaluating ...
+        -> worse: (3276.002 [based on 8 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.001->0.009"], evaluating ...
+        -> worse: (3275.9603333333334 [based on 8 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.001->0.003"], evaluating ...
+256/100000000, 6718.119743108749/21600.0
+257/100000000, 7142.209838628769/21600.0
+          -> Take improving step to neighbour coolFactor=0.003 startTemp=500 (3559.8360000000002 [based on 10 runs with cutoff 900.0]) with flip 16
+
+          
+============= Performing 4 bonus runs of state: coolFactor=0.003 startTemp=500 (3559.8360000000002 [based on 10 runs with cutoff 900.0]) ============ 
+
+258/100000000, 7183.29163479805/21600.0
+260/100000000, 7194.10201382637/21600.0
+261/100000000, 7561.748477220535/21600.0
+          -> After 4 bonus runs: coolFactor=0.003 startTemp=500 (3719.149904761905 [based on 14 runs with cutoff 900.0])
+
+    Changing ["coolFactor: 0.003->0.006"], evaluating ...
+        -> worse: (3275.877 [based on 8 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.003->0.024"], evaluating ...
+263/100000000, 7581.762252807617/21600.0
+267/100000000, 7633.747539281845/21600.0
+          -> Take improving step to neighbour coolFactor=0.024 startTemp=500 (3718.4782857142864 [based on 14 runs with cutoff 900.0]) with flip 17
+
+          
+============= Performing 2 bonus runs of state: coolFactor=0.024 startTemp=500 (3718.4782857142864 [based on 14 runs with cutoff 900.0]) ============ 
+
+269/100000000, 7656.312027454376/21600.0
+          -> After 2 bonus runs: coolFactor=0.024 startTemp=500 (3844.2667500000007 [based on 16 runs with cutoff 900.0])
+
+    Changing ["coolFactor: 0.024->0.03"], evaluating ...
+271/100000000, 7675.647789001465/21600.0
+        -> worse: (3584.602666666667 [based on 10 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.024->0.015"], evaluating ...
+272/100000000, 7686.525800704956/21600.0
+273/100000000, 7714.884996891022/21600.0
+        -> worse: (3563.6526666666673 [based on 10 runs with cutoff 900.0])
+    Changing ["startTemp: 500->1000"], evaluating ...
+276/100000000, 7773.899881839752/21600.0
+280/100000000, 7790.92192196846/21600.0
+281/100000000, 7810.375468969345/21600.0
+        -> worse: (3568.5026666666663 [based on 10 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.024->0.027"], evaluating ...
+        -> worse: (3296.3857192982455 [based on 19 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.024->0.021"], evaluating ...
+285/100000000, 7864.09818482399/21600.0
+          -> Take improving step to neighbour coolFactor=0.021 startTemp=500 (3716.154753246753 [based on 77 runs with cutoff 900.0]) with flip 18
+
+          
+============= Performing 5 bonus runs of state: coolFactor=0.021 startTemp=500 (3716.154753246753 [based on 77 runs with cutoff 900.0]) ============ 
+
+ Same incumbent, new precision:
+New Incumbent: 7872.068885803223, 3680.7982051282047 [78, 900.0]. With state coolFactor=0.021, startTemp=500
+287/100000000, 7878.00061750412/21600.0
+ Same incumbent, new precision:
+New Incumbent: 7878.00061750412, 3645.4805063291133 [79, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 7878.781350135803, 3600.3594999999996 [80, 900.0]. With state coolFactor=0.021, startTemp=500
+289/100000000, 7899.251140594482/21600.0
+ Same incumbent, new precision:
+New Incumbent: 7899.251140594482, 3663.2809876543206 [81, 900.0]. With state coolFactor=0.021, startTemp=500
+290/100000000, 7950.920781373978/21600.0
+ Same incumbent, new precision:
+New Incumbent: 7950.920781373978, 3807.5194308943082 [82, 900.0]. With state coolFactor=0.021, startTemp=500
+          -> After 5 bonus runs: coolFactor=0.021 startTemp=500 (3807.5194308943082 [based on 82 runs with cutoff 900.0])
+
+    Changing ["startTemp: 500->750"], evaluating ...
+        -> worse: (3277.5436666666665 [based on 8 runs with cutoff 900.0])
+    Changing ["startTemp: 500->1000"], evaluating ...
+        -> worse: (3740.745142857143 [based on 7 runs with cutoff 900.0])
+          
+============= Performing 2 bonus runs of state: coolFactor=0.021 startTemp=500 (3807.5194308943082 [based on 82 runs with cutoff 900.0]) ============ 
+
+293/100000000, 7961.311954259872/21600.0
+ Same incumbent, new precision:
+New Incumbent: 7961.311954259872, 3762.0794377510033 [83, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 7961.972217321396, 3718.0189682539676 [84, 900.0]. With state coolFactor=0.021, startTemp=500
+          -> After 2 bonus runs for LM: coolFactor=0.021 startTemp=500 (3718.0189682539676 [based on 84 runs with cutoff 900.0])
+
+   LM for iteration 7: coolFactor=0.021 startTemp=500 (3718.0189682539676 [based on 84 runs with cutoff 900.0])
+
+========== DETAILED RESULTS (iteration 7): ==========
+================================================
+
+==================================================================
+Best parameter configuration found so far (end of iteration 7): coolFactor=0.021, startTemp=500
+==================================================================
+Training quality of this incumbent parameter configuration: 3718.0189682539676, based on 84 runs with cutoff 900.0
+==================================================================
+
+Comparing LM against incumbent:
+coolFactor=0.021 startTemp=500 (3718.0189682539676 [based on 84 runs with cutoff 900.0])
+coolFactor=0.021 startTemp=500 (3718.0189682539676 [based on 84 runs with cutoff 900.0])
+LM better, change incumbent
+New Incumbent: 7961.972217321396, 3718.0189682539676 [84, 900.0]. With state coolFactor=0.021, startTemp=500
+same state as last ILS: coolFactor=0.021 startTemp=500 (3718.0189682539676 [based on 84 runs with cutoff 900.0])
+294/100000000, 7961.972217321396/21600.0
+iteration 8, flip 20, evaluation count 294
+    perturb to ---> coolFactor=0.021 startTemp=750 (3277.5436666666665 [based on 8 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.015 startTemp=750 (4306.666666666666 [based on 2 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.03 startTemp=750 (4379.0 [based on 2 runs with cutoff 900.0])
+   BLS in iteration 8, start with coolFactor=0.03 startTemp=750 (3210.628 [based on 3 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.03->0.018"], evaluating ...
+296/100000000, 7974.2677347660065/21600.0
+        -> worse: (3215.690666666667 [based on 3 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.03->0.024"], evaluating ...
+          -> Take improving step to neighbour coolFactor=0.024 startTemp=750 (3641.6650769230764 [based on 26 runs with cutoff 900.0]) with flip 20
+
+          
+============= Performing 2 bonus runs of state: coolFactor=0.024 startTemp=750 (3641.6650769230764 [based on 26 runs with cutoff 900.0]) ============ 
+
+299/100000000, 7998.904505491257/21600.0
+          -> After 2 bonus runs: coolFactor=0.024 startTemp=750 (3724.459428571428 [based on 28 runs with cutoff 900.0])
+
+    Changing ["coolFactor: 0.024->0.021"], evaluating ...
+        -> worse: (3019.8548148148147 [based on 9 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.024->0.009"], evaluating ...
+        -> worse: (2424.593 [based on 4 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.024->0.006"], evaluating ...
+302/100000000, 8011.641275644302/21600.0
+        -> worse: (2424.593 [based on 4 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.024->0.015"], evaluating ...
+        -> worse: (3172.6351111111107 [based on 3 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.024->0.003"], evaluating ...
+304/100000000, 8064.121695995331/21600.0
+        -> worse: (3220.8573333333334 [based on 3 runs with cutoff 900.0])
+    Changing ["startTemp: 750->500"], evaluating ...
+308/100000000, 8111.718450784683/21600.0
+311/100000000, 8124.217402219772/21600.0
+312/100000000, 8142.082846879959/21600.0
+          -> Take improving step to neighbour coolFactor=0.024 startTemp=500 (3723.4212380952386 [based on 28 runs with cutoff 900.0]) with flip 21
+
+          
+============= Performing 6 bonus runs of state: coolFactor=0.024 startTemp=500 (3723.4212380952386 [based on 28 runs with cutoff 900.0]) ============ 
+
+316/100000000, 8194.206939697266/21600.0
+318/100000000, 8212.28135728836/21600.0
+          -> After 6 bonus runs: coolFactor=0.024 startTemp=500 (3804.671568627451 [based on 34 runs with cutoff 900.0])
+
+    Changing ["coolFactor: 0.024->0.027"], evaluating ...
+319/100000000, 8253.106904506683/21600.0
+        -> worse: (3905.6580999999996 [based on 20 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.024->0.03"], evaluating ...
+        -> worse: (3340.963515151516 [based on 11 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.024->0.009"], evaluating ...
+321/100000000, 8275.184080839157/21600.0
+322/100000000, 8321.587135314941/21600.0
+        -> worse: (3571.852666666667 [based on 10 runs with cutoff 900.0])
+    Changing ["startTemp: 500->1000"], evaluating ...
+        -> worse: (3326.3271515151514 [based on 11 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.024->0.018"], evaluating ...
+324/100000000, 8336.629019021988/21600.0
+325/100000000, 8359.920480012894/21600.0
+        -> worse: (3578.869333333333 [based on 10 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.024->0.003"], evaluating ...
+326/100000000, 8401.008328199387/21600.0
+        -> worse: (3531.5113777777783 [based on 15 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.024->0.021"], evaluating ...
+          -> Take improving step to neighbour coolFactor=0.021 startTemp=500 (3718.0189682539676 [based on 84 runs with cutoff 900.0]) with flip 22
+
+          
+============= Performing 7 bonus runs of state: coolFactor=0.021 startTemp=500 (3718.0189682539676 [based on 84 runs with cutoff 900.0]) ============ 
+
+328/100000000, 8413.793662071228/21600.0
+ Same incumbent, new precision:
+New Incumbent: 8413.793662071228, 3684.728909803921 [85, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 8414.690528869629, 3642.220434108526 [86, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 8415.359713315964, 3601.056980842911 [87, 900.0]. With state coolFactor=0.021, startTemp=500
+331/100000000, 8467.077819347382/21600.0
+ Same incumbent, new precision:
+New Incumbent: 8467.077819347382, 3736.1453484848475 [88, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 8474.793038845062, 3704.804187265917 [89, 900.0]. With state coolFactor=0.021, startTemp=500
+333/100000000, 8494.69848227501/21600.0
+ Same incumbent, new precision:
+New Incumbent: 8494.69848227501, 3759.4433999999987 [90, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 8495.404453277588, 3718.5242417582404 [91, 900.0]. With state coolFactor=0.021, startTemp=500
+          -> After 7 bonus runs: coolFactor=0.021 startTemp=500 (3718.5242417582404 [based on 91 runs with cutoff 900.0])
+
+    Changing ["coolFactor: 0.021->0.001"], evaluating ...
+335/100000000, 8619.760867834091/21600.0
+        -> worse: (3331.11503030303 [based on 11 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.012"], evaluating ...
+336/100000000, 8633.357071876526/21600.0
+        -> worse: (3018.4844444444443 [based on 9 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.015"], evaluating ...
+        -> worse: (3321.9180606060613 [based on 11 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.006"], evaluating ...
+338/100000000, 8669.131225347519/21600.0
+        -> worse: (3018.3733333333334 [based on 9 runs with cutoff 900.0])
+    Changing ["startTemp: 500->1000"], evaluating ...
+        -> worse: (3277.627 [based on 8 runs with cutoff 900.0])
+          
+============= Performing 5 bonus runs of state: coolFactor=0.021 startTemp=500 (3718.5242417582404 [based on 91 runs with cutoff 900.0]) ============ 
+
+ Same incumbent, new precision:
+New Incumbent: 8671.040310144424, 3678.4968043478248 [92, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 8678.77985048294, 3649.2478494623642 [93, 900.0]. With state coolFactor=0.021, startTemp=500
+342/100000000, 8679.403423786163/21600.0
+ Same incumbent, new precision:
+New Incumbent: 8679.403423786163, 3611.0749999999985 [94, 900.0]. With state coolFactor=0.021, startTemp=500
+343/100000000, 8732.552032709122/21600.0
+ Same incumbent, new precision:
+New Incumbent: 8732.552032709122, 3736.082982456139 [95, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 8738.699532985687, 3706.588076388887 [96, 900.0]. With state coolFactor=0.021, startTemp=500
+          -> After 5 bonus runs for LM: coolFactor=0.021 startTemp=500 (3706.588076388887 [based on 96 runs with cutoff 900.0])
+
+   LM for iteration 8: coolFactor=0.021 startTemp=500 (3706.588076388887 [based on 96 runs with cutoff 900.0])
+
+========== DETAILED RESULTS (iteration 8): ==========
+================================================
+
+==================================================================
+Best parameter configuration found so far (end of iteration 8): coolFactor=0.021, startTemp=500
+==================================================================
+Training quality of this incumbent parameter configuration: 3706.588076388887, based on 96 runs with cutoff 900.0
+==================================================================
+
+Comparing LM against incumbent:
+coolFactor=0.021 startTemp=500 (3706.588076388887 [based on 96 runs with cutoff 900.0])
+coolFactor=0.021 startTemp=500 (3706.588076388887 [based on 96 runs with cutoff 900.0])
+LM better, change incumbent
+New Incumbent: 8738.699532985687, 3706.588076388887 [96, 900.0]. With state coolFactor=0.021, startTemp=500
+same state as last ILS: coolFactor=0.021 startTemp=500 (3706.588076388887 [based on 96 runs with cutoff 900.0])
+344/100000000, 8738.699532985687/21600.0
+iteration 9, flip 24, evaluation count 344
+    perturb to ---> coolFactor=0.015 startTemp=500 (3321.9180606060613 [based on 11 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.003 startTemp=500 (3531.5113777777783 [based on 15 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.006 startTemp=500 (3018.3733333333334 [based on 9 runs with cutoff 900.0])
+345/100000000, 8809.284469604492/21600.0
+   BLS in iteration 9, start with coolFactor=0.006 startTemp=500 (3586.236 [based on 10 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.006->0.003"], evaluating ...
+346/100000000, 8829.79769730568/21600.0
+          -> Take improving step to neighbour coolFactor=0.003 startTemp=500 (3531.5113777777783 [based on 15 runs with cutoff 900.0]) with flip 24
+
+          
+============= Performing 1 bonus runs of state: coolFactor=0.003 startTemp=500 (3531.5113777777783 [based on 15 runs with cutoff 900.0]) ============ 
+
+347/100000000, 8970.29978609085/21600.0
+          -> After 1 bonus runs: coolFactor=0.003 startTemp=500 (3854.354416666667 [based on 16 runs with cutoff 900.0])
+
+    Changing ["coolFactor: 0.003->0.012"], evaluating ...
+348/100000000, 9005.764284133911/21600.0
+        -> worse: (3577.319333333333 [based on 10 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.003->0.001"], evaluating ...
+349/100000000, 9017.788172006607/21600.0
+        -> worse: (3058.605444444444 [based on 12 runs with cutoff 900.0])
+    Changing ["startTemp: 500->750"], evaluating ...
+351/100000000, 9427.760373830795/21600.0
+        -> worse: (5036.5743999999995 [based on 5 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.003->0.015"], evaluating ...
+        -> worse: (3050.174888888889 [based on 12 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.003->0.027"], evaluating ...
+          -> Take improving step to neighbour coolFactor=0.027 startTemp=500 (3905.6580999999996 [based on 20 runs with cutoff 900.0]) with flip 25
+
+          
+============= Performing 5 bonus runs of state: coolFactor=0.027 startTemp=500 (3905.6580999999996 [based on 20 runs with cutoff 900.0]) ============ 
+
+357/100000000, 9477.73918557167/21600.0
+          -> After 5 bonus runs: coolFactor=0.027 startTemp=500 (3787.485573333333 [based on 25 runs with cutoff 900.0])
+
+    Changing ["coolFactor: 0.027->0.018"], evaluating ...
+359/100000000, 9490.790930271149/21600.0
+        -> worse: (3335.7513939393934 [based on 11 runs with cutoff 900.0])
+    Changing ["startTemp: 500->1000"], evaluating ...
+360/100000000, 9538.058468580246/21600.0
+        -> worse: (5039.641066666666 [based on 5 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.021"], evaluating ...
+          -> Take improving step to neighbour coolFactor=0.021 startTemp=500 (3706.588076388887 [based on 96 runs with cutoff 900.0]) with flip 26
+
+          
+============= Performing 3 bonus runs of state: coolFactor=0.021 startTemp=500 (3706.588076388887 [based on 96 runs with cutoff 900.0]) ============ 
+
+ Same incumbent, new precision:
+New Incumbent: 9539.45229792595, 3668.744900343641 [97, 900.0]. With state coolFactor=0.021, startTemp=500
+363/100000000, 9559.878186702728/21600.0
+ Same incumbent, new precision:
+New Incumbent: 9559.878186702728, 3720.0536258503384 [98, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 9565.773858308792, 3691.6144175084155 [99, 900.0]. With state coolFactor=0.021, startTemp=500
+          -> After 3 bonus runs: coolFactor=0.021 startTemp=500 (3691.6144175084155 [based on 99 runs with cutoff 900.0])
+
+    Changing ["startTemp: 500->750"], evaluating ...
+365/100000000, 9587.59018111229/21600.0
+        -> worse: (3581.7026666666666 [based on 10 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.009"], evaluating ...
+366/100000000, 9601.190041065216/21600.0
+        -> worse: (3329.3726060606064 [based on 11 runs with cutoff 900.0])
+    Changing ["startTemp: 500->1000"], evaluating ...
+        -> worse: (3019.928888888889 [based on 9 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.024"], evaluating ...
+        -> worse: (3621.616037037037 [based on 36 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.03"], evaluating ...
+        -> worse: (3067.6332222222227 [based on 12 runs with cutoff 900.0])
+          
+============= Performing 5 bonus runs of state: coolFactor=0.021 startTemp=500 (3691.6144175084155 [based on 99 runs with cutoff 900.0]) ============ 
+
+370/100000000, 9662.406600475311/21600.0
+ Same incumbent, new precision:
+New Incumbent: 9662.406600475311, 3809.5566066666647 [100, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 9663.081556797028, 3772.1926798679847 [101, 900.0]. With state coolFactor=0.021, startTemp=500
+372/100000000, 9683.117178201675/21600.0
+ Same incumbent, new precision:
+New Incumbent: 9683.117178201675, 3820.4751045751614 [102, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 9690.859625577927, 3792.6874239482177 [103, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 9691.890684366226, 3756.5654294871774 [104, 900.0]. With state coolFactor=0.021, startTemp=500
+          -> After 5 bonus runs for LM: coolFactor=0.021 startTemp=500 (3756.5654294871774 [based on 104 runs with cutoff 900.0])
+
+   LM for iteration 9: coolFactor=0.021 startTemp=500 (3756.5654294871774 [based on 104 runs with cutoff 900.0])
+
+========== DETAILED RESULTS (iteration 9): ==========
+================================================
+
+==================================================================
+Best parameter configuration found so far (end of iteration 9): coolFactor=0.021, startTemp=500
+==================================================================
+Training quality of this incumbent parameter configuration: 3756.5654294871774, based on 104 runs with cutoff 900.0
+==================================================================
+
+Comparing LM against incumbent:
+coolFactor=0.021 startTemp=500 (3756.5654294871774 [based on 104 runs with cutoff 900.0])
+coolFactor=0.021 startTemp=500 (3756.5654294871774 [based on 104 runs with cutoff 900.0])
+LM better, change incumbent
+New Incumbent: 9691.890684366226, 3756.5654294871774 [104, 900.0]. With state coolFactor=0.021, startTemp=500
+same state as last ILS: coolFactor=0.021 startTemp=500 (3756.5654294871774 [based on 104 runs with cutoff 900.0])
+374/100000000, 9691.890684366226/21600.0
+iteration 10, flip 28, evaluation count 374
+    perturb to ---> coolFactor=0.009 startTemp=500 (3329.3726060606064 [based on 11 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.024 startTemp=500 (3621.616037037037 [based on 36 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.021 startTemp=500 (3756.5654294871774 [based on 104 runs with cutoff 900.0])
+ Same incumbent, new precision:
+New Incumbent: 9692.524821996689, 3721.369568253966 [105, 900.0]. With state coolFactor=0.021, startTemp=500
+   BLS in iteration 10, start with coolFactor=0.021 startTemp=500 (3721.369568253966 [based on 105 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.018"], evaluating ...
+376/100000000, 9693.243151664734/21600.0
+        -> worse: (3062.855444444444 [based on 12 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.012"], evaluating ...
+377/100000000, 9703.500905275345/21600.0
+        -> worse: (3334.3423030303024 [based on 11 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.006"], evaluating ...
+        -> worse: (3068.9943333333335 [based on 12 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.003"], evaluating ...
+379/100000000, 9759.884778499603/21600.0
+        -> worse: (3480.889703703704 [based on 18 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.027"], evaluating ...
+        -> worse: (3541.7596790123457 [based on 27 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.009"], evaluating ...
+        -> worse: (3057.0082222222227 [based on 12 runs with cutoff 900.0])
+    Changing ["startTemp: 500->750"], evaluating ...
+382/100000000, 9772.05306315422/21600.0
+        -> worse: (3338.3271515151514 [based on 11 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.024"], evaluating ...
+383/100000000, 9789.563700437546/21600.0
+        -> worse: (3758.7885765765773 [based on 37 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.001"], evaluating ...
+384/100000000, 9811.525438547134/21600.0
+        -> worse: (2826.097333333333 [based on 13 runs with cutoff 900.0])
+    Changing ["startTemp: 500->1000"], evaluating ...
+385/100000000, 9833.940461397171/21600.0
+        -> worse: (3587.636 [based on 10 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.015"], evaluating ...
+        -> worse: (2817.776820512821 [based on 13 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.03"], evaluating ...
+        -> worse: (2833.8922051282057 [based on 13 runs with cutoff 900.0])
+          
+============= Performing 12 bonus runs of state: coolFactor=0.021 startTemp=500 (3721.369568253966 [based on 105 runs with cutoff 900.0]) ============ 
+
+ Same incumbent, new precision:
+New Incumbent: 9836.630218744278, 3686.535893081759 [106, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 9842.42788529396, 3660.5362305295926 [107, 900.0]. With state coolFactor=0.021, startTemp=500
+390/100000000, 9850.165866613388/21600.0
+ Same incumbent, new precision:
+New Incumbent: 9850.165866613388, 3635.5159320987627 [108, 900.0]. With state coolFactor=0.021, startTemp=500
+391/100000000, 9870.341114759445/21600.0
+ Same incumbent, new precision:
+New Incumbent: 9870.341114759445, 3680.315480122322 [109, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 9871.028286457062, 3647.1835212121186 [110, 900.0]. With state coolFactor=0.021, startTemp=500
+393/100000000, 9923.679013490677/21600.0
+ Same incumbent, new precision:
+New Incumbent: 9923.679013490677, 3753.9791651651626 [111, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 9924.257095813751, 3721.0061369047594 [112, 900.0]. With state coolFactor=0.021, startTemp=500
+395/100000000, 9944.43623995781/21600.0
+ Same incumbent, new precision:
+New Incumbent: 9944.43623995781, 3765.0414808259566 [113, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 9945.241487503052, 3732.3288362573076 [114, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 9951.061020851135, 3707.739646376809 [115, 900.0]. With state coolFactor=0.021, startTemp=500
+398/100000000, 9958.769202709198/21600.0
+ Same incumbent, new precision:
+New Incumbent: 9958.769202709198, 3684.037959770112 [116, 900.0]. With state coolFactor=0.021, startTemp=500
+399/100000000, 10011.306314945221/21600.0
+ Same incumbent, new precision:
+New Incumbent: 10011.306314945221, 3784.959287749285 [117, 900.0]. With state coolFactor=0.021, startTemp=500
+          -> After 12 bonus runs for LM: coolFactor=0.021 startTemp=500 (3784.959287749285 [based on 117 runs with cutoff 900.0])
+
+   LM for iteration 10: coolFactor=0.021 startTemp=500 (3784.959287749285 [based on 117 runs with cutoff 900.0])
+
+========== DETAILED RESULTS (iteration 10): ==========
+================================================
+
+==================================================================
+Best parameter configuration found so far (end of iteration 10): coolFactor=0.021, startTemp=500
+==================================================================
+Training quality of this incumbent parameter configuration: 3784.959287749285, based on 117 runs with cutoff 900.0
+==================================================================
+
+Comparing LM against incumbent:
+coolFactor=0.021 startTemp=500 (3784.959287749285 [based on 117 runs with cutoff 900.0])
+coolFactor=0.021 startTemp=500 (3784.959287749285 [based on 117 runs with cutoff 900.0])
+LM better, change incumbent
+New Incumbent: 10011.306314945221, 3784.959287749285 [117, 900.0]. With state coolFactor=0.021, startTemp=500
+same state as last ILS: coolFactor=0.021 startTemp=500 (3784.959287749285 [based on 117 runs with cutoff 900.0])
+399/100000000, 10011.306314945221/21600.0
+iteration 11, flip 29, evaluation count 399
+    perturb to ---> coolFactor=0.012 startTemp=500 (3334.3423030303024 [based on 11 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.003 startTemp=500 (3480.889703703704 [based on 18 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.021 startTemp=500 (3784.959287749285 [based on 117 runs with cutoff 900.0])
+ Same incumbent, new precision:
+New Incumbent: 10011.916907072067, 3753.4003107344606 [118, 900.0]. With state coolFactor=0.021, startTemp=500
+   BLS in iteration 11, start with coolFactor=0.021 startTemp=500 (3753.4003107344606 [based on 118 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.027"], evaluating ...
+401/100000000, 10027.611246109009/21600.0
+        -> worse: (3725.8754047619045 [based on 28 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.018"], evaluating ...
+        -> worse: (2829.4819487179484 [based on 13 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.024"], evaluating ...
+        -> worse: (3685.0926666666674 [based on 38 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.009"], evaluating ...
+404/100000000, 10037.720706701279/21600.0
+        -> worse: (2824.6229743589747 [based on 13 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.012"], evaluating ...
+        -> worse: (3061.5637777777774 [based on 12 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.003"], evaluating ...
+        -> worse: (3300.89550877193 [based on 19 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.006"], evaluating ...
+        -> worse: (2835.0716923076925 [based on 13 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.001"], evaluating ...
+408/100000000, 10946.132248878479/21600.0
+        -> worse: (3732.173714285714 [based on 14 runs with cutoff 900.0])
+    Changing ["startTemp: 500->750"], evaluating ...
+        -> worse: (3065.2165555555553 [based on 12 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.03"], evaluating ...
+410/100000000, 10983.385226488113/21600.0
+        -> worse: (3737.721333333334 [based on 14 runs with cutoff 900.0])
+    Changing ["startTemp: 500->1000"], evaluating ...
+        -> worse: (3343.721090909091 [based on 11 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.015"], evaluating ...
+412/100000000, 11062.855715751648/21600.0
+        -> worse: (3722.4475238095242 [based on 14 runs with cutoff 900.0])
+          
+============= Performing 12 bonus runs of state: coolFactor=0.021 startTemp=500 (3753.4003107344606 [based on 118 runs with cutoff 900.0]) ============ 
+
+ Same incumbent, new precision:
+New Incumbent: 11063.852895259857, 3722.161652661062 [119, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 11069.656793832779, 3698.6817388888862 [120, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 11070.241961479187, 3668.6182534435234 [121, 900.0]. With state coolFactor=0.021, startTemp=500
+416/100000000, 11090.299112796783/21600.0
+ Same incumbent, new precision:
+New Incumbent: 11090.299112796783, 3709.834497267757 [122, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 11091.255213022232, 3679.900883468832 [123, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 11092.003245592117, 3650.512973118277 [124, 900.0]. With state coolFactor=0.021, startTemp=500
+419/100000000, 11143.960932016373/21600.0
+ Same incumbent, new precision:
+New Incumbent: 11143.960932016373, 3745.2728693333306 [125, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 11151.660867929459, 3723.154386243383 [126, 900.0]. With state coolFactor=0.021, startTemp=500
+421/100000000, 11171.530539512634/21600.0
+ Same incumbent, new precision:
+New Incumbent: 11171.530539512634, 3762.31852493438 [127, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 11177.478339910507, 3739.9923802083304 [128, 900.0]. With state coolFactor=0.021, startTemp=500
+423/100000000, 11185.1444876194/21600.0
+ Same incumbent, new precision:
+New Incumbent: 11185.1444876194, 3718.4292144702813 [129, 900.0]. With state coolFactor=0.021, startTemp=500
+424/100000000, 11237.451752901077/21600.0
+ Same incumbent, new precision:
+New Incumbent: 11237.451752901077, 3808.8656564102535 [130, 900.0]. With state coolFactor=0.021, startTemp=500
+          -> After 12 bonus runs for LM: coolFactor=0.021 startTemp=500 (3808.8656564102535 [based on 130 runs with cutoff 900.0])
+
+   LM for iteration 11: coolFactor=0.021 startTemp=500 (3808.8656564102535 [based on 130 runs with cutoff 900.0])
+
+========== DETAILED RESULTS (iteration 11): ==========
+================================================
+
+==================================================================
+Best parameter configuration found so far (end of iteration 11): coolFactor=0.021, startTemp=500
+==================================================================
+Training quality of this incumbent parameter configuration: 3808.8656564102535, based on 130 runs with cutoff 900.0
+==================================================================
+
+Comparing LM against incumbent:
+coolFactor=0.021 startTemp=500 (3808.8656564102535 [based on 130 runs with cutoff 900.0])
+coolFactor=0.021 startTemp=500 (3808.8656564102535 [based on 130 runs with cutoff 900.0])
+LM better, change incumbent
+New Incumbent: 11237.451752901077, 3808.8656564102535 [130, 900.0]. With state coolFactor=0.021, startTemp=500
+same state as last ILS: coolFactor=0.021 startTemp=500 (3808.8656564102535 [based on 130 runs with cutoff 900.0])
+424/100000000, 11237.451752901077/21600.0
+iteration 12, flip 30, evaluation count 424
+    perturb to ---> coolFactor=0.003 startTemp=500 (3300.89550877193 [based on 19 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.012 startTemp=500 (3061.5637777777774 [based on 12 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.006 startTemp=500 (2835.0716923076925 [based on 13 runs with cutoff 900.0])
+425/100000000, 11420.09390425682/21600.0
+   BLS in iteration 12, start with coolFactor=0.006 startTemp=500 (3737.8403809523807 [based on 14 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.006->0.027"], evaluating ...
+426/100000000, 11440.779113769531/21600.0
+          -> Take improving step to neighbour coolFactor=0.027 startTemp=500 (3725.8754047619045 [based on 28 runs with cutoff 900.0]) with flip 30
+
+          
+============= Performing 1 bonus runs of state: coolFactor=0.027 startTemp=500 (3725.8754047619045 [based on 28 runs with cutoff 900.0]) ============ 
+
+          -> After 1 bonus runs: coolFactor=0.027 startTemp=500 (3599.5003908045974 [based on 29 runs with cutoff 900.0])
+
+    Changing ["coolFactor: 0.027->0.021"], evaluating ...
+          -> Take improving step to neighbour coolFactor=0.021 startTemp=500 (3808.8656564102535 [based on 130 runs with cutoff 900.0]) with flip 31
+
+          
+============= Performing 1 bonus runs of state: coolFactor=0.021 startTemp=500 (3808.8656564102535 [based on 130 runs with cutoff 900.0]) ============ 
+
+ Same incumbent, new precision:
+New Incumbent: 11446.414806604385, 3780.2559949109386 [131, 900.0]. With state coolFactor=0.021, startTemp=500
+          -> After 1 bonus runs: coolFactor=0.021 startTemp=500 (3780.2559949109386 [based on 131 runs with cutoff 900.0])
+
+    Changing ["startTemp: 500->1000"], evaluating ...
+        -> worse: (3070.161 [based on 12 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.009"], evaluating ...
+431/100000000, 11569.499321699142/21600.0
+        -> worse: (3728.6618095238105 [based on 14 runs with cutoff 900.0])
+    Changing ["startTemp: 500->750"], evaluating ...
+        -> worse: (2831.6614358974357 [based on 13 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.012"], evaluating ...
+        -> worse: (2828.289641025641 [based on 13 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.015"], evaluating ...
+434/100000000, 11580.229616641998/21600.0
+        -> worse: (3534.333955555556 [based on 15 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.03"], evaluating ...
+        -> worse: (3548.8447111111113 [based on 15 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.018"], evaluating ...
+436/100000000, 11645.582569122314/21600.0
+        -> worse: (3734.007047619047 [based on 14 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.024"], evaluating ...
+        -> worse: (3591.5210598290605 [based on 39 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.003"], evaluating ...
+438/100000000, 12013.580157756805/21600.0
+        -> worse: (3909.8923999999997 [based on 20 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.001"], evaluating ...
+439/100000000, 12137.886241912842/21600.0
+        -> worse: (3543.6669333333334 [based on 15 runs with cutoff 900.0])
+          
+============= Performing 10 bonus runs of state: coolFactor=0.021 startTemp=500 (3780.2559949109386 [based on 131 runs with cutoff 900.0]) ============ 
+
+ Same incumbent, new precision:
+New Incumbent: 12138.918890953064, 3751.8904191919164 [132, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 12139.636961221695, 3723.949889724308 [133, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 12145.533056974411, 3702.9097562189027 [134, 900.0]. With state coolFactor=0.021, startTemp=500
+443/100000000, 12153.302688121796/21600.0
+ Same incumbent, new precision:
+New Incumbent: 12153.302688121796, 3682.5796395061698 [135, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 12154.302728652954, 3655.7665539215654 [136, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 12154.913657665253, 3629.527381995131 [137, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 12155.595386981964, 3603.48587922705 [138, 900.0]. With state coolFactor=0.021, startTemp=500
+447/100000000, 12207.971923351288/21600.0
+ Same incumbent, new precision:
+New Incumbent: 12207.971923351288, 3688.9703932853686 [139, 900.0]. With state coolFactor=0.021, startTemp=500
+448/100000000, 12228.05099439621/21600.0
+ Same incumbent, new precision:
+New Incumbent: 12228.05099439621, 3724.7420333333303 [140, 900.0]. With state coolFactor=0.021, startTemp=500
+449/100000000, 12248.155878543854/21600.0
+ Same incumbent, new precision:
+New Incumbent: 12248.155878543854, 3760.006274231675 [141, 900.0]. With state coolFactor=0.021, startTemp=500
+          -> After 10 bonus runs for LM: coolFactor=0.021 startTemp=500 (3760.006274231675 [based on 141 runs with cutoff 900.0])
+
+   LM for iteration 12: coolFactor=0.021 startTemp=500 (3760.006274231675 [based on 141 runs with cutoff 900.0])
+
+========== DETAILED RESULTS (iteration 12): ==========
+================================================
+
+==================================================================
+Best parameter configuration found so far (end of iteration 12): coolFactor=0.021, startTemp=500
+==================================================================
+Training quality of this incumbent parameter configuration: 3760.006274231675, based on 141 runs with cutoff 900.0
+==================================================================
+
+Comparing LM against incumbent:
+coolFactor=0.021 startTemp=500 (3760.006274231675 [based on 141 runs with cutoff 900.0])
+coolFactor=0.021 startTemp=500 (3760.006274231675 [based on 141 runs with cutoff 900.0])
+LM better, change incumbent
+New Incumbent: 12248.155878543854, 3760.006274231675 [141, 900.0]. With state coolFactor=0.021, startTemp=500
+same state as last ILS: coolFactor=0.021 startTemp=500 (3760.006274231675 [based on 141 runs with cutoff 900.0])
+449/100000000, 12248.155878543854/21600.0
+iteration 13, flip 33, evaluation count 449
+    perturb to ---> coolFactor=0.003 startTemp=500 (3909.8923999999997 [based on 20 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.003 startTemp=750 (5036.5743999999995 [based on 5 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.015 startTemp=750 (3172.6351111111107 [based on 3 runs with cutoff 900.0])
+   BLS in iteration 13, start with coolFactor=0.015 startTemp=750 (2388.426333333333 [based on 4 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.015->0.018"], evaluating ...
+        -> worse: (2420.718 [based on 4 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.015->0.027"], evaluating ...
+452/100000000, 12328.88039636612/21600.0
+          -> Take improving step to neighbour coolFactor=0.027 startTemp=750 (3537.244711111111 [based on 15 runs with cutoff 900.0]) with flip 33
+
+          
+============= Performing 2 bonus runs of state: coolFactor=0.027 startTemp=750 (3537.244711111111 [based on 15 runs with cutoff 900.0]) ============ 
+
+453/100000000, 12345.33879685402/21600.0
+          -> After 2 bonus runs: coolFactor=0.027 startTemp=750 (3616.098274509804 [based on 17 runs with cutoff 900.0])
+
+    Changing ["coolFactor: 0.027->0.009"], evaluating ...
+455/100000000, 12478.142946720123/21600.0
+        -> worse: (5035.5743999999995 [based on 5 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.001"], evaluating ...
+456/100000000, 12609.339373111725/21600.0
+        -> worse: (3220.8573333333334 [based on 3 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.012"], evaluating ...
+457/100000000, 12620.272689580917/21600.0
+        -> worse: (3194.4128888888886 [based on 3 runs with cutoff 900.0])
+    Changing ["startTemp: 750->1000"], evaluating ...
+        -> worse: (4204.367555555556 [based on 6 runs with cutoff 900.0])
+    Changing ["startTemp: 750->500"], evaluating ...
+461/100000000, 12672.36172747612/21600.0
+465/100000000, 12718.439626455307/21600.0
+468/100000000, 12730.417032003403/21600.0
+469/100000000, 12746.893624067307/21600.0
+        -> worse: (3509.6694444444443 [based on 30 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.024"], evaluating ...
+        -> worse: (3598.1332413793098 [based on 29 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.003"], evaluating ...
+473/100000000, 12759.24731183052/21600.0
+        -> worse: (4201.978666666667 [based on 6 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.021"], evaluating ...
+474/100000000, 12815.56575345993/21600.0
+        -> worse: (3736.0308571428573 [based on 14 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.03"], evaluating ...
+475/100000000, 12855.166779756546/21600.0
+        -> worse: (5033.903466666667 [based on 5 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.006"], evaluating ...
+476/100000000, 13056.097598552704/21600.0
+        -> worse: (5035.5743999999995 [based on 5 runs with cutoff 900.0])
+          
+============= Performing 10 bonus runs of state: coolFactor=0.027 startTemp=750 (3496.8508000000006 [based on 30 runs with cutoff 900.0]) ============ 
+
+478/100000000, 13100.874842643738/21600.0
+480/100000000, 13117.994818925858/21600.0
+483/100000000, 13141.582712650299/21600.0
+          -> After 10 bonus runs for LM: coolFactor=0.027 startTemp=750 (3497.6078 [based on 40 runs with cutoff 900.0])
+
+   LM for iteration 13: coolFactor=0.027 startTemp=750 (3497.6078 [based on 40 runs with cutoff 900.0])
+
+========== DETAILED RESULTS (iteration 13): ==========
+================================================
+
+==================================================================
+Best parameter configuration found so far (end of iteration 13): coolFactor=0.021, startTemp=500
+==================================================================
+Training quality of this incumbent parameter configuration: 3760.006274231675, based on 141 runs with cutoff 900.0
+==================================================================
+
+Comparing LM against incumbent:
+coolFactor=0.027 startTemp=750 (3497.6078 [based on 40 runs with cutoff 900.0])
+coolFactor=0.021 startTemp=500 (3760.006274231675 [based on 141 runs with cutoff 900.0])
+Incumbent better, keeping it
+rejecting worse coolFactor=0.027 startTemp=750 (3497.6078 [based on 40 runs with cutoff 900.0]), going back to coolFactor=0.021 startTemp=500 (3760.006274231675 [based on 141 runs with cutoff 900.0])
+486/100000000, 13149.42496395111/21600.0
+iteration 14, flip 35, evaluation count 486
+    perturb to ---> coolFactor=0.015 startTemp=500 (3534.333955555556 [based on 15 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.03 startTemp=500 (3548.8447111111113 [based on 15 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.03 startTemp=1000 (100000000 [based on 0 runs with cutoff 0])
+   BLS in iteration 14, start with coolFactor=0.03 startTemp=1000 (61.0 [based on 1 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.03->0.024"], evaluating ...
+488/100000000, 13165.794604063034/21600.0
+491/100000000, 13212.631166219711/21600.0
+495/100000000, 13226.086895227432/21600.0
+496/100000000, 13241.481875181198/21600.0
+        -> worse: (3326.3271515151514 [based on 11 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.03->0.015"], evaluating ...
+499/100000000, 13278.186353445053/21600.0
+        -> worse: (4379.0 [based on 2 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.03->0.021"], evaluating ...
+        -> worse: (3070.161 [based on 12 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.03->0.018"], evaluating ...
+502/100000000, 13305.690235614777/21600.0
+        -> worse: (3169.190666666667 [based on 3 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.03->0.003"], evaluating ...
+504/100000000, 13318.241130113602/21600.0
+505/100000000, 13475.282293319702/21600.0
+        -> worse: (4309.0 [based on 2 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.03->0.001"], evaluating ...
+506/100000000, 13489.117521047592/21600.0
+507/100000000, 13957.4960064888/21600.0
+        -> worse: (4379.0 [based on 2 runs with cutoff 900.0])
+    Changing ["startTemp: 1000->750"], evaluating ...
+        -> worse: (4200.919555555555 [based on 6 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.03->0.009"], evaluating ...
+        -> worse: (4202.256444444444 [based on 6 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.03->0.027"], evaluating ...
+510/100000000, 13967.534742593765/21600.0
+        -> worse: (3739.6239047619047 [based on 7 runs with cutoff 900.0])
+    Changing ["startTemp: 1000->500"], evaluating ...
+512/100000000, 14010.682649850845/21600.0
+        -> worse: (3548.8447111111113 [based on 15 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.03->0.012"], evaluating ...
+515/100000000, 14055.989705085754/21600.0
+        -> worse: (4379.0 [based on 2 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.03->0.006"], evaluating ...
+516/100000000, 14078.929672718048/21600.0
+        -> worse: (3220.8573333333334 [based on 3 runs with cutoff 900.0])
+          
+============= Performing 12 bonus runs of state: coolFactor=0.03 startTemp=1000 (3522.6871999999994 [based on 15 runs with cutoff 900.0]) ============ 
+
+517/100000000, 14094.402314901352/21600.0
+521/100000000, 14143.442796230316/21600.0
+525/100000000, 14186.794201135635/21600.0
+528/100000000, 14198.053268194199/21600.0
+          -> After 12 bonus runs for LM: coolFactor=0.03 startTemp=1000 (3536.0370864197525 [based on 27 runs with cutoff 900.0])
+
+   LM for iteration 14: coolFactor=0.03 startTemp=1000 (3536.0370864197525 [based on 27 runs with cutoff 900.0])
+
+========== DETAILED RESULTS (iteration 14): ==========
+================================================
+
+==================================================================
+Best parameter configuration found so far (end of iteration 14): coolFactor=0.021, startTemp=500
+==================================================================
+Training quality of this incumbent parameter configuration: 3760.006274231675, based on 141 runs with cutoff 900.0
+==================================================================
+
+Comparing LM against incumbent:
+coolFactor=0.03 startTemp=1000 (3536.0370864197525 [based on 27 runs with cutoff 900.0])
+coolFactor=0.021 startTemp=500 (3760.006274231675 [based on 141 runs with cutoff 900.0])
+Incumbent better, keeping it
+rejecting worse coolFactor=0.03 startTemp=1000 (3536.0370864197525 [based on 27 runs with cutoff 900.0]), going back to coolFactor=0.021 startTemp=500 (3760.006274231675 [based on 141 runs with cutoff 900.0])
+528/100000000, 14198.053268194199/21600.0
+iteration 15, flip 36, evaluation count 528
+    perturb to ---> coolFactor=0.009 startTemp=500 (3728.6618095238105 [based on 14 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.018 startTemp=500 (3734.007047619047 [based on 14 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.03 startTemp=500 (3548.8447111111113 [based on 15 runs with cutoff 900.0])
+529/100000000, 14212.136200666428/21600.0
+   BLS in iteration 15, start with coolFactor=0.03 startTemp=500 (3870.604416666667 [based on 16 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.03->0.027"], evaluating ...
+          -> Take improving step to neighbour coolFactor=0.027 startTemp=500 (3509.6694444444443 [based on 30 runs with cutoff 900.0]) with flip 36
+
+          
+============= Performing 1 bonus runs of state: coolFactor=0.027 startTemp=500 (3509.6694444444443 [based on 30 runs with cutoff 900.0]) ============ 
+
+          -> After 1 bonus runs: coolFactor=0.027 startTemp=500 (3397.3575268817203 [based on 31 runs with cutoff 900.0])
+
+    Changing ["coolFactor: 0.027->0.001"], evaluating ...
+532/100000000, 14642.589595079422/21600.0
+        -> worse: (3865.75025 [based on 16 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.015"], evaluating ...
+533/100000000, 14670.853127717972/21600.0
+        -> worse: (3857.0005833333335 [based on 16 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.006"], evaluating ...
+534/100000000, 14741.499282836914/21600.0
+        -> worse: (3870.708583333333 [based on 16 runs with cutoff 900.0])
+    Changing ["startTemp: 500->1000"], evaluating ...
+        -> worse: (3276.6459166666664 [based on 8 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.003"], evaluating ...
+        -> worse: (3725.4118095238096 [based on 21 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.012"], evaluating ...
+537/100000000, 14838.936890602112/21600.0
+        -> worse: (3732.3999047619045 [based on 14 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.009"], evaluating ...
+538/100000000, 14852.49797964096/21600.0
+        -> worse: (3540.389155555556 [based on 15 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.021"], evaluating ...
+539/100000000, 14893.241446495056/21600.0
+          -> Take improving step to neighbour coolFactor=0.021 startTemp=500 (3760.006274231675 [based on 141 runs with cutoff 900.0]) with flip 37
+
+          
+============= Performing 8 bonus runs of state: coolFactor=0.021 startTemp=500 (3760.006274231675 [based on 141 runs with cutoff 900.0]) ============ 
+
+540/100000000, 14945.725368499756/21600.0
+ Same incumbent, new precision:
+New Incumbent: 14945.725368499756, 3842.6529436619685 [142, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 14951.728830099106, 3822.10692307692 [143, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 14952.814021587372, 3795.814513888886 [144, 900.0]. With state coolFactor=0.021, startTemp=500
+543/100000000, 14960.534096002579/21600.0
+ Same incumbent, new precision:
+New Incumbent: 14960.534096002579, 3776.245751724135 [145, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 14961.248341083527, 3750.6262602739703 [146, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 14961.821780204773, 3725.5267619047595 [147, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 14962.83470916748, 3700.5975270270246 [148, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 14963.464212179184, 3676.170697986575 [149, 900.0]. With state coolFactor=0.021, startTemp=500
+          -> After 8 bonus runs: coolFactor=0.021 startTemp=500 (3676.170697986575 [based on 149 runs with cutoff 900.0])
+
+    Changing ["coolFactor: 0.021->0.018"], evaluating ...
+        -> worse: (3545.3780444444437 [based on 15 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.024"], evaluating ...
+549/100000000, 14971.252108573914/21600.0
+        -> worse: (3502.4330333333337 [based on 40 runs with cutoff 900.0])
+    Changing ["startTemp: 500->750"], evaluating ...
+        -> worse: (3547.2669333333333 [based on 15 runs with cutoff 900.0])
+    Changing ["startTemp: 500->1000"], evaluating ...
+        -> worse: (2836.764 [based on 13 runs with cutoff 900.0])
+          
+============= Performing 4 bonus runs of state: coolFactor=0.021 startTemp=500 (3676.170697986575 [based on 149 runs with cutoff 900.0]) ============ 
+
+552/100000000, 15030.85918021202/21600.0
+ Same incumbent, new precision:
+New Incumbent: 15030.85918021202, 3754.8706711111085 [150, 900.0]. With state coolFactor=0.021, startTemp=500
+553/100000000, 15050.91954255104/21600.0
+ Same incumbent, new precision:
+New Incumbent: 15050.91954255104, 3787.6000044150087 [151, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 15051.644923686981, 3762.9171096491204 [152, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 15059.340437412262, 3744.5865664487997 [153, 900.0]. With state coolFactor=0.021, startTemp=500
+          -> After 4 bonus runs for LM: coolFactor=0.021 startTemp=500 (3744.5865664487997 [based on 153 runs with cutoff 900.0])
+
+   LM for iteration 15: coolFactor=0.021 startTemp=500 (3744.5865664487997 [based on 153 runs with cutoff 900.0])
+
+========== DETAILED RESULTS (iteration 15): ==========
+================================================
+
+==================================================================
+Best parameter configuration found so far (end of iteration 15): coolFactor=0.021, startTemp=500
+==================================================================
+Training quality of this incumbent parameter configuration: 3744.5865664487997, based on 153 runs with cutoff 900.0
+==================================================================
+
+Comparing LM against incumbent:
+coolFactor=0.021 startTemp=500 (3744.5865664487997 [based on 153 runs with cutoff 900.0])
+coolFactor=0.021 startTemp=500 (3744.5865664487997 [based on 153 runs with cutoff 900.0])
+LM better, change incumbent
+New Incumbent: 15059.340437412262, 3744.5865664487997 [153, 900.0]. With state coolFactor=0.021, startTemp=500
+same state as last ILS: coolFactor=0.021 startTemp=500 (3744.5865664487997 [based on 153 runs with cutoff 900.0])
+555/100000000, 15059.340437412262/21600.0
+iteration 16, flip 39, evaluation count 555
+    perturb to ---> coolFactor=0.012 startTemp=500 (3732.3999047619045 [based on 14 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.015 startTemp=500 (3857.0005833333335 [based on 16 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.006 startTemp=500 (3870.708583333333 [based on 16 runs with cutoff 900.0])
+556/100000000, 15062.355996608734/21600.0
+   BLS in iteration 16, start with coolFactor=0.006 startTemp=500 (3644.725725490196 [based on 17 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.006->0.015"], evaluating ...
+          -> Take improving step to neighbour coolFactor=0.015 startTemp=500 (3631.8240784313725 [based on 17 runs with cutoff 900.0]) with flip 39
+
+          
+============= Performing 1 bonus runs of state: coolFactor=0.015 startTemp=500 (3631.8240784313725 [based on 17 runs with cutoff 900.0]) ============ 
+
+558/100000000, 15074.3960647583/21600.0
+          -> After 1 bonus runs: coolFactor=0.015 startTemp=500 (3483.2974074074073 [based on 18 runs with cutoff 900.0])
+
+    Changing ["coolFactor: 0.015->0.001"], evaluating ...
+559/100000000, 15094.540484428406/21600.0
+        -> worse: (3640.000235294118 [based on 17 runs with cutoff 900.0])
+    Changing ["startTemp: 500->750"], evaluating ...
+561/100000000, 15107.63325214386/21600.0
+563/100000000, 15120.289179086685/21600.0
+564/100000000, 15150.25724196434/21600.0
+        -> worse: (3571.502666666667 [based on 10 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.015->0.018"], evaluating ...
+565/100000000, 15173.588369131088/21600.0
+567/100000000, 15183.705863237381/21600.0
+          -> Take improving step to neighbour coolFactor=0.018 startTemp=500 (3477.2081111111106 [based on 18 runs with cutoff 900.0]) with flip 40
+
+          
+============= Performing 3 bonus runs of state: coolFactor=0.018 startTemp=500 (3477.2081111111106 [based on 18 runs with cutoff 900.0]) ============ 
+
+569/100000000, 15245.105555534363/21600.0
+          -> After 3 bonus runs: coolFactor=0.018 startTemp=500 (3722.9069523809517 [based on 21 runs with cutoff 900.0])
+
+    Changing ["startTemp: 500->1000"], evaluating ...
+572/100000000, 15316.5131752491/21600.0
+574/100000000, 15327.828200101852/21600.0
+576/100000000, 15338.832527637482/21600.0
+577/100000000, 15364.866114616394/21600.0
+581/100000000, 15444.772815227509/21600.0
+583/100000000, 15478.368652820587/21600.0
+        -> worse: (3851.104416666667 [based on 16 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.018->0.009"], evaluating ...
+584/100000000, 15525.637152671814/21600.0
+586/100000000, 15546.18352341652/21600.0
+588/100000000, 15670.050283432007/21600.0
+          -> Take improving step to neighbour coolFactor=0.009 startTemp=500 (3707.372126984127 [based on 21 runs with cutoff 900.0]) with flip 41
+
+          
+============= Performing 2 bonus runs of state: coolFactor=0.009 startTemp=500 (3707.372126984127 [based on 21 runs with cutoff 900.0]) ============ 
+
+          -> After 2 bonus runs: coolFactor=0.009 startTemp=500 (3388.861507246377 [based on 23 runs with cutoff 900.0])
+
+    Changing ["coolFactor: 0.009->0.021"], evaluating ...
+592/100000000, 15796.885824203491/21600.0
+          -> Take improving step to neighbour coolFactor=0.021 startTemp=500 (3744.5865664487997 [based on 153 runs with cutoff 900.0]) with flip 42
+
+          
+============= Performing 1 bonus runs of state: coolFactor=0.021 startTemp=500 (3744.5865664487997 [based on 153 runs with cutoff 900.0]) ============ 
+
+ Same incumbent, new precision:
+New Incumbent: 15802.834521770477, 3726.144913419912 [154, 900.0]. With state coolFactor=0.021, startTemp=500
+          -> After 1 bonus runs: coolFactor=0.021 startTemp=500 (3726.144913419912 [based on 154 runs with cutoff 900.0])
+
+    Changing ["coolFactor: 0.021->0.027"], evaluating ...
+        -> worse: (3661.95101010101 [based on 33 runs with cutoff 900.0])
+    Changing ["startTemp: 500->1000"], evaluating ...
+595/100000000, 15863.069569587708/21600.0
+        -> worse: (3740.507047619048 [based on 14 runs with cutoff 900.0])
+    Changing ["startTemp: 500->750"], evaluating ...
+596/100000000, 15884.473978996277/21600.0
+        -> worse: (3869.12525 [based on 16 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.003"], evaluating ...
+        -> worse: (3557.3476363636364 [based on 22 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.012"], evaluating ...
+598/100000000, 15901.40538907051/21600.0
+        -> worse: (3542.769911111111 [based on 15 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.03"], evaluating ...
+        -> worse: (3495.3341481481484 [based on 18 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.024"], evaluating ...
+600/100000000, 15951.869606733322/21600.0
+        -> worse: (3794.597268292683 [based on 41 runs with cutoff 900.0])
+          
+============= Performing 7 bonus runs of state: coolFactor=0.021 startTemp=500 (3726.144913419912 [based on 154 runs with cutoff 900.0]) ============ 
+
+ Same incumbent, new precision:
+New Incumbent: 15957.695953845978, 3707.7797849462354 [155, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 15958.53056049347, 3684.1978632478617 [156, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 15959.264996528625, 3661.1201698513787 [157, 900.0]. With state coolFactor=0.021, startTemp=500
+604/100000000, 15979.076781988144/21600.0
+ Same incumbent, new precision:
+New Incumbent: 15979.076781988144, 3692.141561181433 [158, 900.0]. With state coolFactor=0.021, startTemp=500
+605/100000000, 16031.326773643494/21600.0
+ Same incumbent, new precision:
+New Incumbent: 16031.326773643494, 3766.4310272536673 [159, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 16039.093111991882, 3748.880483333332 [160, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 16039.83867096901, 3725.8178716356097 [161, 900.0]. With state coolFactor=0.021, startTemp=500
+          -> After 7 bonus runs for LM: coolFactor=0.021 startTemp=500 (3725.8178716356097 [based on 161 runs with cutoff 900.0])
+
+   LM for iteration 16: coolFactor=0.021 startTemp=500 (3725.8178716356097 [based on 161 runs with cutoff 900.0])
+
+========== DETAILED RESULTS (iteration 16): ==========
+================================================
+
+==================================================================
+Best parameter configuration found so far (end of iteration 16): coolFactor=0.021, startTemp=500
+==================================================================
+Training quality of this incumbent parameter configuration: 3725.8178716356097, based on 161 runs with cutoff 900.0
+==================================================================
+
+Comparing LM against incumbent:
+coolFactor=0.021 startTemp=500 (3725.8178716356097 [based on 161 runs with cutoff 900.0])
+coolFactor=0.021 startTemp=500 (3725.8178716356097 [based on 161 runs with cutoff 900.0])
+LM better, change incumbent
+New Incumbent: 16039.83867096901, 3725.8178716356097 [161, 900.0]. With state coolFactor=0.021, startTemp=500
+same state as last ILS: coolFactor=0.021 startTemp=500 (3725.8178716356097 [based on 161 runs with cutoff 900.0])
+607/100000000, 16039.83867096901/21600.0
+iteration 17, flip 44, evaluation count 607
+    perturb to ---> coolFactor=0.001 startTemp=500 (3640.000235294118 [based on 17 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.027 startTemp=500 (3661.95101010101 [based on 33 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.027 startTemp=750 (3497.6078 [based on 40 runs with cutoff 900.0])
+608/100000000, 16084.100522518158/21600.0
+   BLS in iteration 17, start with coolFactor=0.027 startTemp=750 (3790.401918699187 [based on 41 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.012"], evaluating ...
+        -> worse: (2404.7596666666664 [based on 4 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.018"], evaluating ...
+610/100000000, 16151.455127239227/21600.0
+        -> worse: (5031.341066666666 [based on 5 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.009"], evaluating ...
+        -> worse: (4201.145333333333 [based on 6 runs with cutoff 900.0])
+    Changing ["startTemp: 750->500"], evaluating ...
+612/100000000, 16169.640006780624/21600.0
+        -> worse: (3806.560294117647 [based on 34 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.003"], evaluating ...
+613/100000000, 16227.57726264/21600.0
+        -> worse: (3738.6022857142857 [based on 7 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.021"], evaluating ...
+        -> worse: (3643.647294117647 [based on 17 runs with cutoff 900.0])
+    Changing ["startTemp: 750->1000"], evaluating ...
+        -> worse: (3019.0568148148145 [based on 9 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.03"], evaluating ...
+616/100000000, 16241.321389198303/21600.0
+        -> worse: (3737.6944761904765 [based on 7 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.001"], evaluating ...
+617/100000000, 16256.887431383133/21600.0
+        -> worse: (2424.593 [based on 4 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.015"], evaluating ...
+        -> worse: (3329.054424242425 [based on 11 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.006"], evaluating ...
+619/100000000, 16269.649942398071/21600.0
+        -> worse: (4200.978666666667 [based on 6 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.024"], evaluating ...
+        -> worse: (3508.284133333333 [based on 30 runs with cutoff 900.0])
+          
+============= Performing 12 bonus runs of state: coolFactor=0.027 startTemp=750 (3790.401918699187 [based on 41 runs with cutoff 900.0]) ============ 
+
+621/100000000, 16280.206089258194/21600.0
+623/100000000, 16297.274819850922/21600.0
+624/100000000, 16340.788640022278/21600.0
+627/100000000, 16352.70542883873/21600.0
+631/100000000, 16377.315804719925/21600.0
+632/100000000, 16421.39803147316/21600.0
+          -> After 12 bonus runs for LM: coolFactor=0.027 startTemp=750 (3905.9002767295597 [based on 53 runs with cutoff 900.0])
+
+   LM for iteration 17: coolFactor=0.027 startTemp=750 (3905.9002767295597 [based on 53 runs with cutoff 900.0])
+
+========== DETAILED RESULTS (iteration 17): ==========
+================================================
+
+==================================================================
+Best parameter configuration found so far (end of iteration 17): coolFactor=0.021, startTemp=500
+==================================================================
+Training quality of this incumbent parameter configuration: 3725.8178716356097, based on 161 runs with cutoff 900.0
+==================================================================
+
+Comparing LM against incumbent:
+coolFactor=0.027 startTemp=750 (3905.9002767295597 [based on 53 runs with cutoff 900.0])
+coolFactor=0.021 startTemp=500 (3725.8178716356097 [based on 161 runs with cutoff 900.0])
+Incumbent better, keeping it
+rejecting worse coolFactor=0.027 startTemp=750 (3905.9002767295597 [based on 53 runs with cutoff 900.0]), going back to coolFactor=0.021 startTemp=500 (3725.8178716356097 [based on 161 runs with cutoff 900.0])
+632/100000000, 16421.39803147316/21600.0
+iteration 18, flip 45, evaluation count 632
+    perturb to ---> coolFactor=0.03 startTemp=500 (3495.3341481481484 [based on 18 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.018 startTemp=500 (3722.9069523809517 [based on 21 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.021 startTemp=500 (3725.8178716356097 [based on 161 runs with cutoff 900.0])
+ Same incumbent, new precision:
+New Incumbent: 16422.441883325577, 3703.041218106995 [162, 900.0]. With state coolFactor=0.021, startTemp=500
+   BLS in iteration 18, start with coolFactor=0.021 startTemp=500 (3703.041218106995 [based on 162 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.024"], evaluating ...
+        -> worse: (3725.787142857143 [based on 42 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.009"], evaluating ...
+635/100000000, 16445.55506324768/21600.0
+        -> worse: (3775.0930133333336 [based on 25 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.015"], evaluating ...
+        -> worse: (3303.17649122807 [based on 19 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.001"], evaluating ...
+637/100000000, 16610.947333097458/21600.0
+        -> worse: (3491.019333333333 [based on 18 runs with cutoff 900.0])
+    Changing ["startTemp: 500->1000"], evaluating ...
+        -> worse: (3551.4447111111117 [based on 15 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.003"], evaluating ...
+639/100000000, 16621.671493530273/21600.0
+        -> worse: (3405.3325217391307 [based on 23 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.018"], evaluating ...
+        -> worse: (3555.3202727272724 [based on 22 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.012"], evaluating ...
+641/100000000, 16657.880795955658/21600.0
+        -> worse: (3857.9717916666664 [based on 16 runs with cutoff 900.0])
+    Changing ["startTemp: 500->750"], evaluating ...
+        -> worse: (3494.4637777777775 [based on 18 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.006"], evaluating ...
+643/100000000, 16694.041319847107/21600.0
+        -> worse: (3495.4822962962958 [based on 18 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.027"], evaluating ...
+        -> worse: (3725.1826857142855 [based on 35 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.03"], evaluating ...
+        -> worse: (3314.579719298246 [based on 19 runs with cutoff 900.0])
+          
+============= Performing 12 bonus runs of state: coolFactor=0.021 startTemp=500 (3703.041218106995 [based on 162 runs with cutoff 900.0]) ============ 
+
+646/100000000, 16720.365132331848/21600.0
+ Same incumbent, new precision:
+New Incumbent: 16720.365132331848, 3732.253644171778 [163, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 16728.122626781464, 3715.339560975609 [164, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 16728.711131811142, 3693.1920484848474 [165, 900.0]. With state coolFactor=0.021, startTemp=500
+649/100000000, 16734.613413333893/21600.0
+ Same incumbent, new precision:
+New Incumbent: 16734.613413333893, 3676.249024096385 [166, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 16735.334655046463, 3654.449928143712 [167, 900.0]. With state coolFactor=0.021, startTemp=500
+651/100000000, 16788.357335090637/21600.0
+ Same incumbent, new precision:
+New Incumbent: 16788.357335090637, 3724.942289682539 [168, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 16796.060482501984, 3708.5718856015774 [169, 900.0]. With state coolFactor=0.021, startTemp=500
+653/100000000, 16848.382472991943/21600.0
+ Same incumbent, new precision:
+New Incumbent: 16848.382472991943, 3778.0008745098035 [170, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 16854.26580095291, 3761.1971968810913 [171, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 16855.148230075836, 3739.498375968992 [172, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 16855.84282064438, 3718.235379576108 [173, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 16856.559023857117, 3697.0719578544063 [174, 900.0]. With state coolFactor=0.021, startTemp=500
+          -> After 12 bonus runs for LM: coolFactor=0.021 startTemp=500 (3697.0719578544063 [based on 174 runs with cutoff 900.0])
+
+   LM for iteration 18: coolFactor=0.021 startTemp=500 (3697.0719578544063 [based on 174 runs with cutoff 900.0])
+
+========== DETAILED RESULTS (iteration 18): ==========
+================================================
+
+==================================================================
+Best parameter configuration found so far (end of iteration 18): coolFactor=0.021, startTemp=500
+==================================================================
+Training quality of this incumbent parameter configuration: 3697.0719578544063, based on 174 runs with cutoff 900.0
+==================================================================
+
+Comparing LM against incumbent:
+coolFactor=0.021 startTemp=500 (3697.0719578544063 [based on 174 runs with cutoff 900.0])
+coolFactor=0.021 startTemp=500 (3697.0719578544063 [based on 174 runs with cutoff 900.0])
+LM better, change incumbent
+New Incumbent: 16856.559023857117, 3697.0719578544063 [174, 900.0]. With state coolFactor=0.021, startTemp=500
+same state as last ILS: coolFactor=0.021 startTemp=500 (3697.0719578544063 [based on 174 runs with cutoff 900.0])
+657/100000000, 16856.559023857117/21600.0
+iteration 19, flip 46, evaluation count 657
+    perturb to ---> coolFactor=0.03 startTemp=500 (3314.579719298246 [based on 19 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.001 startTemp=500 (3491.019333333333 [based on 18 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.012 startTemp=500 (3857.9717916666664 [based on 16 runs with cutoff 900.0])
+   BLS in iteration 19, start with coolFactor=0.012 startTemp=500 (3633.149921568627 [based on 17 runs with cutoff 900.0])
+    Changing ["startTemp: 500->750"], evaluating ...
+659/100000000, 16956.680346250534/21600.0
+661/100000000, 16973.247264146805/21600.0
+663/100000000, 16988.935742855072/21600.0
+664/100000000, 17026.431748628616/21600.0
+        -> worse: (3578.569333333333 [based on 10 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.012->0.027"], evaluating ...
+665/100000000, 17039.923762083054/21600.0
+          -> Take improving step to neighbour coolFactor=0.027 startTemp=500 (3725.1826857142855 [based on 35 runs with cutoff 900.0]) with flip 46
+
+          
+============= Performing 2 bonus runs of state: coolFactor=0.027 startTemp=500 (3725.1826857142855 [based on 35 runs with cutoff 900.0]) ============ 
+
+667/100000000, 17055.994535923004/21600.0
+          -> After 2 bonus runs: coolFactor=0.027 startTemp=500 (3760.524162162162 [based on 37 runs with cutoff 900.0])
+
+    Changing ["coolFactor: 0.027->0.001"], evaluating ...
+668/100000000, 17070.021908044815/21600.0
+        -> worse: (3310.4919999999997 [based on 19 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.027->0.024"], evaluating ...
+          -> Take improving step to neighbour coolFactor=0.024 startTemp=500 (3725.787142857143 [based on 42 runs with cutoff 900.0]) with flip 47
+
+          
+============= Performing 2 bonus runs of state: coolFactor=0.024 startTemp=500 (3725.787142857143 [based on 42 runs with cutoff 900.0]) ============ 
+
+671/100000000, 17093.898654699326/21600.0
+          -> After 2 bonus runs: coolFactor=0.024 startTemp=500 (3754.9059090909086 [based on 44 runs with cutoff 900.0])
+
+    Changing ["coolFactor: 0.024->0.03"], evaluating ...
+672/100000000, 17130.213039159775/21600.0
+        -> worse: (3923.2090666666672 [based on 20 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.024->0.015"], evaluating ...
+673/100000000, 17202.625034809113/21600.0
+        -> worse: (3912.442666666667 [based on 20 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.024->0.021"], evaluating ...
+674/100000000, 17248.134523153305/21600.0
+          -> Take improving step to neighbour coolFactor=0.021 startTemp=500 (3697.0719578544063 [based on 174 runs with cutoff 900.0]) with flip 48
+
+          
+============= Performing 3 bonus runs of state: coolFactor=0.021 startTemp=500 (3697.0719578544063 [based on 174 runs with cutoff 900.0]) ============ 
+
+675/100000000, 17268.14485311508/21600.0
+ Same incumbent, new precision:
+New Incumbent: 17268.14485311508, 3725.6429752380955 [175, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 17275.900467157364, 3709.9196856060607 [176, 900.0]. With state coolFactor=0.021, startTemp=500
+677/100000000, 17327.97764158249/21600.0
+ Same incumbent, new precision:
+New Incumbent: 17327.97764158249, 3776.427672316385 [177, 900.0]. With state coolFactor=0.021, startTemp=500
+          -> After 3 bonus runs: coolFactor=0.021 startTemp=500 (3776.427672316385 [based on 177 runs with cutoff 900.0])
+
+    Changing ["coolFactor: 0.021->0.018"], evaluating ...
+        -> worse: (3403.3933043478255 [based on 23 runs with cutoff 900.0])
+    Changing ["startTemp: 500->750"], evaluating ...
+        -> worse: (3313.755157894737 [based on 19 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.009"], evaluating ...
+        -> worse: (3631.274051282052 [based on 26 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.006"], evaluating ...
+        -> worse: (3314.720070175438 [based on 19 runs with cutoff 900.0])
+    Changing ["startTemp: 500->1000"], evaluating ...
+682/100000000, 17356.143664121628/21600.0
+        -> worse: (3873.041916666667 [based on 16 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.003"], evaluating ...
+683/100000000, 17721.01021194458/21600.0
+        -> worse: (3908.686722222222 [based on 24 runs with cutoff 900.0])
+          
+============= Performing 6 bonus runs of state: coolFactor=0.021 startTemp=500 (3776.427672316385 [based on 177 runs with cutoff 900.0]) ============ 
+
+ Same incumbent, new precision:
+New Incumbent: 17726.951296567917, 3760.293651685394 [178, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 17727.899184942245, 3739.442849162012 [179, 900.0]. With state coolFactor=0.021, startTemp=500
+686/100000000, 17747.881900787354/21600.0
+ Same incumbent, new precision:
+New Incumbent: 17747.881900787354, 3765.5533518518528 [180, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 17748.480636119843, 3745.086206261511 [181, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 17749.29299068451, 3724.705512820514 [182, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 17755.193115234375, 3709.2949471766865 [183, 900.0]. With state coolFactor=0.021, startTemp=500
+          -> After 6 bonus runs for LM: coolFactor=0.021 startTemp=500 (3709.2949471766865 [based on 183 runs with cutoff 900.0])
+
+   LM for iteration 19: coolFactor=0.021 startTemp=500 (3709.2949471766865 [based on 183 runs with cutoff 900.0])
+
+========== DETAILED RESULTS (iteration 19): ==========
+================================================
+
+==================================================================
+Best parameter configuration found so far (end of iteration 19): coolFactor=0.021, startTemp=500
+==================================================================
+Training quality of this incumbent parameter configuration: 3709.2949471766865, based on 183 runs with cutoff 900.0
+==================================================================
+
+Comparing LM against incumbent:
+coolFactor=0.021 startTemp=500 (3709.2949471766865 [based on 183 runs with cutoff 900.0])
+coolFactor=0.021 startTemp=500 (3709.2949471766865 [based on 183 runs with cutoff 900.0])
+LM better, change incumbent
+New Incumbent: 17755.193115234375, 3709.2949471766865 [183, 900.0]. With state coolFactor=0.021, startTemp=500
+same state as last ILS: coolFactor=0.021 startTemp=500 (3709.2949471766865 [based on 183 runs with cutoff 900.0])
+689/100000000, 17755.193115234375/21600.0
+iteration 20, flip 50, evaluation count 689
+    perturb to ---> coolFactor=0.015 startTemp=500 (3912.442666666667 [based on 20 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.009 startTemp=500 (3631.274051282052 [based on 26 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.012 startTemp=500 (3484.549592592592 [based on 18 runs with cutoff 900.0])
+   BLS in iteration 20, start with coolFactor=0.012 startTemp=500 (3304.3627719298242 [based on 19 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.012->0.015"], evaluating ...
+691/100000000, 17846.754891872406/21600.0
+          -> Take improving step to neighbour coolFactor=0.015 startTemp=500 (3912.442666666667 [based on 20 runs with cutoff 900.0]) with flip 50
+
+          
+============= Performing 1 bonus runs of state: coolFactor=0.015 startTemp=500 (3912.442666666667 [based on 20 runs with cutoff 900.0]) ============ 
+
+          -> After 1 bonus runs: coolFactor=0.015 startTemp=500 (3727.8406349206352 [based on 21 runs with cutoff 900.0])
+
+    Changing ["coolFactor: 0.015->0.024"], evaluating ...
+          -> Take improving step to neighbour coolFactor=0.024 startTemp=500 (4015.452444444444 [based on 45 runs with cutoff 900.0]) with flip 51
+
+          
+============= Performing 1 bonus runs of state: coolFactor=0.024 startTemp=500 (4015.452444444444 [based on 45 runs with cutoff 900.0]) ============ 
+
+          -> After 1 bonus runs: coolFactor=0.024 startTemp=500 (3948.9935652173913 [based on 46 runs with cutoff 900.0])
+
+    Changing ["coolFactor: 0.024->0.009"], evaluating ...
+695/100000000, 17869.79998397827/21600.0
+696/100000000, 17916.74677658081/21600.0
+698/100000000, 17932.10576725006/21600.0
+700/100000000, 18056.4559340477/21600.0
+702/100000000, 18105.585991859436/21600.0
+703/100000000, 18123.653916597366/21600.0
+705/100000000, 18171.815861701965/21600.0
+706/100000000, 18190.320120096207/21600.0
+709/100000000, 18315.832282543182/21600.0
+710/100000000, 18329.560700416565/21600.0
+712/100000000, 18378.30211687088/21600.0
+713/100000000, 18500.179981470108/21600.0
+714/100000000, 18518.32030725479/21600.0
+          -> Take improving step to neighbour coolFactor=0.009 startTemp=500 (3935.5675362318843 [based on 46 runs with cutoff 900.0]) with flip 52
+
+          
+============= Performing 1 bonus runs of state: coolFactor=0.009 startTemp=500 (3935.5675362318843 [based on 46 runs with cutoff 900.0]) ============ 
+
+          -> After 1 bonus runs: coolFactor=0.009 startTemp=500 (3853.129929078015 [based on 47 runs with cutoff 900.0])
+
+    Changing ["startTemp: 500->750"], evaluating ...
+716/100000000, 18539.14300274849/21600.0
+718/100000000, 18560.333024978638/21600.0
+719/100000000, 18610.481919288635/21600.0
+        -> worse: (3585.636 [based on 10 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.009->0.021"], evaluating ...
+720/100000000, 18624.302322149277/21600.0
+          -> Take improving step to neighbour coolFactor=0.021 startTemp=500 (3709.2949471766865 [based on 183 runs with cutoff 900.0]) with flip 53
+
+          
+============= Performing 2 bonus runs of state: coolFactor=0.021 startTemp=500 (3709.2949471766865 [based on 183 runs with cutoff 900.0]) ============ 
+
+721/100000000, 18644.14837384224/21600.0
+ Same incumbent, new precision:
+New Incumbent: 18644.14837384224, 3734.4763152173923 [184, 900.0]. With state coolFactor=0.021, startTemp=500
+722/100000000, 18695.57807970047/21600.0
+ Same incumbent, new precision:
+New Incumbent: 18695.57807970047, 3798.031398198199 [185, 900.0]. With state coolFactor=0.021, startTemp=500
+          -> After 2 bonus runs: coolFactor=0.021 startTemp=500 (3798.031398198199 [based on 185 runs with cutoff 900.0])
+
+    Changing ["coolFactor: 0.021->0.03"], evaluating ...
+        -> worse: (3738.0943492063498 [based on 21 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.027"], evaluating ...
+        -> worse: (3593.167641025641 [based on 39 runs with cutoff 900.0])
+    Changing ["startTemp: 500->750"], evaluating ...
+725/100000000, 18753.096623420715/21600.0
+        -> worse: (3922.6090666666664 [based on 20 runs with cutoff 900.0])
+    Changing ["startTemp: 500->1000"], evaluating ...
+        -> worse: (3646.862980392157 [based on 17 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.001"], evaluating ...
+727/100000000, 19654.17067551613/21600.0
+        -> worse: (3920.1090666666664 [based on 20 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.003"], evaluating ...
+728/100000000, 19709.0326359272/21600.0
+        -> worse: (3790.673013333333 [based on 25 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.006"], evaluating ...
+729/100000000, 19892.319400310516/21600.0
+        -> worse: (3922.6757333333326 [based on 20 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.018"], evaluating ...
+730/100000000, 19953.667531490326/21600.0
+        -> worse: (3906.967194444444 [based on 24 runs with cutoff 900.0])
+          
+============= Performing 8 bonus runs of state: coolFactor=0.021 startTemp=500 (3798.031398198199 [based on 185 runs with cutoff 900.0]) ============ 
+
+ Same incumbent, new precision:
+New Incumbent: 19954.456073522568, 3777.8043476702524 [186, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 19955.40876674652, 3757.7519180035665 [187, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 19956.10862493515, 3738.0883439716326 [188, 900.0]. With state coolFactor=0.021, startTemp=500
+734/100000000, 19963.95982480049/21600.0
+ Same incumbent, new precision:
+New Incumbent: 19963.95982480049, 3723.380701940037 [189, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 19964.538457632065, 3704.105014035089 [190, 900.0]. With state coolFactor=0.021, startTemp=500
+736/100000000, 19984.819163560867/21600.0
+ Same incumbent, new precision:
+New Incumbent: 19984.819163560867, 3730.2458254799317 [191, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 19985.70854973793, 3710.968503472224 [192, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 19991.677143335342, 3696.427588946461 [193, 900.0]. With state coolFactor=0.021, startTemp=500
+          -> After 8 bonus runs for LM: coolFactor=0.021 startTemp=500 (3696.427588946461 [based on 193 runs with cutoff 900.0])
+
+   LM for iteration 20: coolFactor=0.021 startTemp=500 (3696.427588946461 [based on 193 runs with cutoff 900.0])
+
+========== DETAILED RESULTS (iteration 20): ==========
+================================================
+
+==================================================================
+Best parameter configuration found so far (end of iteration 20): coolFactor=0.021, startTemp=500
+==================================================================
+Training quality of this incumbent parameter configuration: 3696.427588946461, based on 193 runs with cutoff 900.0
+==================================================================
+
+Comparing LM against incumbent:
+coolFactor=0.021 startTemp=500 (3696.427588946461 [based on 193 runs with cutoff 900.0])
+coolFactor=0.021 startTemp=500 (3696.427588946461 [based on 193 runs with cutoff 900.0])
+LM better, change incumbent
+New Incumbent: 19991.677143335342, 3696.427588946461 [193, 900.0]. With state coolFactor=0.021, startTemp=500
+same state as last ILS: coolFactor=0.021 startTemp=500 (3696.427588946461 [based on 193 runs with cutoff 900.0])
+738/100000000, 19991.677143335342/21600.0
+iteration 21, flip 55, evaluation count 738
+    perturb to ---> coolFactor=0.021 startTemp=750 (3922.6090666666664 [based on 20 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.021 startTemp=1000 (3646.862980392157 [based on 17 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.001 startTemp=1000 (4379.0 [based on 2 runs with cutoff 900.0])
+739/100000000, 20128.200046777725/21600.0
+   BLS in iteration 21, start with coolFactor=0.001 startTemp=1000 (3220.8573333333334 [based on 3 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.001->0.006"], evaluating ...
+740/100000000, 20145.258592128754/21600.0
+          -> Take improving step to neighbour coolFactor=0.006 startTemp=1000 (2424.593 [based on 4 runs with cutoff 900.0]) with flip 55
+
+          
+============= Performing 2 bonus runs of state: coolFactor=0.006 startTemp=1000 (2424.593 [based on 4 runs with cutoff 900.0]) ============ 
+
+742/100000000, 20356.70450901985/21600.0
+          -> After 2 bonus runs: coolFactor=0.006 startTemp=1000 (4202.145333333333 [based on 6 runs with cutoff 900.0])
+
+    Changing ["startTemp: 1000->750"], evaluating ...
+744/100000000, 20391.649040699005/21600.0
+745/100000000, 20420.725222349167/21600.0
+          -> Take improving step to neighbour coolFactor=0.006 startTemp=750 (3737.745142857143 [based on 7 runs with cutoff 900.0]) with flip 56
+
+          
+============= Performing 2 bonus runs of state: coolFactor=0.006 startTemp=750 (3737.745142857143 [based on 7 runs with cutoff 900.0]) ============ 
+
+747/100000000, 20452.217777252197/21600.0
+          -> After 2 bonus runs: coolFactor=0.006 startTemp=750 (3017.5955555555556 [based on 9 runs with cutoff 900.0])
+
+    Changing ["coolFactor: 0.006->0.018"], evaluating ...
+749/100000000, 20463.182734012604/21600.0
+751/100000000, 20473.836484193802/21600.0
+          -> Take improving step to neighbour coolFactor=0.018 startTemp=750 (3015.3548148148147 [based on 9 runs with cutoff 900.0]) with flip 57
+
+          
+============= Performing 1 bonus runs of state: coolFactor=0.018 startTemp=750 (3015.3548148148147 [based on 9 runs with cutoff 900.0]) ============ 
+
+752/100000000, 20498.945190668106/21600.0
+          -> After 1 bonus runs: coolFactor=0.018 startTemp=750 (3583.5193333333327 [based on 10 runs with cutoff 900.0])
+
+    Changing ["coolFactor: 0.018->0.012"], evaluating ...
+754/100000000, 20517.277629852295/21600.0
+          -> Take improving step to neighbour coolFactor=0.012 startTemp=750 (3335.4786666666664 [based on 11 runs with cutoff 900.0]) with flip 58
+
+          
+============= Performing 2 bonus runs of state: coolFactor=0.012 startTemp=750 (3335.4786666666664 [based on 11 runs with cutoff 900.0]) ============ 
+
+          -> After 2 bonus runs: coolFactor=0.012 startTemp=750 (2829.789641025641 [based on 13 runs with cutoff 900.0])
+
+    Changing ["coolFactor: 0.012->0.009"], evaluating ...
+757/100000000, 20535.074990034103/21600.0
+        -> worse: (3341.218181818182 [based on 11 runs with cutoff 900.0])
+    Changing ["startTemp: 750->500"], evaluating ...
+758/100000000, 20634.45224404335/21600.0
+          -> Take improving step to neighbour coolFactor=0.012 startTemp=500 (3913.6863 [based on 20 runs with cutoff 900.0]) with flip 59
+
+          
+============= Performing 2 bonus runs of state: coolFactor=0.012 startTemp=500 (3913.6863 [based on 20 runs with cutoff 900.0]) ============ 
+
+          -> After 2 bonus runs: coolFactor=0.012 startTemp=500 (3560.7966363636365 [based on 22 runs with cutoff 900.0])
+
+    Changing ["coolFactor: 0.012->0.006"], evaluating ...
+        -> worse: (3737.5864126984125 [based on 21 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.012->0.024"], evaluating ...
+          -> Take improving step to neighbour coolFactor=0.024 startTemp=500 (3948.9935652173913 [based on 46 runs with cutoff 900.0]) with flip 60
+
+          
+============= Performing 2 bonus runs of state: coolFactor=0.024 startTemp=500 (3948.9935652173913 [based on 46 runs with cutoff 900.0]) ============ 
+
+764/100000000, 20646.608881235123/21600.0
+          -> After 2 bonus runs: coolFactor=0.024 startTemp=500 (3804.5682500000003 [based on 48 runs with cutoff 900.0])
+
+    Changing ["coolFactor: 0.024->0.003"], evaluating ...
+        -> worse: (3646.2548205128205 [based on 26 runs with cutoff 900.0])
+    Changing ["startTemp: 500->1000"], evaluating ...
+        -> worse: (3054.2165555555553 [based on 12 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.024->0.021"], evaluating ...
+          -> Take improving step to neighbour coolFactor=0.021 startTemp=500 (3696.427588946461 [based on 193 runs with cutoff 900.0]) with flip 61
+
+          
+============= Performing 3 bonus runs of state: coolFactor=0.021 startTemp=500 (3696.427588946461 [based on 193 runs with cutoff 900.0]) ============ 
+
+ Same incumbent, new precision:
+New Incumbent: 20653.72916173935, 3677.5583745704484 [194, 900.0]. With state coolFactor=0.021, startTemp=500
+769/100000000, 20707.461369037628/21600.0
+ Same incumbent, new precision:
+New Incumbent: 20707.461369037628, 3738.187135042737 [195, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 20715.160017967224, 3723.9379353741515 [196, 900.0]. With state coolFactor=0.021, startTemp=500
+          -> After 3 bonus runs: coolFactor=0.021 startTemp=500 (3723.9379353741515 [based on 196 runs with cutoff 900.0])
+
+    Changing ["coolFactor: 0.021->0.03"], evaluating ...
+        -> worse: (3569.499151515152 [based on 22 runs with cutoff 900.0])
+    Changing ["startTemp: 500->1000"], evaluating ...
+772/100000000, 20724.577894210815/21600.0
+        -> worse: (3497.500814814815 [based on 18 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.018"], evaluating ...
+        -> worse: (3789.0222666666664 [based on 25 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.027"], evaluating ...
+        -> worse: (3504.23845 [based on 40 runs with cutoff 900.0])
+    Changing ["startTemp: 500->750"], evaluating ...
+775/100000000, 20735.23611831665/21600.0
+        -> worse: (3737.5229206349204 [based on 21 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.001"], evaluating ...
+776/100000000, 20749.949590206146/21600.0
+        -> worse: (3735.141968253968 [based on 21 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.009"], evaluating ...
+        -> worse: (3715.054666666667 [based on 49 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.021->0.015"], evaluating ...
+        -> worse: (3407.550144927536 [based on 23 runs with cutoff 900.0])
+          
+============= Performing 8 bonus runs of state: coolFactor=0.021 startTemp=500 (3723.9379353741515 [based on 196 runs with cutoff 900.0]) ============ 
+
+ Same incumbent, new precision:
+New Incumbent: 20753.886407136917, 3705.2164230118465 [197, 900.0]. With state coolFactor=0.021, startTemp=500
+780/100000000, 20806.274163722992/21600.0
+ Same incumbent, new precision:
+New Incumbent: 20806.274163722992, 3764.807080808083 [198, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 20807.295425891876, 3746.0291557788964 [199, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 20815.08603811264, 3732.090730000002 [200, 900.0]. With state coolFactor=0.021, startTemp=500
+783/100000000, 20834.97840976715/21600.0
+ Same incumbent, new precision:
+New Incumbent: 20834.97840976715, 3756.446829187398 [201, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 20840.83777976036, 3742.3286369636985 [202, 900.0]. With state coolFactor=0.021, startTemp=500
+ Same incumbent, new precision:
+New Incumbent: 20841.46442246437, 3724.1940131362912 [203, 900.0]. With state coolFactor=0.021, startTemp=500
+786/100000000, 20861.430680513382/21600.0
+ Same incumbent, new precision:
+New Incumbent: 20861.430680513382, 3747.7902843137276 [204, 900.0]. With state coolFactor=0.021, startTemp=500
+          -> After 8 bonus runs for LM: coolFactor=0.021 startTemp=500 (3747.7902843137276 [based on 204 runs with cutoff 900.0])
+
+   LM for iteration 21: coolFactor=0.021 startTemp=500 (3747.7902843137276 [based on 204 runs with cutoff 900.0])
+
+========== DETAILED RESULTS (iteration 21): ==========
+================================================
+
+==================================================================
+Best parameter configuration found so far (end of iteration 21): coolFactor=0.021, startTemp=500
+==================================================================
+Training quality of this incumbent parameter configuration: 3747.7902843137276, based on 204 runs with cutoff 900.0
+==================================================================
+
+Comparing LM against incumbent:
+coolFactor=0.021 startTemp=500 (3747.7902843137276 [based on 204 runs with cutoff 900.0])
+coolFactor=0.021 startTemp=500 (3747.7902843137276 [based on 204 runs with cutoff 900.0])
+LM better, change incumbent
+New Incumbent: 20861.430680513382, 3747.7902843137276 [204, 900.0]. With state coolFactor=0.021, startTemp=500
+same state as last ILS: coolFactor=0.021 startTemp=500 (3747.7902843137276 [based on 204 runs with cutoff 900.0])
+786/100000000, 20861.430680513382/21600.0
+iteration 22, flip 63, evaluation count 786
+    perturb to ---> coolFactor=0.001 startTemp=500 (3735.141968253968 [based on 21 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.024 startTemp=500 (3727.495428571429 [based on 49 runs with cutoff 900.0])
+    perturb to ---> coolFactor=0.001 startTemp=500 (3735.141968253968 [based on 21 runs with cutoff 900.0])
+787/100000000, 20881.090165138245/21600.0
+   BLS in iteration 22, start with coolFactor=0.001 startTemp=500 (3566.635515151515 [based on 22 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.001->0.003"], evaluating ...
+788/100000000, 20893.235762119293/21600.0
+          -> Take improving step to neighbour coolFactor=0.003 startTemp=500 (3646.2548205128205 [based on 26 runs with cutoff 900.0]) with flip 63
+
+          
+============= Performing 1 bonus runs of state: coolFactor=0.003 startTemp=500 (3646.2548205128205 [based on 26 runs with cutoff 900.0]) ============ 
+
+789/100000000, 20934.315791130066/21600.0
+          -> After 1 bonus runs: coolFactor=0.003 startTemp=500 (3544.7110123456787 [based on 27 runs with cutoff 900.0])
+
+    Changing ["coolFactor: 0.003->0.015"], evaluating ...
+790/100000000, 21007.411452531815/21600.0
+        -> worse: (3910.909166666667 [based on 24 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.003->0.006"], evaluating ...
+        -> worse: (3569.3324848484845 [based on 22 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.003->0.012"], evaluating ...
+792/100000000, 21104.417438983917/21600.0
+        -> worse: (3911.8344166666666 [based on 24 runs with cutoff 900.0])
+    Changing ["coolFactor: 0.003->0.03"], evaluating ...
+        -> worse: (3416.955710144928 [based on 23 runs with cutoff 900.0])
+    Changing ["startTemp: 500->1000"], evaluating ...
+794/100000000, 21151.263247013092/21600.0
+796/100000000, 21575.735085725784/21600.0
+798/100000000, 21645.04731941223/21600.0
+ParamILS has reached the specified CPU time limit of 21600.0 seconds => stopping the search now.
+ParamILS has reached the specified CPU time limit of 21600.0 seconds => stopping the search now.
+        -> worse: (3713.932761904762 [based on 7 runs with cutoff 900.0])
+ParamILS has reached the specified CPU time limit of 21600.0 seconds => stopping the search now.
+          
+============= Performing 5 bonus runs of state: coolFactor=0.003 startTemp=500 (3544.7110123456787 [based on 27 runs with cutoff 900.0]) ============ 
+
+ParamILS has reached the specified CPU time limit of 21600.0 seconds => stopping the search now.
+          -> After 5 bonus runs for LM: coolFactor=0.003 startTemp=500 (3544.7110123456787 [based on 27 runs with cutoff 900.0])
+
+   LM for iteration 22: coolFactor=0.003 startTemp=500 (3544.7110123456787 [based on 27 runs with cutoff 900.0])
+
+========== DETAILED RESULTS (iteration 22): ==========
+================================================
+
+==================================================================
+Best parameter configuration found so far (end of iteration 22): coolFactor=0.021, startTemp=500
+==================================================================
+Training quality of this incumbent parameter configuration: 3747.7902843137276, based on 204 runs with cutoff 900.0
+==================================================================
+
+Comparing LM against incumbent:
+coolFactor=0.003 startTemp=500 (3544.7110123456787 [based on 27 runs with cutoff 900.0])
+coolFactor=0.021 startTemp=500 (3747.7902843137276 [based on 204 runs with cutoff 900.0])
+Incumbent better, keeping it
+rejecting worse coolFactor=0.003 startTemp=500 (3544.7110123456787 [based on 27 runs with cutoff 900.0]), going back to coolFactor=0.021 startTemp=500 (3747.7902843137276 [based on 204 runs with cutoff 900.0])
+ParamILS has reached the specified CPU time limit of 21600.0 seconds => stopping the search now.
+Final solution for depth 1 with limit N=2000, and cutoff time=900.0.
+New Incumbent: 21645.04731941223, 3747.7902843137276 [204, 900.0]. With state coolFactor=0.021, startTemp=500
+
+==================================================================
+ParamILS is finished.
+==================================================================
+
+Final best parameter configuration found: coolFactor=0.021, startTemp=500
+==================================================================
+Active parameters: coolFactor=0.021, startTemp=500
+
+==================================================================
+Training quality of this final best found parameter configuration: 3747.7902843137276, based on 204 runs with cutoff 900.0
+==================================================================
+
+
+==================================================================
+Computing validation result on independent data -- 20 runs with cutoff time 900.0...
+==================================================================
+../test_cases/TC7_huge.xml: 58246.5
+../test_cases/TCX0_multicast.xml: 36.6
+../test_cases/TC7_huge.xml: 58506.16666666667
+../test_cases/TCX0_multicast.xml: 36.6
+../test_cases/TCX0_multicast.xml: 36.6
+../test_cases/TC7_huge.xml: 58577.5
+../test_cases/TCX0_multicast.xml: 36.6
+../test_cases/TC7_huge.xml: 58742.166666666664
+../test_cases/TCX0_multicast.xml: 36.6
+../test_cases/TC7_huge.xml: 58582.0
+../test_cases/TC7_huge.xml: 58650.0
+../test_cases/TCX0_multicast.xml: 36.6
+../test_cases/TCX0_multicast.xml: 36.6
+../test_cases/TC7_huge.xml: 58537.833333333336
+../test_cases/TC7_huge.xml: 58413.16666666667
+../test_cases/TCX0_multicast.xml: 36.6
+../test_cases/TC7_huge.xml: 58492.49999999999
+../test_cases/TCX0_multicast.xml: 36.6
+../test_cases/TCX0_multicast.xml: 36.6
+../test_cases/TC7_huge.xml: 58583.5
+Combined result: 29284.86666666666
+
+================================================================
+Final best parameter configuration: coolFactor=0.021, startTemp=500
+==================================================================
+Active parameters: coolFactor=0.021, startTemp=500
+
+================================================================
+Training quality of this final best found parameter configuration: 3747.7902843137276, based on 204 runs with cutoff 900.0
+Test quality of this final best found parameter configuration: 29284.86666666666, based on 20 independent runs with cutoff 900.0
+==================================================================
