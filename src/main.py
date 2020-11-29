@@ -100,7 +100,7 @@ def run_evaluation(filename, cutoff_time, seed, coolFactor, startTemp):
     G, N = createGraph(tsn)
     findStreamsRoutes(tsn, G)
     printStreamRoutes(tsn)
-    generateGraphImage(N)
+    # generateGraphImage(N)
     results_dict = simulated_annealing(tsn, startTemp, coolFactor, cutoff_time)
     return results_dict
 

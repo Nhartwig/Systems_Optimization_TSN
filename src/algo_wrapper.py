@@ -1,21 +1,27 @@
 from main import *
 
 
-def plot_temp(instance, iters, temp, startTemp, coolFactor):
-    fig = plt.figure(figsize=(20,10))
-    plt.plot(range(iters), temp, label='temp')
-    plt.title('Cooling Curve with StartTemp = ' + str(startTemp) + ' , alpha = ' + str(coolFactor))
-    plt.legend()
-    test_case = getTestCaseName(instance)
-    plt.savefig('../plots/'+test_case+'-'+'Cooling Curve'+'-'+str(startTemp)+'-'+str(coolFactor)+'-'+datetime.datetime.now().strftime("%d %B %Y %X"))
+def plot_temp_cost(instance, iters, temp, cost, startTemp, coolFactor):
+    fig, ax1 = plt.subplots()
+    color = 'tab:red'
+    ax1.set_xlabel('iterations')
+    ax1.set_ylabel('temperature', color=color)
+    ax1.plot(range(iters), temp, color=color, label='temp', linestyle='dashed')
+    ax1.tick_params(axis='y', labelcolor=color)
 
-def plot_cost(instance, iters, cost, startTemp, coolFactor):
-    fig = plt.figure(figsize=(20,10))
-    plt.plot(range(iters), cost, label='temp')
-    plt.title('Optimization of Cost with StartTemp = ' + str(startTemp) + ' , alpha = ' + str(coolFactor))
-    plt.legend()
+    ax2 = ax1.twinx()
+
+    color = 'tab:blue'
+    ax2.set_ylabel('cost', color=color)
+    ax2.plot(range(iters), cost, color=color, label='cost')
+    ax2.tick_params(axis='y', labelcolor=color)
+
     test_case = getTestCaseName(instance)
-    plt.savefig('../plots/'+test_case+'-'+'Cost Curve'+'-'+str(startTemp)+'-'+str(coolFactor)+'-'+datetime.datetime.now().strftime("%d %B %Y %X"))
+    plt.title('Cooling Curve and Cost Optimization with t_start = ' + str(startTemp) + ' , alpha = ' + str(coolFactor), fontsize=11)
+    fig.tight_layout()
+
+    plt.savefig('../plots/'+test_case+'-'+'Temp and Cost'+'-'+str(startTemp)+'-'+str(coolFactor)+'-'+datetime.datetime.now().strftime("%d %B %Y %X")+".PNG", format="PNG")
+
 
 # parse args from the paramILS command line call
 parser = argparse.ArgumentParser()
@@ -33,10 +39,8 @@ args = parser.parse_args()
 results_dict = run_evaluation(args.instance_name, float(args.cutoff_time), args.seed, float(args.coolFactor), float(args.startTemp))
 
 # plot
-iterations, temperature_progress, cost_progress, startTemp, coolFactor = results_dict['Values']
-#plot_temp(args.instance_name, iterations, temperature_progress, startTemp, coolFactor)
-#plot_cost(args.instance_name, iterations, cost_progress, startTemp, coolFactor)
-
+iters, temp, cost, startTemp, coolFactor = results_dict['Values']
+plot_temp_cost(args.instance_name, iters, temp, cost, startTemp, coolFactor)
 
 # collect results for paramILS
 status, runtime, cost, seed = results_dict['Results']
@@ -48,5 +52,5 @@ status, runtime, cost, seed = results_dict['Results']
 # where status is either: “SUCCESS”, “TIMEOUT”, “ABORT” or “CRASHED”
 # and quality is scalar value or comma separated values between brackets (a list).
 
-print("Result for ParamILS:", status, ", ", runtime, ", ", iterations, ", ", cost, ", ", args.seed)
+print("Result for ParamILS:", status, ", ", runtime, ", ", iters, ", ", cost, ", ", args.seed)
 #print("Result for ParamILS:"+status, runtime, iterations, cost, args.seed, sep=", ")
