@@ -102,7 +102,6 @@ class TSN:
         b = similarity
         c = wct
         return 10*a + 5*b + 3*c
-        # return (-a*a + a + a*b + b + b*c + c)/1000
             
     ## Calculates the similar links between the different routes for the critical streams
     #
@@ -136,7 +135,6 @@ class TSN:
         worstCaseDelay = maxWCT * maxRouteLength
         
         if worstCaseDelay > s.period:
-            print("OVERFLOW")
             return 10000000
 
         return 0
