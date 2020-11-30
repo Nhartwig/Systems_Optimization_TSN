@@ -88,7 +88,7 @@ class TSN:
 
     ## Calculates the Cost for each link
     #
-    # @return The cost (depending on the bandwidth used) multiplied by the Link similarity of critical streams, more bandwidth used the higher the cost value.
+    # @return The overall cost for each stream based on the bandwidth used, route lenght, redudant streams similarity and the constrain of Worst Case Delay to be smaller than the smaller period of the stream using the correspoind link.
     def linksCost(self):
         cost = 0
         wct = 0
@@ -101,7 +101,7 @@ class TSN:
         a = cost
         b = similarity
         c = wct
-        return 10*a + 5*b + 3*c
+        return a + 50*b + c
             
     ## Calculates the similar links between the different routes for the critical streams
     #
@@ -118,7 +118,7 @@ class TSN:
                             similarity_links += 1
         return similarity_links
 
-
+    ## 
     def stream_wct(self, s):
         maxWCT = 0                  # maximum worst case time for all switches
         for l in s.solution_links:
@@ -161,7 +161,17 @@ class TSN:
             stream.solution_routes = stream.saved_solution_routes
         return self.savedCost
 
-
+## Device class
+    #
+    #    @param id                  List with devices objects.
+    #    @param name                List with stream objects.
+    #    @param type               List with links objects.
+    #    @param vertices               List with links objects.
+    #    @param speed               List with links objects.
+    #    @param egressPort               List with links objects.
+    #    @param cycleTime               List with links objects.
+    #
+    #    @return   An instance of the TSN class initializer with devices, streams and links lists of objects.
 class Device:
 
     def __init__(self, id, name, type):
