@@ -4,8 +4,8 @@ from worst_case_delay import worst_case_delay
 
 
 def simulated_annealing(tsn):
-    T = 1000  # Set
-    r = 0.05  # Set t declining factor
+    T = 500  # Set
+    r = 0.03  # Set t declining factor
     i = 0
     print("\n")
 

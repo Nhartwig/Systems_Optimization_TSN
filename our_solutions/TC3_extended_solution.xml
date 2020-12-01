@@ -1,0 +1,120 @@
+<solution tc_name="TC3_extended">
+    <stream id="Stream0">
+        <route>
+            <link dest="SW8" src="ES1" />
+            <link dest="SW3" src="SW8" />
+            <link dest="SW2" src="SW3" />
+            <link dest="SW5" src="SW2" />
+            <link dest="ES4" src="SW5" />
+        </route>
+        <route>
+            <link dest="SW1" src="ES1" />
+            <link dest="SW2" src="SW1" />
+            <link dest="SW4" src="SW2" />
+            <link dest="SW6" src="SW4" />
+            <link dest="SW5" src="SW6" />
+            <link dest="ES4" src="SW5" />
+        </route>
+        <route>
+            <link dest="SW8" src="ES1" />
+            <link dest="ES4" src="SW8" />
+        </route>
+        <route>
+            <link dest="SW1" src="ES1" />
+            <link dest="SW5" src="SW1" />
+            <link dest="ES4" src="SW5" />
+        </route>
+    </stream>
+    <stream id="Stream0">
+        <route>
+            <link dest="SW8" src="ES1" />
+            <link dest="SW3" src="SW8" />
+            <link dest="SW7" src="SW3" />
+            <link dest="SW6" src="SW7" />
+            <link dest="ES5" src="SW6" />
+        </route>
+    </stream>
+    <stream id="Stream1">
+        <route>
+            <link dest="SW2" src="ES2" />
+            <link dest="SW7" src="SW2" />
+            <link dest="SW6" src="SW7" />
+            <link dest="ES5" src="SW6" />
+        </route>
+        <route>
+            <link dest="SW2" src="ES2" />
+            <link dest="SW4" src="SW2" />
+            <link dest="SW6" src="SW4" />
+            <link dest="ES5" src="SW6" />
+        </route>
+    </stream>
+    <stream id="Stream2">
+        <route>
+            <link dest="SW3" src="ES3" />
+            <link dest="SW7" src="SW3" />
+            <link dest="SW6" src="SW7" />
+            <link dest="SW5" src="SW6" />
+            <link dest="ES4" src="SW5" />
+        </route>
+        <route>
+            <link dest="SW3" src="ES3" />
+            <link dest="SW2" src="SW3" />
+            <link dest="SW5" src="SW2" />
+            <link dest="ES4" src="SW5" />
+        </route>
+        <route>
+            <link dest="SW3" src="ES3" />
+            <link dest="SW2" src="SW3" />
+            <link dest="SW1" src="SW2" />
+            <link dest="SW5" src="SW1" />
+            <link dest="ES4" src="SW5" />
+        </route>
+    </stream>
+    <stream id="Stream3">
+        <route>
+            <link dest="SW1" src="ES1" />
+            <link dest="SW2" src="SW1" />
+            <link dest="SW4" src="SW2" />
+            <link dest="SW6" src="SW4" />
+            <link dest="ES5" src="SW6" />
+        </route>
+    </stream>
+    <stream id="Stream4">
+        <route>
+            <link dest="SW2" src="ES2" />
+            <link dest="SW7" src="SW2" />
+            <link dest="ES6" src="SW7" />
+        </route>
+    </stream>
+    <stream id="Stream5">
+        <route>
+            <link dest="SW3" src="ES3" />
+            <link dest="SW2" src="SW3" />
+            <link dest="SW5" src="SW2" />
+            <link dest="ES4" src="SW5" />
+        </route>
+    </stream>
+    <stream id="Stream6">
+        <route>
+            <link dest="SW8" src="ES1" />
+            <link dest="SW3" src="SW8" />
+            <link dest="SW7" src="SW3" />
+            <link dest="ES6" src="SW7" />
+        </route>
+    </stream>
+    <stream id="Stream7">
+        <route>
+            <link dest="SW2" src="ES2" />
+            <link dest="SW5" src="SW2" />
+            <link dest="ES4" src="SW5" />
+        </route>
+    </stream>
+    <stream id="Stream8">
+        <route>
+            <link dest="SW3" src="ES3" />
+            <link dest="SW7" src="SW3" />
+            <link dest="SW6" src="SW7" />
+            <link dest="ES5" src="SW6" />
+        </route>
+    </stream>
+</solution>

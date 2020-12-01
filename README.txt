@@ -18,15 +18,15 @@ Requirements:
     - networkx
 
 How to run:
+- navigate to the Systems_Optimization_TSN folder
 - in the command line:
-    - small.xml data input: python Exercise.py "small"
-    - medium.xml data input: python Exercise.py "medium"
-    - large.xml data input: python Exercise.py "large"
-- if no or misstyped arguments are given, the default input is large.xml
+    - python src\main.py <xml file>
+    
+- if no arguments are given, the default input is TC5_large1.xml
 
 Output details:
-- the generated .xml solution files are placed in the './output/' folder
-- naming scheme: small/medium/large_solution.xml
+- the generated .xml solution files are placed in the './solution_xml_files/' folder
+- naming scheme: <test case file>_solution.xml
 
 Our solutions:
 - located inside the 'our_solutions' folder

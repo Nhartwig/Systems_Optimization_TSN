@@ -37,12 +37,6 @@
     <stream id="Stream2">
         <route>
             <link dest="SW3" src="ES3" />
-            <link dest="SW2" src="SW3" />
-            <link dest="SW5" src="SW2" />
-            <link dest="ES4" src="SW5" />
-        </route>
-        <route>
-            <link dest="SW3" src="ES3" />
             <link dest="SW7" src="SW3" />
             <link dest="SW6" src="SW7" />
             <link dest="SW5" src="SW6" />
@@ -53,6 +47,12 @@
             <link dest="SW2" src="SW3" />
             <link dest="SW1" src="SW2" />
             <link dest="SW5" src="SW1" />
+            <link dest="ES4" src="SW5" />
+        </route>
+        <route>
+            <link dest="SW3" src="ES3" />
+            <link dest="SW2" src="SW3" />
+            <link dest="SW5" src="SW2" />
             <link dest="ES4" src="SW5" />
         </route>
     </stream>

@@ -3,14 +3,14 @@
         <route>
             <link dest="SW_2" src="ES_7" />
             <link dest="SW_0" src="SW_2" />
-            <link dest="SW_3" src="SW_0" />
+            <link dest="SW_1" src="SW_0" />
+            <link dest="SW_3" src="SW_1" />
             <link dest="ES_9" src="SW_3" />
         </route>
         <route>
             <link dest="SW_2" src="ES_7" />
             <link dest="SW_0" src="SW_2" />
-            <link dest="SW_1" src="SW_0" />
-            <link dest="SW_3" src="SW_1" />
+            <link dest="SW_3" src="SW_0" />
             <link dest="ES_9" src="SW_3" />
         </route>
         <route>
@@ -106,33 +106,33 @@
         <route>
             <link dest="SW_2" src="ES_6" />
             <link dest="SW_3" src="SW_2" />
+            <link dest="SW_1" src="SW_3" />
+            <link dest="SW_0" src="SW_1" />
+            <link dest="ES_0" src="SW_0" />
+        </route>
+        <route>
+            <link dest="SW_2" src="ES_6" />
+            <link dest="SW_3" src="SW_2" />
             <link dest="SW_0" src="SW_3" />
             <link dest="ES_0" src="SW_0" />
         </route>
         <route>
             <link dest="SW_2" src="ES_6" />
             <link dest="SW_0" src="SW_2" />
-            <link dest="ES_0" src="SW_0" />
-        </route>
-        <route>
-            <link dest="SW_2" src="ES_6" />
-            <link dest="SW_3" src="SW_2" />
-            <link dest="SW_1" src="SW_3" />
-            <link dest="SW_0" src="SW_1" />
             <link dest="ES_0" src="SW_0" />
         </route>
     </stream>
     <stream id="Stream_9">
         <route>
             <link dest="SW_2" src="ES_6" />
-            <link dest="SW_3" src="SW_2" />
-            <link dest="SW_0" src="SW_3" />
+            <link dest="SW_0" src="SW_2" />
             <link dest="SW_1" src="SW_0" />
             <link dest="ES_5" src="SW_1" />
         </route>
         <route>
             <link dest="SW_2" src="ES_6" />
-            <link dest="SW_0" src="SW_2" />
+            <link dest="SW_3" src="SW_2" />
+            <link dest="SW_0" src="SW_3" />
             <link dest="SW_1" src="SW_0" />
             <link dest="ES_5" src="SW_1" />
         </route>
@@ -146,20 +146,21 @@
     <stream id="Stream_10">
         <route>
             <link dest="SW_0" src="ES_2" />
-            <link dest="SW_3" src="SW_0" />
-            <link dest="SW_2" src="SW_3" />
+            <link dest="SW_2" src="SW_0" />
             <link dest="ES_6" src="SW_2" />
         </route>
         <route>
             <link dest="SW_0" src="ES_2" />
-            <link dest="SW_2" src="SW_0" />
+            <link dest="SW_3" src="SW_0" />
+            <link dest="SW_2" src="SW_3" />
             <link dest="ES_6" src="SW_2" />
         </route>
     </stream>
     <stream id="Stream_11">
         <route>
             <link dest="SW_1" src="ES_5" />
-            <link dest="SW_0" src="SW_1" />
+            <link dest="SW_3" src="SW_1" />
+            <link dest="SW_0" src="SW_3" />
             <link dest="SW_2" src="SW_0" />
             <link dest="ES_8" src="SW_2" />
         </route>
@@ -171,8 +172,7 @@
         </route>
         <route>
             <link dest="SW_1" src="ES_5" />
-            <link dest="SW_3" src="SW_1" />
-            <link dest="SW_0" src="SW_3" />
+            <link dest="SW_0" src="SW_1" />
             <link dest="SW_2" src="SW_0" />
             <link dest="ES_8" src="SW_2" />
         </route>
