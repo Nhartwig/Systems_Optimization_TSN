@@ -132,7 +132,7 @@ class TSN:
             if maxRouteLength < len(s.solution_routes[i]):
                 maxRouteLength = len(s.solution_routes[i])
 
-        worstCaseDelay = maxWCT * maxRouteLength
+        worstCaseDelay = maxWCT * (maxRouteLength+1)
         
         if worstCaseDelay > s.period:
             return 10000000
