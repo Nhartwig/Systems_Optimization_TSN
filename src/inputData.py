@@ -118,7 +118,11 @@ class TSN:
                             similarity_links += 1
         return similarity_links
 
-    ## 
+    ## Calculates the worst delay time for each link
+    #
+    #    @param s      A stream object.
+    #
+    #    @return Penalty (0 or 10.000.000).
     def stream_wct(self, s):
         maxWCT = 0                  # maximum worst case time for all switches
         for l in s.solution_links:
@@ -150,12 +154,20 @@ class TSN:
         for link in self.links:
             link.used_bandwidth = 0
 
+    ## Saves solution in the stream object's attribute
+    #
+    #   @param cost      Cost of solution
+    #
+    #   @return No return.
     def save_Solution(self, cost):
         if cost < self.savedCost:
             self.savedCost = cost
             for stream in self.streams:
                 stream.saved_solution_routes = stream.solution_routes
 
+    ## Loads best solution from the stream object's attribute
+    #
+    #   @return Cost of solution.
     def load_Best_Solution(self):
         for stream in self.streams:
             stream.solution_routes = stream.saved_solution_routes
@@ -185,7 +197,15 @@ class Device:
         
         
 
-
+## Link class
+    #
+    #    @param src                 source device
+    #    @param dest                destination device
+    #    @param bandwidth           bandwidth of link
+    #    @param used_bandwidth      currently used bandwidth of link  
+    #    @param src.speed           speed of source device
+    #
+    #    @return   An instance of the Link class initializer.
 class Link:
 
     def __init__(self, source_device, dest_device, speed):
@@ -196,7 +216,23 @@ class Link:
         self.src.speed = speed * 8     #Mbit/s which is the bandwidth size of the link
         
 
-
+## Stream class
+    #
+    #    @param id                      id of stream
+    #    @param rl                      redundancy level of stream
+    #    @param src                     source device
+    #    @param dest                    destination device
+    #    @param size                    stream size
+    #    @param period                  stream period
+    #    @param deadline                stream deadline
+    #    @param stream_bandwidth        stream bandwidth
+    #    @param routes                  list of routes
+    #    @param solution_routes         list of solution routes
+    #    @param saved_solution_route    list of saved solution routes
+    #    @param solution_links          list of solution links, effectively solution routes shown as lists of links
+    #    @param routes                  list of routes
+    
+    #    @return   An instance of the Link class initializer.
 class Stream:
 
     def __init__(self, id, source_device, dest_device, size, period, deadline, rl):
