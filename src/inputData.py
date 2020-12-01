@@ -13,7 +13,7 @@ class TSN:
     #
     #    @return   An instance of the TSN class initializer with devices, streams and links lists of objects.
 
-    def __init__(self, filename="../test_cases/TC3_medium.xml"):
+    def __init__(self, filename="test_cases/TC5_large.xml"):
 
         tree = ET.parse(filename)
 

@@ -50,5 +50,5 @@ def outputSolutionXML(tsn, filename="default.xml"):
     indent(root)
     tree = ET.ElementTree(root)
 
-    with open('../solution_xml_files/'+test_case+'_solution.xml', "wb") as files:
+    with open('solution_xml_files/'+test_case+'_solution.xml', "wb") as files:
         tree.write(files, encoding="utf-8")

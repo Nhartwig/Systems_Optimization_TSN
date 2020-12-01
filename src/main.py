@@ -54,7 +54,7 @@ def generateGraphImage(graph):
     plt.tight_layout()
     pos = nx.spectral_layout(graph)
     nx.draw_networkx(graph, arrows=True, font_size=6, pos = pos, font_color = 'w', arrowsize=6)
-    plt.savefig("../images/Graph_Image.png", format="PNG")
+    plt.savefig("images/Graph_Image.png", format="PNG")
     plt.clf()
 
 
@@ -63,10 +63,10 @@ def printSolution(tsn):
         s.printRouteLinks(tsn)
 
 def parsing_input(args):
-    folderPath = "../test_cases/"
+    folderPath = "test_cases/"
 
     if not args:
-        args.append("../test_cases/TC5_large1.xml")
+        args.append("TC5_large1.xml")
         filename = folderPath + args[0]
     else:
         filename = folderPath + args[0]
@@ -87,19 +87,9 @@ G, N = createGraph(tsn)     # createGraph(tsn) returns two graphs, one with devi
 
 findStreamsRoutes(tsn)      # we find for each stream the possible routes and create our initial solution
 
-# printStreamRoutes(tsn)
-
 generateGraphImage(N)       # generate graph image with input only the devices names
 
 simulated_annealing(tsn)    # run simulated annealing algorithm
 
-printSolution(tsn)          # print solution
-
 outputSolutionXML(tsn, filename)  # output results to xml file
 
-# for device in tsn.devices:
-#     if device.type == "Switch":
-#         print(" \033[0m", device.name," cycle time = ", round(device.cycleTime, 3))
-
-# for s in tsn.streams:
-#     print(s.id, " route lenght = ", math.ceil(len(s.solution_links)/s.rl), "worst cycle delay = ", math.ceil(len(s.solution_links)/s.rl)*round(tsn.stream_wct(s), 3))
