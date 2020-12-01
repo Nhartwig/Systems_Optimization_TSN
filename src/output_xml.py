@@ -1,10 +1,21 @@
 import xml.etree.ElementTree as ET
 import inputData
 
+## Gets name of the testcase file.
+#
+#   @param filename           filename
+#
+# @return test_case_name
 def getTestCaseName(filename):
     test_case_name = filename.split('/')[-1].split('.')[0]
     return test_case_name
 
+## Formats output with tabs.
+#
+#   @param elem               element of xml tree to start from
+#   @param level              level of tree
+#
+# @return Nothing.
 def indent(elem, level=0):
     i = "\n" + level*"    "
     if len(elem):
@@ -20,6 +31,12 @@ def indent(elem, level=0):
         if level and (not elem.tail or not elem.tail.strip()):
             elem.tail = i
 
+## Generate output xml of solution.
+#
+#   @param tsn               TSN object (input data saved in classes)
+#   @param filename          filename
+#
+# @return Nothing.
 def outputSolutionXML(tsn, filename="default.xml"):
     """
     Outputs TSN solution to XML file called "solution.xml", located in same directory.

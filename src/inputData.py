@@ -230,9 +230,8 @@ class Link:
     #    @param solution_routes         list of solution routes
     #    @param saved_solution_route    list of saved solution routes
     #    @param solution_links          list of solution links, effectively solution routes shown as lists of links
-    #    @param routes                  list of routes
-    
-    #    @return   An instance of the Link class initializer.
+    #    @param priority                stream priority
+    #    @return   An instance of the Stream class initializer with devices, streams and links lists of objects.
 class Stream:
 
     def __init__(self, id, source_device, dest_device, size, period, deadline, rl):
@@ -260,7 +259,7 @@ class Stream:
 
     ## Initialising a random solution for the routes
     #
-    #@return has no return
+    # @return has no return
     def initial_solution(self):
         for i in range(self.rl):
             if self.routes:
@@ -274,7 +273,7 @@ class Stream:
 
     ## Transforms the solution routes into solution links of devices.
     #
-    #@return has no return.
+    # @return has no return.
     def solution_Links(self, tsn):
         self.solution_links.clear()
         for route in self.solution_routes:
@@ -300,9 +299,9 @@ class Stream:
                 cost = cost * 10
         return cost
 
-    #Chooses a random route from an array of all possible routes and exchanges it with a route from the solutions.
+    ## Chooses a random route from an array of all possible routes and exchanges it with a route from the solutions.
     #
-    #@return Two random routes and is used to calculate the new solution cost in the simulating annealing.
+    # @return Two random routes and is used to calculate the new solution cost in the simulating annealing.
     def random_exchange(self, random_stream):
         r1 = random.choice(self.routes)
         r2 = random.choice(self.solution_routes)
@@ -314,6 +313,9 @@ class Stream:
         random_stream.solution_routes.append(r1)
         return r1, r2
 
+    ## Prints the routes as a list of links 
+    #
+    # @return Nothing.
     def printRouteLinks(self, tsn):
         self.solution_links.clear()
         print("\n \33[31m", self.id, "\033[0m")
